@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Level Estimator | ThunderQuiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <a href="../../index.html" class="back-button">← ThunderQuiz</a>
+
+            <h1>IQ Level Estimator</h1>
+            <p>Answer 9 questions to estimate your IQ.</p>
+        </header>
+
+        <section id="quiz" class="quiz">
+
+            <div class="progress">
+                <span id="question-number">Question 1 of 9</span>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card">
+
+                <h2 id="question"></h2>
+
+                <div id="answers" class="answers"></div>
+
+            </div>
+
+        </section>
+
+	<section id="result" class="result hidden">
+
+    <h2>Your Estimated IQ is</h2>
+
+    <div class="score">
+        <span id="score">0</span>
+    </div>
+
+    <p id="result-message"></p>
+
+    <button id="restart-button">Try Again</button>
+
+    <a href="../../index.html" class="home-button">
+        Back to Games
+    </a>
+
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

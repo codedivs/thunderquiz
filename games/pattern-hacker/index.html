@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pattern Hacker | ThunderQuiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+
+            <a href="../../index.html" class="back-button">
+                ← ThunderQuiz
+            </a>
+
+            <h1>Pattern Hacker</h1>
+
+            <p>
+                Crack the pattern before time runs out.
+            </p>
+
+        </header>
+
+        <section class="game-panel">
+
+            <div class="top-bar">
+
+                <span id="question-number">
+                    Challenge 1 / 10
+                </span>
+
+                <span id="timer">
+                    15
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div id="progress-fill"></div>
+            </div>
+
+            <div class="challenge">
+
+                <div id="pattern" class="pattern">
+                </div>
+
+                <p class="instruction">
+                    What comes next?
+                </p>
+
+                <div id="answers" class="answers">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="result" class="result hidden">
+
+            <h2>Pattern Hacker</h2>
+
+            <div class="final-score">
+                <span id="score">0</span>
+                <small>/ 10</small>
+            </div>
+
+            <p id="result-message">
+                Challenge complete.
+            </p>
+
+            <button id="restart-button">
+                Play Again
+            </button>
+
+            <a href="../../index.html" class="home-button">
+                Back to Games
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

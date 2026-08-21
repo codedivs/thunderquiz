@@ -1,0 +1,550 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap'
+);
+
+/* =========================================
+   PATTERN HACKER
+   Emerald / Teal / Orange Theme
+   ========================================= */
+
+:root {
+
+    --background: #04100d;
+    --background-light: #071a15;
+
+    --panel: #081914;
+
+    --green: #19e6a1;
+    --teal: #14b8a6;
+    --orange: #ff9f43;
+
+    --text: #f0fff9;
+    --muted: #78988f;
+
+    --border: rgba(25, 230, 161, 0.16);
+
+    --glow:
+        rgba(25, 230, 161, 0.25);
+}
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text);
+
+    background:
+
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(25, 230, 161, 0.12),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255, 159, 67, 0.07),
+            transparent 35%
+        ),
+
+        var(--background);
+
+    overflow-x: hidden;
+}
+
+/* =========================
+   TECH GRID
+   ========================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(25, 230, 161, 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(25, 230, 161, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+
+    z-index: -1;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.game-container {
+
+    width: min(750px, 94%);
+
+    margin: auto;
+
+    padding: 35px 0 80px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.game-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.back-button {
+
+    color: var(--green);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.game-header h1 {
+
+    margin: 20px 0 8px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(32px, 7vw, 50px);
+
+    letter-spacing: -1.5px;
+
+    text-transform: uppercase;
+
+    color: #effff9;
+
+    text-shadow:
+        0 0 25px rgba(25, 230, 161, 0.18);
+}
+
+.game-header p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+/* =========================
+   GAME PANEL
+   ========================= */
+
+.game-panel {
+
+    position: relative;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 31, 25, 0.96),
+            rgba(5, 20, 16, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(25, 230, 161, 0.05);
+}
+
+/* =========================
+   TOP BAR
+   ========================= */
+
+.top-bar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+#timer {
+
+    min-width: 40px;
+
+    padding: 7px 10px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    color: var(--orange);
+
+    background:
+        rgba(255, 159, 67, 0.08);
+
+    border:
+        1px solid rgba(255, 159, 67, 0.2);
+}
+
+/* =========================
+   PROGRESS
+   ========================= */
+
+.progress {
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #102821;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    margin-bottom: 35px;
+}
+
+#progress-fill {
+
+    width: 10%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--teal)
+        );
+
+    box-shadow:
+        0 0 12px var(--green);
+
+    transition:
+        width 0.3s ease;
+}
+
+/* =========================
+   PATTERN
+   ========================= */
+
+.challenge {
+
+    text-align: center;
+}
+
+.pattern {
+
+    min-height: 110px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+.pattern-item {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(25, 230, 161, 0.08);
+
+    border:
+        1px solid rgba(25, 230, 161, 0.2);
+
+    color: var(--green);
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 20px rgba(25, 230, 161, 0.06);
+}
+
+.pattern-item.missing {
+
+    color: var(--orange);
+
+    border-color:
+        rgba(255, 159, 67, 0.4);
+
+    background:
+        rgba(255, 159, 67, 0.06);
+}
+
+.instruction {
+
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+/* =========================
+   ANSWERS
+   ========================= */
+
+.answers {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.answer {
+
+    padding: 17px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(25, 230, 161, 0.14);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color: var(--text);
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.answer:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        rgba(25, 230, 161, 0.08);
+
+    border-color:
+        rgba(25, 230, 161, 0.45);
+}
+
+/* =========================
+   RESULT
+   ========================= */
+
+.result {
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #081914,
+            #05130f
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.result h2 {
+
+    margin-top: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 30px;
+}
+
+.final-score {
+
+    margin: 25px auto;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    color: var(--green);
+
+    font-size: 72px;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 30px rgba(25, 230, 161, 0.3);
+}
+
+.final-score small {
+
+    color: var(--muted);
+
+    font-size: 25px;
+}
+
+#result-message {
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+button,
+.home-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+#restart-button {
+
+    border: none;
+
+    color: #02100c;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            #55f0c0
+        );
+}
+
+.home-button {
+
+    margin-top: 12px;
+
+    color: var(--text);
+
+    background: #10241e;
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .game-container {
+
+        width: 94%;
+    }
+
+    .game-panel {
+
+        padding: 20px;
+    }
+
+    .answers {
+
+        grid-template-columns: 1fr;
+    }
+
+    .pattern {
+
+        gap: 8px;
+    }
+
+    .pattern-item {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 21px;
+    }
+
+}
