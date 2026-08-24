@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archery Master</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="instructions" class="popup">
+    <div class="popup-card">
+      <div class="big-bow">🏹</div>
+      <h1>ARCHERY MASTER</h1>
+
+      <p>Move your mouse to aim.</p>
+      <p><strong>Pull to the RIGHT</strong> to draw your bow.</p>
+      <p>Release your mouse and...</p>
+
+      <div class="space-key">SPACE</div>
+      <p><strong>Hit SPACE to shoot!</strong></p>
+
+      <button id="startButton">START GAME</button>
+    </div>
+  </div>
+
+  <div id="gameOver" class="popup hidden">
+    <div class="popup-card">
+      <div class="big-bow">🎯</div>
+      <h1>GAME OVER</h1>
+      <p>Your final score:</p>
+      <div id="finalScore" class="final-score">0</div>
+      <button id="restartButton">PLAY AGAIN</button>
+    </div>
+  </div>
+
+  <header class="hud">
+    <div class="hud-item">
+      <span>SCORE</span>
+      <strong id="score">0</strong>
+    </div>
+
+    <div class="hud-center">
+      <h2>🏹 ARCHERY MASTER</h2>
+      <span id="message">Move mouse to aim</span>
+    </div>
+
+    <div class="hud-item">
+      <span>ARROWS</span>
+      <strong id="arrows">10</strong>
+    </div>
+  </header>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div class="power-container">
+    <span>DRAW POWER</span>
+    <div class="power-bar">
+      <div id="powerFill"></div>
+    </div>
+  </div>
+
+  <div class="crosshair" id="crosshair"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
