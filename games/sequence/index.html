@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b19">
+    <meta name="description" content="Sequence — Crack the Pattern.">
+    <title>Sequence — Crack the Pattern</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+</div>
+
+<main class="app">
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <a href="../../" class="brand">
+            <span class="brand-icon">✦</span>
+            <span>Se<span>quence</span></span>
+        </a>
+
+        <div class="header-right">
+
+            <button class="sound-btn" id="soundBtn">
+                🔊
+            </button>
+
+            <button class="level-btn" id="levelBtn">
+                <small>LVL</small>
+                <strong id="levelDisplay">1</strong>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- HOME -->
+    <section class="screen active" id="homeScreen">
+
+        <div class="hero">
+
+            <div class="daily-badge" id="dailyBadge">
+                <span></span>
+                DAILY PATTERN
+                <b id="dailyStatus">READY</b>
+            </div>
+
+            <div class="hero-symbol">
+                <div>?</div>
+            </div>
+
+            <h1>
+                Crack the<br>
+                <span>Pattern.</span>
+            </h1>
+
+            <p class="subtitle">
+                Something is missing.<br>
+                Can your mind figure out what comes next?
+            </p>
+
+            <button class="play-button" id="playButton">
+                <span>START GAME</span>
+                <b>→</b>
+            </button>
+
+            <div class="stats">
+
+                <div>
+                    <small>BEST</small>
+                    <strong id="bestScore">0</strong>
+                </div>
+
+                <i></i>
+
+                <div>
+                    <small>STREAK</small>
+                    <strong>🔥 <span id="streak">0</span></strong>
+                </div>
+
+                <i></i>
+
+                <div>
+                    <small>LEVEL</small>
+                    <strong id="homeLevel">1</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature">
+                <span>01</span>
+                <div>
+                    <strong>Observe</strong>
+                    <p>Study the mysterious sequence.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <span>02</span>
+                <div>
+                    <strong>Think</strong>
+                    <p>Discover the hidden rule.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <span>03</span>
+                <div>
+                    <strong>Crack it</strong>
+                    <p>Choose what comes next.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAME -->
+    <section class="screen" id="gameScreen">
+
+        <div class="game-header">
+
+            <div class="game-stat">
+                <small>SCORE</small>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="game-stat center">
+                <small>COMBO</small>
+                <strong>×<span id="combo">0</span></strong>
+            </div>
+
+            <div class="game-stat right">
+                <small>ROUND</small>
+                <strong id="round">1</strong>
+            </div>
+
+        </div>
+
+
+        <div class="timer">
+
+            <div class="timer-track">
+                <div id="timerBar"></div>
+            </div>
+
+            <span>
+                <b id="timer">12.0</b>s
+            </span>
+
+        </div>
+
+
+        <div class="question-heading">
+
+            <div class="question-icon">
+                🧠
+            </div>
+
+            <div>
+                <strong id="questionTitle">
+                    What comes next?
+                </strong>
+
+                <p id="questionSubtitle">
+                    Find the hidden rule.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- PATTERN -->
+        <div class="pattern-card">
+
+            <div class="pattern" id="pattern"></div>
+
+        </div>
+
+
+        <div class="choose-label">
+            CHOOSE THE MISSING PIECE
+        </div>
+
+
+        <div class="answers" id="answers"></div>
+
+
+        <div class="game-bottom">
+
+            <div class="lives" id="lives">
+                <span>♥</span>
+                <span>♥</span>
+                <span>♥</span>
+            </div>
+
+            <div class="difficulty">
+                <small>DIFFICULTY</small>
+
+                <div class="difficulty-bars">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+            </div>
+
+            <button class="quit" id="quitButton">
+                QUIT
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+    <section class="screen" id="resultScreen">
+
+        <div class="result-card">
+
+            <div class="result-label" id="resultLabel">
+                PATTERN COMPLETE
+            </div>
+
+            <div class="result-icon" id="resultIcon">
+                🧠
+            </div>
+
+            <h2 id="resultTitle">
+                Sharp thinking.
+            </h2>
+
+            <p id="resultText">
+                You spotted the hidden rules.
+            </p>
+
+
+            <div class="final-score">
+
+                <small>FINAL SCORE</small>
+
+                <strong id="finalScore">
+                    0
+                </strong>
+
+                <div id="newBest" class="new-best">
+                    ✦ NEW PERSONAL BEST
+                </div>
+
+            </div>
+
+
+            <div class="result-stats">
+
+                <div>
+                    <small>ROUNDS</small>
+                    <strong id="finalRounds">0</strong>
+                </div>
+
+                <div>
+                    <small>BEST COMBO</small>
+                    <strong id="finalCombo">0</strong>
+                </div>
+
+                <div>
+                    <small>XP</small>
+                    <strong id="earnedXp">+0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="xp-section">
+
+                <div class="xp-top">
+                    <span>LEVEL <b id="resultLevel">1</b></span>
+                    <span>
+                        <b id="currentXp">0</b> /
+                        <b id="requiredXp">100</b>
+                    </span>
+                </div>
+
+                <div class="xp-track">
+                    <div id="xpBar"></div>
+                </div>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button class="play-button" id="againButton">
+                    <span>PLAY AGAIN</span>
+                    <b>→</b>
+                </button>
+
+                <button class="home-button" id="homeButton">
+                    BACK TO HOME
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LEVEL MODAL -->
+    <div class="modal" id="levelModal">
+
+        <div class="modal-background"></div>
+
+        <div class="level-card">
+
+            <button class="close" id="closeModal">
+                ×
+            </button>
+
+            <div class="big-level">
+                LVL <span id="modalLevel">1</span>
+            </div>
+
+            <h3>
+                Keep thinking.
+            </h3>
+
+            <p>
+                Play more rounds to earn XP and unlock harder patterns.
+            </p>
+
+            <div class="modal-xp">
+
+                <div>
+                    <span>EXPERIENCE</span>
+                    <b id="modalXp">0 / 100</b>
+                </div>
+
+                <div class="xp-track">
+                    <div id="modalXpBar"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+
+        <span id="toastIcon">✨</span>
+
+        <div>
+            <strong id="toastTitle">Nice!</strong>
+            <p id="toastMessage">
+                You spotted it.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- PARTICLES -->
+    <div class="particles" id="particles"></div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
