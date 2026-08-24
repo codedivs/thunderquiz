@@ -554,10 +554,7 @@ function createRound() {
         `${i === oddIndex ? oddSize : baseSize}%`;
     }
 
-    const bgColor = hexToRgba(
-      i === oddIndex ? oddColor : baseColor,
-      .12
-    );
+    const bgColor = hexToRgba(baseColor,0.12);
 
     tile.style.background = bgColor;
 
