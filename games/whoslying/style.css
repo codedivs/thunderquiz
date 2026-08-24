@@ -1,0 +1,981 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #25211b,
+            #0d0d0c 70%
+        );
+
+    color: #e8e1d3;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+/* =====================================================
+   START / RESULT SCREENS
+===================================================== */
+
+.screen {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+
+/* =====================================================
+   CASE FILE
+===================================================== */
+
+.case-file,
+.result-card {
+
+    width: min(520px, 94vw);
+
+    padding: 45px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #29251e,
+            #141412
+        );
+
+    border:
+        1px solid
+        rgba(203, 165, 88, 0.35);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0, 0, 0, 0.7),
+
+        inset 0 1px
+        rgba(255,255,255,0.04);
+}
+
+
+.detective-icon {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+
+.classified {
+
+    display: inline-block;
+
+    padding: 5px 14px;
+
+    border:
+        1px solid
+        #a73d35;
+
+    color:
+        #d85b50;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    transform: rotate(-3deg);
+
+    margin-bottom: 20px;
+}
+
+
+.case-file h1 {
+
+    font-size: 38px;
+
+    letter-spacing: 6px;
+
+    color: #d6b25d;
+
+    text-shadow:
+        0 2px 15px
+        rgba(214,178,93,0.2);
+}
+
+
+.subtitle {
+
+    margin-top: 8px;
+
+    color: #918b7e;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+
+.intro-text {
+
+    margin: 30px 0;
+
+    color: #c8c1b4;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+button {
+
+    padding:
+        14px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4ae58,
+            #a87e32
+        );
+
+    color: #17140e;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.4);
+
+    transition:
+        0.2s;
+}
+
+button:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7c66e,
+            #bd9442
+        );
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar {
+
+    position:
+        sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 30px;
+
+    background:
+        rgba(13,13,12,0.94);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+.label {
+
+    display: block;
+
+    color:
+        #777166;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.topbar strong {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color:
+        #d6b25d;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 22px;
+}
+
+
+.title {
+
+    font-size: 18px;
+
+    letter-spacing: 4px;
+
+    color:
+        #cdb87d;
+}
+
+
+.timer-box {
+
+    text-align: right;
+}
+
+
+#timer {
+
+    color:
+        #e6d4a0;
+
+    transition:
+        color 0.2s;
+}
+
+
+#timer.danger {
+
+    color:
+        #df5148;
+
+    animation:
+        pulse 0.7s infinite alternate;
+}
+
+
+@keyframes pulse {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.45;
+    }
+}
+
+
+/* =====================================================
+   GAME AREA
+===================================================== */
+
+.game-area {
+
+    width:
+        min(900px, 94vw);
+
+    margin:
+        35px auto 70px;
+}
+
+
+/* =====================================================
+   CASE INTRO
+===================================================== */
+
+.case-intro {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.case-tag {
+
+    color:
+        #a9823b;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 8px;
+}
+
+
+.case-intro h2 {
+
+    color:
+        #dfc67e;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.case-intro p {
+
+    max-width: 650px;
+
+    margin:
+        auto;
+
+    color:
+        #aaa396;
+
+    line-height: 1.6;
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+
+/* =====================================================
+   SCENE
+===================================================== */
+
+.scene {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 20px;
+
+    margin-bottom: 35px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    border-radius: 7px;
+}
+
+
+.scene-icon {
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 38px;
+
+    background:
+        #1e1c18;
+
+    border:
+        1px solid
+        rgba(203,165,88,0.25);
+
+    border-radius: 5px;
+}
+
+
+.scene h3 {
+
+    color:
+        #d7c38a;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.scene p {
+
+    color:
+        #8e897e;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SECTION TITLES
+===================================================== */
+
+.section-title {
+
+    margin-bottom: 15px;
+
+    color:
+        #8f846e;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+.swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 30px auto 10px;
+
+    color: #b69a59;
+
+    font-family: Arial, sans-serif;
+
+    animation: swipePulse 1.5s infinite;
+}
+
+.swipe-hint span {
+    font-size: 30px;
+
+    animation: arrowDown 1s infinite;
+}
+
+.swipe-hint strong {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.swipe-hint small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #777166;
+
+    font-size: 11px;
+}
+
+@keyframes arrowDown {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+}
+
+@keyframes swipePulse {
+    0%, 100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   SUSPECTS
+===================================================== */
+
+.suspects {
+
+    margin-bottom: 35px;
+}
+
+
+#suspectContainer {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.suspect {
+
+    position: relative;
+
+    padding: 22px 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #27241f,
+            #171714
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.09);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition:
+        0.2s;
+}
+
+
+.suspect:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(203,165,88,0.45);
+}
+
+
+.suspect.selected {
+
+    border-color:
+        #d6b25d;
+
+    box-shadow:
+        0 0 25px
+        rgba(214,178,93,0.12);
+}
+
+
+.suspect-avatar {
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin:
+        0 auto 12px;
+
+    font-size: 38px;
+
+    background:
+        #141412;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+}
+
+
+.suspect h4 {
+
+    text-align: center;
+
+    color:
+        #d8c99e;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.suspect .role {
+
+    display: block;
+
+    text-align: center;
+
+    color:
+        #777268;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.statement {
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    color:
+        #aaa49a;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   CLUES
+===================================================== */
+
+.clues {
+
+    margin-bottom: 25px;
+}
+
+
+#clueContainer {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.clue {
+
+    padding: 17px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border-left:
+        3px solid
+        #8b6b35;
+
+    color:
+        #aaa398;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.clue strong {
+
+    color:
+        #cbb777;
+}
+
+
+/* =====================================================
+   INSTRUCTION
+===================================================== */
+
+.instruction {
+
+    padding:
+        18px;
+
+    text-align: center;
+
+    color:
+        #756f64;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+}
+
+
+.instruction strong {
+
+    color:
+        #b69a59;
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+#resultIcon {
+
+    font-size: 65px;
+
+    margin-bottom: 12px;
+}
+
+
+.result-card h1 {
+
+    color:
+        #d7b961;
+
+    letter-spacing: 4px;
+
+    font-size: 29px;
+}
+
+
+#resultText {
+
+    margin:
+        20px 0;
+
+    color:
+        #aaa398;
+
+    line-height: 1.7;
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+
+.score-display {
+
+    margin:
+        25px 0;
+
+    padding:
+        18px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border-radius: 5px;
+}
+
+
+.score-display span {
+
+    display: block;
+
+    color:
+        #777166;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+.score-display strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color:
+        #e1c66f;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 42px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .topbar {
+
+        padding:
+            0 15px;
+    }
+
+    .title {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    #suspectContainer {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    #clueContainer {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .suspect {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            70px 1fr;
+
+        column-gap: 15px;
+
+        align-items: center;
+    }
+
+    .suspect-avatar {
+
+        grid-row:
+            span 3;
+
+        margin: 0;
+    }
+
+    .suspect h4 {
+
+        text-align: left;
+    }
+
+    .suspect .role {
+
+        text-align: left;
+    }
+
+    .statement {
+
+        margin-top: 4px;
+    }
+
+    .case-file {
+
+        padding:
+            35px 22px;
+    }
+
+    .case-file h1 {
+
+        font-size: 28px;
+
+        letter-spacing: 4px;
+    }
+
+    .case-intro h2 {
+
+        font-size: 25px;
+    }
+}

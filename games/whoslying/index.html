@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Who Is Lying?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         START SCREEN
+    ================================= -->
+
+    <div id="startScreen" class="screen">
+
+        <div class="case-file">
+
+            <div class="detective-icon">🕵️</div>
+
+            <div class="classified">
+                CONFIDENTIAL
+            </div>
+
+            <h1>WHO IS LYING?</h1>
+
+            <p class="subtitle">
+                A detective deduction game
+            </p>
+
+            <div class="intro-text">
+                Three suspects.
+                <br>
+                One of them is lying.
+                <br>
+                Can you find out who?
+            </div>
+
+            <button id="startButton">
+                OPEN CASE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         GAME
+    ================================= -->
+
+    <div id="game" class="hidden">
+
+        <header class="topbar">
+
+            <div>
+                <span class="label">CASE</span>
+                <strong id="caseNumber">01</strong>
+            </div>
+
+            <div class="title">
+                WHO IS LYING?
+            </div>
+
+            <div class="timer-box">
+                <span class="label">TIME</span>
+                <strong id="timer">60</strong>
+            </div>
+
+        </header>
+
+
+        <main class="game-area">
+
+            <!-- CASE DESCRIPTION -->
+
+            <section class="case-intro">
+
+                <div class="case-tag">
+                    CASE FILE
+                </div>
+
+                <h2 id="caseTitle">
+                    The Missing Diamond
+                </h2>
+
+                <p id="caseDescription">
+                    A priceless diamond disappeared from
+                    the mansion during dinner.
+                </p>
+
+            </section>
+
+
+            <!-- LOCATION -->
+
+            <section class="scene">
+
+                <div class="scene-icon" id="sceneIcon">
+                    💎
+                </div>
+
+                <div>
+                    <h3 id="sceneTitle">
+                        Blackwood Mansion
+                    </h3>
+
+                    <p id="sceneDescription">
+                        The diamond vanished between
+                        8:00 PM and 8:30 PM.
+                    </p>
+                </div>
+
+            </section>
+
+	    <!-- SWIPE DOWN CLUE -->
+
+	    <div class="swipe-hint">
+		    <span>↓</span>
+		    <div>
+			    <strong>MORE EVIDENCE BELOW</strong>
+			    <small>Swipe down to investigate</small>
+		    </div>
+	    </div>
+
+            <!-- SUSPECTS -->
+
+            <section class="suspects">
+
+                <h3 class="section-title">
+                    SUSPECTS
+                </h3>
+
+                <div id="suspectContainer">
+                    <!-- JavaScript inserts suspects -->
+                </div>
+
+            </section>
+
+
+            <!-- CLUES -->
+
+            <section class="clues">
+
+                <h3 class="section-title">
+                    EVIDENCE
+                </h3>
+
+                <div id="clueContainer">
+                    <!-- JavaScript inserts clues -->
+                </div>
+
+            </section>
+
+
+            <div class="instruction">
+                Study the statements and evidence.
+                <strong>One suspect is lying.</strong>
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================================
+         RESULT
+    ================================= -->
+
+    <div id="resultScreen" class="screen hidden">
+
+        <div class="result-card">
+
+            <div id="resultIcon">
+                🎯
+            </div>
+
+            <h1 id="resultTitle">
+                CASE SOLVED
+            </h1>
+
+            <p id="resultText"></p>
+
+            <div class="score-display">
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <button id="nextButton">
+                NEXT CASE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
