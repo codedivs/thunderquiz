@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrainStorm — Ultimate Quiz Battle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="background">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <!-- START SCREEN -->
+  <section id="startScreen" class="screen active">
+    <div class="logo">⚡ BRAIN<span>STORM</span></div>
+    <p class="tagline">ULTIMATE QUIZ BATTLE</p>
+
+    <div class="start-card">
+      <div class="brain-icon">🧠</div>
+      <h1>Are You Ready?</h1>
+      <p>Challenge your brain. Build your streak. Defeat the Boss.</p>
+
+      <input id="playerName" type="text" maxlength="18"
+        placeholder="Enter your champion name..." />
+
+      <div class="category-grid">
+        <button class="category selected" data-category="mixed">🌎 Mixed</button>
+        <button class="category" data-category="science">🔬 Science</button>
+        <button class="category" data-category="technology">💻 Technology</button>
+        <button class="category" data-category="history">🏛️ History</button>
+        <button class="category" data-category="geography">🗺️ Geography</button>
+        <button class="category" data-category="sports">🏆 Sports</button>
+      </div>
+
+      <button id="startBtn" class="primary-btn">
+        START BATTLE <span>⚔️</span>
+      </button>
+
+      <p class="best-score">🏆 Best Score: <strong id="bestScore">0</strong></p>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section id="gameScreen" class="screen">
+    <header class="game-header">
+      <div class="mini-logo">⚡ BRAINSTORM</div>
+
+      <div class="stats">
+        <div class="stat">
+          <small>SCORE</small>
+          <strong id="score">0</strong>
+        </div>
+
+        <div class="stat">
+          <small>STREAK</small>
+          <strong id="streak">0 🔥</strong>
+        </div>
+
+        <div class="stat lives">
+          <small>LIVES</small>
+          <strong id="lives">❤️❤️❤️</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="quiz-container">
+
+      <div class="progress-info">
+        <span id="roundText">QUESTION 1 / 20</span>
+        <span id="categoryText">MIXED</span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+
+      <div class="timer-container">
+        <div class="timer-ring">
+          <span id="timer">15</span>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="question-number" id="questionNumber">01</div>
+        <h2 id="question">Question loading...</h2>
+
+        <div id="answers" class="answers"></div>
+      </div>
+
+      <div class="lifelines">
+        <button id="fiftyBtn" class="power-btn">
+          <span>50/50</span>
+          <small>Remove answers</small>
+        </button>
+
+        <button id="freezeBtn" class="power-btn">
+          <span>❄️ TIME FREEZE</span>
+          <small>Pause timer</small>
+        </button>
+
+        <button id="doubleBtn" class="power-btn">
+          <span>💎 DOUBLE</span>
+          <small>2× next score</small>
+        </button>
+      </div>
+
+    </main>
+  </section>
+
+  <!-- BOSS SCREEN -->
+  <section id="bossScreen" class="screen">
+    <div class="boss-warning">⚠️ FINAL CHALLENGE ⚠️</div>
+    <div class="boss-icon">👹</div>
+    <h1>THE BRAIN BOSS</h1>
+    <p>One question stands between you and legendary status.</p>
+
+    <div class="boss-card">
+      <div id="bossTimer">20</div>
+      <h2 id="bossQuestion">Boss question loading...</h2>
+      <div id="bossAnswers" class="answers"></div>
+    </div>
+  </section>
+
+  <!-- RESULT SCREEN -->
+  <section id="resultScreen" class="screen">
+    <div class="result-card">
+      <div id="resultEmoji" class="result-emoji">🏆</div>
+      <p class="result-label">BATTLE COMPLETE</p>
+      <h1 id="resultTitle">QUIZ MASTER</h1>
+
+      <div class="final-score">
+        <small>FINAL SCORE</small>
+        <strong id="finalScore">0</strong>
+      </div>
+
+      <div class="result-stats">
+        <div>
+          <span>🎯</span>
+          <small>Accuracy</small>
+          <strong id="accuracy">0%</strong>
+        </div>
+
+        <div>
+          <span>🔥</span>
+          <small>Best Streak</small>
+          <strong id="bestStreak">0</strong>
+        </div>
+
+        <div>
+          <span>⚡</span>
+          <small>Correct</small>
+          <strong id="correctAnswers">0</strong>
+        </div>
+      </div>
+
+      <p id="resultMessage" class="result-message"></p>
+
+      <button id="restartBtn" class="primary-btn">
+        PLAY AGAIN 🚀
+      </button>
+
+      <button id="homeBtn" class="secondary-btn">
+        MAIN MENU
+      </button>
+    </div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
