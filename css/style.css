@@ -1,25 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap');
 
 :root {
-    --bg: #05070d;
-    --panel: #0b0f18;
+    --bg: #070a12;
+    --surface: #0d1220;
+    --surface-2: #111827;
 
-    --text: #f4f7ff;
-    --muted: #7f899f;
+    --text: #f8fafc;
+    --muted: #94a0b5;
 
-    --blue: #3b82f6;
-    --cyan: #22d3ee;
-    --electric: #60a5fa;
+    --cyan: #38bdf8;
+    --blue: #5b7cfa;
+    --purple: #9b7bea;
+    --green: #4caf8a;
+    --gold: #d6a85c;
+    --rose: #d36b7c;
 
-    --border: rgba(96, 165, 250, 0.18);
+    --border: rgba(255,255,255,.09);
 }
 
-/* =========================
-   BASE
-   ========================= */
+
+/* =========================================
+   RESET
+========================================= */
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,16 +41,29 @@ body {
 
     background:
         radial-gradient(
-            ellipse at 50% -20%,
-            rgba(37, 99, 235, 0.16),
-            transparent 55%
+            circle at 15% 0%,
+            rgba(79, 70, 229, .14),
+            transparent 32%
         ),
-        #05070d;
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(14, 165, 233, .10),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #060810,
+            #080c16 50%,
+            #060811
+        );
 
     overflow-x: hidden;
 }
 
-/* subtle technical grid */
+
+/* =========================================
+   SUBTLE BACKGROUND GRID
+========================================= */
 
 body::before {
     content: "";
@@ -53,73 +75,62 @@ body::before {
 
     background-image:
         linear-gradient(
-            rgba(255, 255, 255, 0.018) 1px,
+            rgba(255,255,255,.018) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.018) 1px,
+            rgba(255,255,255,.018) 1px,
             transparent 1px
         );
 
-    background-size: 48px 48px;
+    background-size: 50px 50px;
 
     mask-image:
         linear-gradient(
             to bottom,
-            black,
-            transparent 85%
+            black 0%,
+            transparent 90%
         );
+
+    z-index: -1;
 }
 
-/* =========================
-   MAIN
-   ========================= */
 
-main {
-    width: min(1200px, 94%);
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    width: min(1200px, 92%);
 
     margin: 0 auto;
 
-    padding: 75px 0 100px;
+    padding: 65px 0 35px;
 
-    display: flex;
-    flex-direction: column;
-
-    gap: 20px;
+    text-align: center;
 }
 
-/* =========================
-   BRAND
-   ========================= */
-
-main::before {
-    content: "Play games";
+header h1 {
+    margin: 0;
 
     font-family: "Orbitron", sans-serif;
 
-    font-size: clamp(34px, 7vw, 72px);
+    font-size: clamp(36px, 7vw, 68px);
 
     font-weight: 800;
 
     letter-spacing: 5px;
 
-    text-align: center;
-
-    color: #f8fafc;
+    color: #ffffff;
 
     text-shadow:
-        0 0 15px rgba(96, 165, 250, 0.25),
-        0 0 45px rgba(37, 99, 235, 0.12);
-
-    margin-bottom: 0;
+        0 0 25px rgba(96,165,250,.15),
+        0 0 70px rgba(99,102,241,.08);
 }
 
-main::after {
-    content:
-        "INTELLIGENCE  •  KNOWLEDGE  •  CHALLENGE";
-
-    text-align: center;
+header p {
+    margin: 12px 0 0;
 
     font-family: "Orbitron", sans-serif;
 
@@ -129,339 +140,417 @@ main::after {
 
     letter-spacing: 4px;
 
-    color: #64748b;
-
-    margin-bottom: 45px;
+    color: #69758c;
 }
 
-/* =========================
-   GAME LINK
-   ========================= */
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+    padding: 10px 0 90px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   GAME LINKS
+========================================= */
 
 main > a {
-    width: 100%;
-
     display: block;
 
     color: inherit;
 
     text-decoration: none;
+
+    min-width: 0;
 }
 
-/* =========================
-   GAME BANNER
-   ========================= */
+
+/* =========================================
+   GAME CARD
+========================================= */
 
 .game-card {
+    --accent: #5b7cfa;
+
     position: relative;
 
-    width: 100%;
+    min-height: 225px;
 
-    min-height: 250px;
-
-    padding: 45px 90px;
+    padding: 34px 36px;
 
     display: flex;
 
     flex-direction: column;
 
-    justify-content: center;
+    justify-content: flex-end;
 
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            110deg,
-            #090d16 0%,
-            #0d1422 45%,
-            #09101c 100%
-        );
+    isolation: isolate;
+
+    border-radius: 22px;
 
     border: 1px solid var(--border);
 
-    /* angular shape */
-    clip-path: polygon(
-        28px 0,
-        calc(100% - 28px) 0,
-        100% 50%,
-        calc(100% - 28px) 100%,
-        28px 100%,
-        0 50%
-    );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.012)
+        ),
+        #0c111d;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.035);
 
     transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
 }
 
-/* =========================
-   LEFT < ACCENT
-   ========================= */
+
+/* =========================================
+   CARD GLOW
+========================================= */
 
 .game-card::before {
-    content: "<";
-
-    position: absolute;
-
-    left: 24px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    font-family: "Orbitron", sans-serif;
-
-    font-size: 65px;
-
-    font-weight: 700;
-
-    color: rgba(96, 165, 250, 0.25);
-
-    text-shadow:
-        0 0 20px rgba(59, 130, 246, 0.4);
-
-    transition:
-        color 0.35s ease,
-        text-shadow 0.35s ease,
-        transform 0.35s ease;
-}
-
-/* =========================
-   RIGHT > ACCENT
-   ========================= */
-
-.game-card::after {
-    content: ">";
-
-    position: absolute;
-
-    right: 24px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    font-family: "Orbitron", sans-serif;
-
-    font-size: 65px;
-
-    font-weight: 700;
-
-    color: rgba(96, 165, 250, 0.25);
-
-    text-shadow:
-        0 0 20px rgba(59, 130, 246, 0.4);
-
-    transition:
-        color 0.35s ease,
-        text-shadow 0.35s ease,
-        transform 0.35s ease;
-}
-
-/* =========================
-   LIGHTING
-   ========================= */
-
-.game-card {
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.04),
-        inset 0 -1px 0 rgba(255,255,255,0.02),
-        0 15px 45px rgba(0, 0, 0, 0.35);
-}
-
-/* horizontal light beam */
-
-.game-card h2,
-.game-card p {
-    position: relative;
-    z-index: 2;
-}
-
-.game-card h2::after {
     content: "";
 
     position: absolute;
 
-    left: 0;
-    bottom: -14px;
+    width: 230px;
+    height: 230px;
 
-    width: 90px;
+    right: -90px;
+    top: -100px;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(
+                in srgb,
+                var(--accent) 28%,
+                transparent
+            ),
+            transparent 68%
+        );
+
+    opacity: .65;
+
+    pointer-events: none;
+
+    transition:
+        transform .4s ease,
+        opacity .4s ease;
+}
+
+
+/* =========================================
+   BOTTOM ACCENT
+========================================= */
+
+.game-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 36px;
+    right: 36px;
+    bottom: 0;
+
     height: 2px;
 
     background:
         linear-gradient(
             90deg,
-            var(--cyan),
+            transparent,
+            var(--accent),
             transparent
         );
 
-    box-shadow:
-        0 0 12px var(--cyan);
+    opacity: .35;
+
+    transition:
+        opacity .3s ease,
+        box-shadow .3s ease;
 }
 
-/* =========================
-   GAME TITLE
-   ========================= */
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.game-card h2,
+.game-card p {
+    position: relative;
+
+    z-index: 2;
+}
 
 .game-card h2 {
-    margin: 0 0 24px;
+    margin: 0 0 12px;
 
     font-family: "Orbitron", sans-serif;
 
-    font-size: clamp(25px, 4vw, 38px);
+    font-size: clamp(20px, 2.5vw, 28px);
 
     font-weight: 700;
 
-    letter-spacing: 1px;
+    line-height: 1.3;
 
-    text-transform: uppercase;
+    letter-spacing: .4px;
 
     color: #f8fafc;
-
-    text-shadow:
-        0 0 20px rgba(96, 165, 250, 0.12);
 }
-
-/* =========================
-   DESCRIPTION
-   ========================= */
 
 .game-card p {
     margin: 0;
 
-    max-width: 650px;
+    max-width: 560px;
 
-    font-size: 15px;
+    color: #8995aa;
+
+    font-size: 14px;
+
+    line-height: 1.65;
 
     font-weight: 500;
-
-    letter-spacing: 0.4px;
-
-    line-height: 1.7;
-
-    color: #8b96aa;
 }
 
-/* =========================
+
+/* =========================================
    HOVER
-   ========================= */
+========================================= */
 
 main > a:hover .game-card {
-
-    transform: scale(1.012);
+    transform:
+        translateY(-6px);
 
     border-color:
-        rgba(96, 165, 250, 0.5);
+        color-mix(
+            in srgb,
+            var(--accent) 45%,
+            transparent
+        );
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.06),
-        0 20px 70px rgba(0, 0, 0, 0.55),
-        0 0 35px rgba(37, 99, 235, 0.16),
-        0 0 100px rgba(37, 99, 235, 0.07);
+        0 22px 55px rgba(0,0,0,.42),
+        0 0 30px
+            color-mix(
+                in srgb,
+                var(--accent) 10%,
+                transparent
+            ),
+        inset 0 1px 0 rgba(255,255,255,.07);
 }
 
 main > a:hover .game-card::before {
-    color: rgba(34, 211, 238, 0.85);
+    transform: scale(1.35);
 
-    text-shadow:
-        0 0 10px rgba(34, 211, 238, 0.8),
-        0 0 30px rgba(34, 211, 238, 0.5);
-
-    transform:
-        translateY(-50%)
-        translateX(-4px);
+    opacity: 1;
 }
 
 main > a:hover .game-card::after {
-    color: rgba(34, 211, 238, 0.85);
+    opacity: .9;
 
-    text-shadow:
-        0 0 10px rgba(34, 211, 238, 0.8),
-        0 0 30px rgba(34, 211, 238, 0.5);
-
-    transform:
-        translateY(-50%)
-        translateX(4px);
+    box-shadow:
+        0 0 14px var(--accent);
 }
 
-/* =========================
-   FOCUS
-   ========================= */
+
+/* =========================================
+   KEYBOARD FOCUS
+========================================= */
 
 main > a:focus-visible {
     outline: none;
 }
 
 main > a:focus-visible .game-card {
-    border-color: var(--cyan);
+    border-color: var(--accent);
 
     box-shadow:
-        0 0 0 3px rgba(34, 211, 238, 0.12),
-        0 0 45px rgba(34, 211, 238, 0.25);
+        0 0 0 3px
+            color-mix(
+                in srgb,
+                var(--accent) 20%,
+                transparent
+            ),
+        0 20px 50px rgba(0,0,0,.4);
 }
 
-/* =========================
+
+/* =========================================
+   INDIVIDUAL GAME COLORS
+========================================= */
+
+/* IQ */
+
+main > a:nth-child(1) .game-card {
+    --accent: #d6a85c;
+}
+
+/* Mind Match */
+
+main > a:nth-child(2) .game-card {
+    --accent: #38bdf8;
+}
+
+/* Sequence */
+
+main > a:nth-child(3) .game-card {
+    --accent: #8b7cf6;
+}
+
+/* BrainStorm */
+
+main > a:nth-child(4) .game-card {
+    --accent: #e07855;
+}
+
+/* Pattern Hacker */
+
+main > a:nth-child(5) .game-card {
+    --accent: #43b7a1;
+}
+
+/* Archery */
+
+main > a:nth-child(6) .game-card {
+    --accent: #c9975b;
+}
+
+/* Who Is Lying */
+
+main > a:nth-child(7) .game-card {
+    --accent: #c66a7b;
+}
+
+/* Color Memory */
+
+main > a:nth-child(8) .game-card {
+    --accent: #7771c9;
+}
+
+
+/* =========================================
+   OPTIONAL SMALL GAME NUMBER
+========================================= */
+
+.game-card {
+    counter-increment: game;
+}
+
+
+/* =========================================
    MOBILE
-   ========================= */
+========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
 
-    main {
-        width: 96%;
-
+    header {
         padding-top: 45px;
+        padding-bottom: 28px;
     }
 
-    main::before {
-        font-size: 34px;
-
+    header h1 {
+        font-size: 38px;
         letter-spacing: 3px;
     }
 
-    main::after {
+    header p {
         font-size: 8px;
-
         letter-spacing: 2px;
+    }
 
-        margin-bottom: 25px;
+    main {
+        width: 94%;
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
     }
 
     .game-card {
-        min-height: 210px;
+        min-height: 205px;
 
-        padding: 35px 55px;
+        padding: 30px;
     }
 
     .game-card h2 {
-        font-size: 22px;
-
-        line-height: 1.4;
+        font-size: 21px;
     }
 
     .game-card p {
         font-size: 13px;
     }
 
-    .game-card::before,
     .game-card::after {
-        font-size: 42px;
-    }
-
-    .game-card::before {
-        left: 12px;
-    }
-
-    .game-card::after {
-        right: 12px;
+        left: 30px;
+        right: 30px;
     }
 }
 
-/* =========================
-   ACCESSIBILITY
-   ========================= */
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    body {
+        padding: 0;
+    }
+
+    header {
+        width: 92%;
+
+        padding-top: 38px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        width: 92%;
+
+        padding-bottom: 60px;
+    }
+
+    .game-card {
+        min-height: 190px;
+
+        padding: 26px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    * {
+    *,
+    *::before,
+    *::after {
         animation: none !important;
         transition: none !important;
     }
