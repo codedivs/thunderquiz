@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d1025" />
+  <meta
+    name="description"
+    content="Mind Match — a beautiful fast-paced visual brain game."
+  />
+  <title>Mind Match — Find the Odd One</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="app">
+
+    <!-- HEADER -->
+    <header class="topbar">
+      <a class="brand" href="../../">
+        <span class="brand-mark">✦</span>
+        <span>Mind<span>Match</span></span>
+      </a>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="soundBtn" aria-label="Toggle sound">
+          🔊
+        </button>
+
+        <button class="profile-level" id="levelButton">
+          <span>LVL</span>
+          <strong id="levelDisplay">1</strong>
+        </button>
+      </div>
+    </header>
+
+    <!-- START SCREEN -->
+    <section class="screen active" id="startScreen">
+
+      <div class="hero">
+
+        <div class="daily-pill">
+          <span class="pulse-dot"></span>
+          DAILY CHALLENGE
+          <strong id="dailyLabel">READY</strong>
+        </div>
+
+        <div class="hero-icon">
+          <div class="brain-glow">🧠</div>
+        </div>
+
+        <h1>Find the<br><span>Odd One.</span></h1>
+
+        <p class="hero-copy">
+          Train your eyes. Sharpen your mind.<br>
+          Find what's different before time runs out.
+        </p>
+
+        <button class="play-btn" id="playBtn">
+          <span>PLAY NOW</span>
+          <b>→</b>
+        </button>
+
+        <div class="quick-stats">
+          <div>
+            <small>BEST</small>
+            <strong id="bestScore">0</strong>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div>
+            <small>STREAK</small>
+            <strong>🔥 <span id="streakDisplay">0</span></strong>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div>
+            <small>LEVEL</small>
+            <strong id="startLevel">1</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="how-card">
+        <div class="how-item">
+          <span class="how-number">01</span>
+          <div>
+            <strong>Look</strong>
+            <p>Study the grid.</p>
+          </div>
+        </div>
+
+        <div class="how-item">
+          <span class="how-number">02</span>
+          <div>
+            <strong>Spot</strong>
+            <p>Find what's different.</p>
+          </div>
+        </div>
+
+        <div class="how-item">
+          <span class="how-number">03</span>
+          <div>
+            <strong>Tap</strong>
+            <p>Beat the clock.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section class="screen" id="gameScreen">
+
+      <div class="game-top">
+
+        <div class="game-stat">
+          <small>SCORE</small>
+          <strong id="scoreDisplay">0</strong>
+        </div>
+
+        <div class="game-stat combo-stat">
+          <small>COMBO</small>
+          <strong>×<span id="comboDisplay">0</span></strong>
+        </div>
+
+        <div class="game-stat">
+          <small>ROUND</small>
+          <strong><span id="roundDisplay">1</span></strong>
+        </div>
+
+      </div>
+
+      <div class="timer-wrap">
+        <div class="timer-track">
+          <div class="timer-bar" id="timerBar"></div>
+        </div>
+
+        <div class="timer-text">
+          <span id="timerDisplay">10.0</span>s
+        </div>
+      </div>
+
+      <div class="instruction">
+        <span id="instructionIcon">👁</span>
+        <div>
+          <strong id="instructionTitle">Find the odd one</strong>
+          <p id="instructionText">One tile is different. Can you spot it?</p>
+        </div>
+      </div>
+
+      <div class="game-board" id="gameBoard"></div>
+
+      <div class="game-footer">
+        <div class="lives" id="livesDisplay">
+          <span>♥</span>
+          <span>♥</span>
+          <span>♥</span>
+        </div>
+
+        <div class="difficulty">
+          <span>DIFFICULTY</span>
+          <div class="difficulty-dots" id="difficultyDots">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+
+        <button class="quit-btn" id="quitBtn">QUIT</button>
+      </div>
+
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section class="screen" id="resultScreen">
+
+      <div class="result-card">
+
+        <div class="result-badge" id="resultBadge">ROUND COMPLETE</div>
+
+        <div class="result-icon" id="resultIcon">✨</div>
+
+        <h2 id="resultTitle">Brilliant.</h2>
+
+        <p id="resultMessage">
+          Your eyes were seriously sharp.
+        </p>
+
+        <div class="final-score">
+          <small>YOUR SCORE</small>
+          <strong id="finalScore">0</strong>
+
+          <div class="new-record" id="newRecord">
+            ✦ NEW PERSONAL BEST
+          </div>
+        </div>
+
+        <div class="result-stats">
+
+          <div>
+            <span>ROUNDS</span>
+            <strong id="finalRounds">0</strong>
+          </div>
+
+          <div>
+            <span>BEST COMBO</span>
+            <strong id="finalCombo">0</strong>
+          </div>
+
+          <div>
+            <span>XP EARNED</span>
+            <strong id="finalXp">+0</strong>
+          </div>
+
+        </div>
+
+        <div class="xp-progress">
+          <div class="xp-header">
+            <span>LEVEL <b id="resultLevel">1</b></span>
+            <span><b id="xpCurrent">0</b> / <b id="xpRequired">100</b> XP</span>
+          </div>
+
+          <div class="xp-track">
+            <div id="xpBar"></div>
+          </div>
+        </div>
+
+        <div class="result-buttons">
+          <button class="play-btn" id="againBtn">
+            <span>PLAY AGAIN</span>
+            <b>→</b>
+          </button>
+
+          <button class="secondary-btn" id="homeBtn">
+            BACK TO HOME
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LEVEL PANEL -->
+    <div class="modal" id="levelModal">
+      <div class="modal-backdrop"></div>
+
+      <div class="level-modal-card">
+
+        <button class="close-modal" id="closeLevel">×</button>
+
+        <div class="level-big">LVL <span id="modalLevel">1</span></div>
+
+        <h3>Keep sharpening.</h3>
+
+        <p>
+          Every game earns XP. Keep playing to unlock higher difficulty.
+        </p>
+
+        <div class="modal-xp">
+          <div>
+            <span>XP</span>
+            <strong id="modalXp">0 / 100</strong>
+          </div>
+
+          <div class="xp-track">
+            <div id="modalXpBar"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+      <span id="toastIcon">✨</span>
+      <div>
+        <strong id="toastTitle">Nice!</strong>
+        <p id="toastText">Your eyes are getting sharper.</p>
+      </div>
+    </div>
+
+    <!-- PARTICLES -->
+    <div class="particles" id="particles"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
