@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>IQ Level Estimator – Free IQ Test & Brain Games | ThunderQuiz</title>
+    <meta
+        name="description"
+        content="Estimate your IQ level with ThunderQuiz. Take fun IQ tests, solve brain games and challenge your memory, logic, reasoning and problem-solving skills."
+    >
+    <meta
+        name="keywords"
+        content="IQ test, IQ level estimator, free IQ test, brain games, intelligence test, logic puzzles, memory games, reasoning test, ThunderQuiz"
+    >
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ThunderQuiz">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.thunderquiz.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IQ Level Estimator – Free IQ Test | ThunderQuiz">
+    <meta
+        property="og:description"
+        content="Test your intelligence, estimate your IQ level and challenge your brain with fun puzzles and games on ThunderQuiz."
+    >
+    <meta property="og:url" content="https://www.thunderquiz.com/">
+    <meta property="og:site_name" content="ThunderQuiz">
+    <meta property="og:image" content="https://www.thunderquiz.com/images/iq-test.jpg">
+    <meta property="og:image:alt" content="ThunderQuiz IQ Level Estimator">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IQ Level Estimator – Free IQ Test | ThunderQuiz">
+    <meta
+        name="twitter:description"
+        content="Estimate your IQ level and challenge your brain with fun IQ tests, logic puzzles and brain games."
+    >
+    <meta name="twitter:image" content="https://www.thunderquiz.com/images/iq-test.jpg">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <a href="../../index.html" class="back-button">← ThunderQuiz</a>
+
+            <h1>IQ Level Estimator</h1>
+            <p>Answer 9 questions to estimate your IQ.</p>
+        </header>
+
+        <section id="quiz" class="quiz">
+
+            <div class="progress">
+                <span id="question-number">Question 1 of 9</span>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card">
+
+                <h2 id="question"></h2>
+
+                <div id="answers" class="answers"></div>
+
+            </div>
+
+        </section>
+
+	<section id="result" class="result hidden">
+
+    <h2>Your Estimated IQ is</h2>
+
+    <div class="score">
+        <span id="score">0</span>
+    </div>
+
+    <p id="result-message"></p>
+
+    <button id="restart-button">Try Again</button>
+
+    <a href="../../index.html" class="home-button">
+        Back to Games
+    </a>
+
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
