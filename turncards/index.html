@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>You vs John</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        linear-gradient(
+            135deg,
+            #5B2923,
+            #71352C,
+            #5F2924
+        );
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    font-family: "Nunito", sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px;
+}
+
+.game {
+    width: 100%;
+    max-width: 650px;
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 20px 55px rgba(35, 12, 8, .35);
+}
+
+h1 {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(34px, 8vw, 52px);
+    color: #3f4f7a;
+}
+
+.subtitle {
+    margin: 4px 0 18px;
+    color: #7b7d83;
+    font-size: 15px;
+}
+
+.level {
+    display: inline-block;
+    background: #e6e1d5;
+    color: #555e70;
+    padding: 6px 17px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: .5px;
+    margin-bottom: 12px;
+}
+
+.scores {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.player {
+    background: white;
+    border-radius: 15px;
+    padding: 9px;
+    box-shadow: 0 4px 14px rgba(55,55,55,.08);
+    border: 3px solid transparent;
+}
+
+.player.active {
+    border-color: #6677aa;
+}
+
+.player-name {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #858991;
+}
+
+.score {
+    display: block;
+    font-size: 27px;
+    font-weight: 800;
+    color: #465785;
+    line-height: 1.1;
+}
+
+.vs {
+    color: #999b9f;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.message {
+    min-height: 27px;
+    font-weight: 800;
+    color: #59688e;
+    margin-bottom: 4px;
+}
+
+.countdown {
+    height: 38px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #4d5f92;
+    opacity: 0;
+    transition: opacity .15s;
+}
+
+.countdown.show {
+    opacity: 1;
+}
+
+.board {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    margin: 4px auto 18px;
+}
+
+.card {
+    aspect-ratio: 1;
+    border-radius: 13px;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid white;
+    background: #d9dde3;
+    box-shadow: 0 4px 9px rgba(40,45,55,.12);
+    transition: transform .15s, box-shadow .15s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card.back::after {
+    content: "?";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 23px;
+    font-weight: 800;
+    color: #8b919b;
+}
+
+.card.open {
+    cursor: default;
+    transform: none;
+}
+
+.card.matched {
+    cursor: default;
+    border-color: #fff;
+    box-shadow: 0 0 0 2px rgba(72,85,110,.12);
+}
+
+/* ================================
+   CALM DEEP JEWEL COLORS
+================================ */
+
+.indigo {
+    background: #3F467F;
+}
+
+.blue {
+    background: #304A68;
+}
+
+.teal {
+    background: #286B68;
+}
+
+.green {
+    background: #3F6548;
+}
+
+.purple {
+    background: #514375;
+}
+
+.burgundy {
+    background: #793C49;
+}
+
+.orange {
+    background: #95553D;
+}
+
+.plum {
+    background: #71445F;
+}
+
+.coral {
+    background: #874B59;
+}
+
+.sage {
+    background: #5B6842;
+}
+
+.navy {
+    background: #344A64;
+}
+
+.violet {
+    background: #514375;
+}
+
+.copper {
+    background: #87543D;
+}
+
+.moss {
+    background: #60613B;
+}
+
+.ruby {
+    background: #793C49;
+}
+
+.cyan {
+    background: #35665B;
+}
+
+.olive {
+    background: #60613B;
+}
+
+.magenta {
+    background: #67485D;
+}
+button {
+    border: none;
+    border-radius: 11px;
+    background: #53679f;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 11px 22px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #465988;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(35,40,50,.42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.popup {
+    background: white;
+    border-radius: 22px;
+    padding: 30px 25px;
+    width: min(90vw, 360px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+
+.popup h2 {
+    margin: 0 0 8px;
+    font-family: "Playfair Display", serif;
+    color: #43537e;
+}
+
+.popup p {
+    color: #777d88;
+    margin-bottom: 22px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .board {
+        gap: 6px;
+    }
+
+    .card {
+        border-radius: 9px;
+    }
+
+    .scores {
+        grid-template-columns: 1fr 38px 1fr;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="game">
+
+<h1>You vs John</h1>
+
+<div class="subtitle">
+    Remember the colors and find the pairs.
+</div>
+
+<div class="level" id="level">
+    LEVEL 1
+</div>
+
+<div class="scores">
+
+    <div class="player active" id="youBox">
+        <div class="player-name">You</div>
+        <span class="score" id="youScore">0</span>
+    </div>
+
+    <div class="vs">VS</div>
+
+    <div class="player" id="johnBox">
+        <div class="player-name">John</div>
+        <span class="score" id="johnScore">0</span>
+    </div>
+
+</div>
+
+<div class="message" id="message">
+    Your turn
+</div>
+
+<div class="countdown" id="countdown"></div>
+
+<div class="board" id="board"></div>
+
+<button onclick="newGame()">
+    New Game
+</button>
+
+</div>
+
+<div class="overlay hidden" id="popup">
+
+<div class="popup">
+
+    <h2 id="popupTitle"></h2>
+
+    <p id="popupText"></p>
+
+    <button onclick="popupAction()" id="popupButton">
+        Continue
+    </button>
+
+</div>
+
+</div>
+
+<script>
+
+const board = document.getElementById("board");
+const levelText = document.getElementById("level");
+const message = document.getElementById("message");
+const countdown = document.getElementById("countdown");
+
+const youScore = document.getElementById("youScore");
+const johnScore = document.getElementById("johnScore");
+
+const youBox = document.getElementById("youBox");
+const johnBox = document.getElementById("johnBox");
+
+const popup = document.getElementById("popup");
+const popupTitle = document.getElementById("popupTitle");
+const popupText = document.getElementById("popupText");
+const popupButton = document.getElementById("popupButton");
+
+
+/*
+    LEVELS
+
+    3x3 = 9 spaces.
+    Because pairs need an even number,
+    one space is used as a neutral card.
+
+    Level 2 = 4x4
+    Level 3 = 5x5
+    Level 4 = 6x6
+    Level 5 = 7x7
+*/
+
+const levels = {
+
+    1: { size: 3, pairs: 4 },
+    2: { size: 4, pairs: 8 },
+    3: { size: 5, pairs: 12 },
+    4: { size: 6, pairs: 18 },
+    5: { size: 7, pairs: 24 }
+
+};
+
+
+const colors = [
+    "indigo",
+    "blue",
+    "teal",
+    "green",
+    "purple",
+    "burgundy",
+    "orange",
+    "plum",
+    "coral",
+    "sage",
+    "navy",
+    "violet",
+    "copper",
+    "moss",
+    "ruby",
+    "cyan",
+    "olive",
+    "magenta"
+];
+
+
+let level = 1;
+
+let cards = [];
+
+let firstCard = null;
+let secondCard = null;
+
+let currentPlayer = "you";
+
+let youPairs = 0;
+let johnPairs = 0;
+
+let playerTurns = 0;
+
+let locked = false;
+
+let countdownTimer = null;
+
+let gameNumber = 0;
+
+
+/* ================================
+   START
+================================ */
+
+function newGame() {
+
+    gameNumber++;
+
+    clearTimeouts();
+
+    popup.classList.add("hidden");
+
+    firstCard = null;
+    secondCard = null;
+
+    currentPlayer = "you";
+
+    youPairs = 0;
+    johnPairs = 0;
+
+    playerTurns = 0;
+
+    locked = false;
+
+    youScore.textContent = "0";
+    johnScore.textContent = "0";
+
+    levelText.textContent =
+        "LEVEL " + level;
+
+    message.textContent =
+        "Your turn";
+
+    youBox.classList.add("active");
+    johnBox.classList.remove("active");
+
+    countdown.textContent = "";
+    countdown.classList.remove("show");
+
+    createBoard();
+
+}
+
+
+/* ================================
+   CREATE BOARD
+================================ */
+
+function createBoard() {
+
+    const settings = levels[level];
+
+    board.innerHTML = "";
+
+    board.style.gridTemplateColumns =
+        `repeat(${settings.size}, 1fr)`;
+
+    cards = [];
+
+    /*
+        Create pairs.
+    */
+
+    for (
+        let i = 0;
+        i < settings.pairs;
+        i++
+    ) {
+
+        const color = colors[i];
+
+        cards.push({
+            color: color,
+            matched: false
+        });
+
+        cards.push({
+            color: color,
+            matched: false
+        });
+
+    }
+
+    /*
+        Level 1 has 9 spaces,
+        but only 8 cards.
+
+        Add one harmless empty card.
+    */
+
+    const total =
+        settings.size * settings.size;
+
+    while (cards.length < total) {
+
+        cards.push({
+            color: null,
+            matched: true,
+            empty: true
+        });
+
+    }
+
+    shuffle(cards);
+
+    cards.forEach((data, index) => {
+
+        const element =
+            document.createElement("div");
+
+        element.className = "card back";
+
+        element.dataset.index = index;
+
+        if (data.empty) {
+
+            element.style.visibility =
+                "hidden";
+
+        } else {
+
+            element.onclick =
+                () => playerClick(index);
+
+        }
+
+        board.appendChild(element);
+
+    });
+
+}
+
+
+/* ================================
+   SHUFFLE
+================================ */
+
+function shuffle(array) {
+
+    for (
+        let i = array.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [array[i], array[j]] =
+        [array[j], array[i]];
+
+    }
+
+}
+
+
+/* ================================
+   PLAYER CLICK
+================================ */
+
+function playerClick(index) {
+
+    if (
+        currentPlayer !== "you" ||
+        locked ||
+        cards[index].matched
+    ) {
+        return;
+    }
+
+    if (firstCard === index) {
+        return;
+    }
+
+    reveal(index);
+
+    if (firstCard === null) {
+
+        firstCard = index;
+
+        return;
+
+    }
+
+    secondCard = index;
+
+    playerTurns++;
+
+    checkPair();
+
+}
+
+
+/* ================================
+   REVEAL
+================================ */
+
+function reveal(index) {
+
+    const element =
+        board.children[index];
+
+    element.classList.remove("back");
+
+    element.classList.add("open");
+
+    element.classList.add(
+        cards[index].color
+    );
+
+}
+
+
+/* ================================
+   HIDE
+================================ */
+
+function hide(index) {
+
+    const element =
+        board.children[index];
+
+    element.className =
+        "card back";
+
+}
+
+
+/* ================================
+   CHECK
+================================ */
+
+function checkPair() {
+
+    locked = true;
+
+    const first =
+        cards[firstCard];
+
+    const second =
+        cards[secondCard];
+
+
+    if (
+        first.color === second.color
+    ) {
+
+        match();
+
+    } else {
+
+        mismatch();
+
+    }
+
+}
+
+
+/* ================================
+   MATCH
+================================ */
+
+function match() {
+
+    const firstElement =
+        board.children[firstCard];
+
+    const secondElement =
+        board.children[secondCard];
+
+    firstElement.classList.add("matched");
+    secondElement.classList.add("matched");
+
+    cards[firstCard].matched = true;
+    cards[secondCard].matched = true;
+
+
+    if (currentPlayer === "you") {
+
+        youPairs++;
+
+        youScore.textContent =
+            youPairs;
+
+        message.textContent =
+            "Nice match!";
+
+    } else {
+
+        johnPairs++;
+
+        johnScore.textContent =
+            johnPairs;
+
+        message.textContent =
+            "John found a pair.";
+
+    }
+
+
+    clearSelection();
+
+    locked = false;
+
+
+    /*
+        The player who found
+        a pair gets another turn.
+    */
+
+    if (
+        allPairsFound()
+    ) {
+
+        finishLevel();
+
+        return;
+
+    }
+
+
+    if (
+        currentPlayer === "john"
+    ) {
+
+        johnPlay();
+
+    }
+
+}
+
+
+/* ================================
+   MISMATCH
+================================ */
+
+function mismatch() {
+
+    /*
+        THE IMPORTANT RULE:
+
+        The cards ALWAYS stay visible
+        for 3 seconds.
+
+        Only the countdown disappears
+        after the player's third turn.
+    */
+
+
+    if (
+        currentPlayer === "you" &&
+        playerTurns <= 3
+    ) {
+
+        showCountdown();
+
+    } else {
+
+        /*
+            No countdown from turn 4,
+            but still exactly 3 seconds.
+        */
+
+        setTimeout(
+            finishMismatch,
+            3000
+        );
+
+    }
+
+}
+
+
+/* ================================
+   COUNTDOWN
+================================ */
+
+function showCountdown() {
+
+    let number = 3;
+
+    countdown.textContent = number;
+
+    countdown.classList.add("show");
+
+
+    countdownTimer =
+        setInterval(() => {
+
+            number--;
+
+            if (number <= 0) {
+
+                clearInterval(
+                    countdownTimer
+                );
+
+                countdownTimer = null;
+
+                countdown.textContent = "";
+
+                countdown.classList.remove(
+                    "show"
+                );
+
+                /*
+                    The cards have now been
+                    visible for the 3 seconds.
+                */
+
+                finishMismatch();
+
+                return;
+
+            }
+
+            countdown.textContent =
+                number;
+
+        }, 1000);
+
+}
+
+
+/* ================================
+   FINISH MISMATCH
+================================ */
+
+function finishMismatch() {
+
+    if (
+        firstCard === null ||
+        secondCard === null
+    ) {
+        return;
+    }
+
+
+    hide(firstCard);
+    hide(secondCard);
+
+
+    clearSelection();
+
+    locked = false;
+
+
+    /*
+        After a mismatch,
+        the other player gets the turn.
+    */
+
+    if (
+        currentPlayer === "you"
+    ) {
+
+        currentPlayer = "john";
+
+        message.textContent =
+            "John's turn";
+
+        youBox.classList.remove("active");
+        johnBox.classList.add("active");
+
+
+        /*
+            Only about one second
+            before John begins.
+        */
+
+        setTimeout(
+            johnPlay,
+            1000
+        );
+
+    } else {
+
+        currentPlayer = "you";
+
+        message.textContent =
+            "Your turn";
+
+        johnBox.classList.remove("active");
+        youBox.classList.add("active");
+
+    }
+
+}
+
+
+/* ================================
+   JOHN
+================================ */
+
+function johnPlay() {
+
+    if (
+        currentPlayer !== "john" ||
+        locked
+    ) {
+        return;
+    }
+
+    locked = true;
+
+
+    /*
+        John is intentionally not
+        perfect.
+
+        His ability increases
+        with each level.
+    */
+
+    const available = [];
+
+    cards.forEach(
+        (card, index) => {
+
+            if (!card.matched) {
+                available.push(index);
+            }
+
+        }
+    );
+
+
+    if (available.length < 2) {
+
+        locked = false;
+
+        return;
+
+    }
+
+
+    let first =
+        randomItem(available);
+
+    let second;
+
+
+    /*
+        John's chance of finding
+        a pair becomes stronger
+        as levels increase.
+    */
+
+    const chance =
+        0.30 + (level * 0.12);
+
+
+    if (
+        Math.random() < chance
+    ) {
+
+        const matching =
+            available.filter(
+                index =>
+                    index !== first &&
+                    cards[index].color ===
+                    cards[first].color
+            );
+
+
+        if (matching.length) {
+
+            second =
+                randomItem(matching);
+
+        }
+
+    }
+
+
+    if (
+        second === undefined
+    ) {
+
+        second =
+            randomItem(
+                available.filter(
+                    i => i !== first
+                )
+            );
+
+    }
+
+
+    reveal(first);
+
+
+    setTimeout(() => {
+
+        reveal(second);
+
+
+        setTimeout(() => {
+
+            if (
+                cards[first].color ===
+                cards[second].color
+            ) {
+
+                firstCard = first;
+                secondCard = second;
+
+                match();
+
+            } else {
+
+                firstCard = first;
+                secondCard = second;
+
+                /*
+                    John's mismatched
+                    cards also stay visible
+                    for 3 seconds.
+
+                    No countdown.
+                */
+
+                setTimeout(
+                    finishMismatch,
+                    3000
+                );
+
+            }
+
+        }, 400);
+
+    }, 500);
+
+}
+
+
+/* ================================
+   RANDOM
+================================ */
+
+function randomItem(array) {
+
+    return array[
+        Math.floor(
+            Math.random() * array.length
+        )
+    ];
+
+}
+
+
+/* ================================
+   CLEAR SELECTION
+================================ */
+
+function clearSelection() {
+
+    firstCard = null;
+    secondCard = null;
+
+}
+
+
+/* ================================
+   ALL PAIRS
+================================ */
+
+function allPairsFound() {
+
+    return cards.every(
+        card =>
+            card.matched ||
+            card.empty
+    );
+
+}
+
+
+/* ================================
+   LEVEL COMPLETE
+================================ */
+
+function finishLevel() {
+
+    locked = true;
+
+    if (
+        youPairs > johnPairs
+    ) {
+
+        if (level === 5) {
+
+            popupTitle.textContent =
+                "You Beat John!";
+
+            popupText.textContent =
+                "Amazing! You conquered all five levels.";
+
+            popupButton.textContent =
+                "Play Again";
+
+            popupButton.dataset.action =
+                "restart";
+
+        } else {
+
+            popupTitle.textContent =
+                "Level Complete!";
+
+            popupText.textContent =
+                `You beat John ${youPairs} - ${johnPairs}.`;
+
+            popupButton.textContent =
+                "Next Level";
+
+            popupButton.dataset.action =
+                "next";
+
+        }
+
+    } else {
+
+        popupTitle.textContent =
+            "John Wins";
+
+        popupText.textContent =
+            `John won ${johnPairs} - ${youPairs}.`;
+
+        popupButton.textContent =
+            "Try Again";
+
+        popupButton.dataset.action =
+            "retry";
+
+    }
+
+    popup.classList.remove("hidden");
+
+}
+
+
+/* ================================
+   POPUP BUTTON
+================================ */
+
+function popupAction() {
+
+    const action =
+        popupButton.dataset.action;
+
+
+    popup.classList.add("hidden");
+
+
+    if (
+        action === "next"
+    ) {
+
+        level++;
+
+        newGame();
+
+    }
+
+    else if (
+        action === "restart"
+    ) {
+
+        level = 1;
+
+        newGame();
+
+    }
+
+    else {
+
+        newGame();
+
+    }
+
+}
+
+
+/* ================================
+   CLEAR TIMERS
+================================ */
+
+function clearTimeouts() {
+
+    if (countdownTimer) {
+
+        clearInterval(
+            countdownTimer
+        );
+
+        countdownTimer = null;
+
+    }
+
+}
+
+
+/* ================================
+   START
+================================ */
+
+newGame();
+
+</script>
+
+</body>
+</html>
+
