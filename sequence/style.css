@@ -1538,3 +1538,264 @@ button {
             rgba(255,255,255,.06);
     }
 }
+/* =========================================================
+   SEO CONTENT
+   ========================================================= */
+
+.seo-content {
+    margin-top: 70px;
+    padding: 30px 26px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.018)
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.16);
+}
+
+.seo-content h2 {
+    margin-top: 34px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 22px;
+    line-height: 1.25;
+
+    letter-spacing: -.5px;
+
+    color: var(--text);
+}
+
+.seo-content h2:first-child {
+    margin-top: 0;
+}
+
+.seo-content h3 {
+    margin-top: 25px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 15px;
+    line-height: 1.4;
+
+    color: #eeeaff;
+}
+
+.seo-content p {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.seo-content ol,
+.seo-content ul {
+    margin-top: 14px;
+
+    padding-left: 22px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.seo-content li {
+    margin-bottom: 7px;
+
+    padding-left: 3px;
+}
+
+.seo-content li::marker {
+    color: var(--purple-light);
+    font-weight: 700;
+}
+
+.seo-content strong {
+    color: #e9e5ff;
+}
+
+
+/* =========================================================
+   MORE GAMES
+   ========================================================= */
+
+.more-games {
+    margin-top: 25px;
+    padding: 26px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.more-games h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 21px;
+
+    letter-spacing: -.4px;
+}
+
+.more-games > p {
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.more-games nav {
+    margin-top: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.more-games nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    color: #c4b5fd;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition:
+        transform .18s ease,
+        background .18s ease,
+        border-color .18s ease,
+        color .18s ease;
+}
+
+.more-games nav a:hover {
+    transform: translateY(-2px);
+
+    color: #fff;
+
+    background:
+        rgba(139,92,246,.12);
+
+    border-color:
+        rgba(167,139,250,.3);
+
+    box-shadow:
+        0 8px 25px
+        rgba(139,92,246,.12);
+}
+
+.more-games nav a:active {
+    transform: scale(.97);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / FOCUS
+   ========================================================= */
+
+.more-games nav a:focus-visible,
+button:focus-visible,
+.brand:focus-visible {
+    outline:
+        2px solid
+        var(--purple-light);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MOBILE SEO CONTENT
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .seo-content {
+        margin-top: 50px;
+
+        padding:
+            24px
+            18px;
+
+        border-radius: 20px;
+    }
+
+    .seo-content h2 {
+        font-size: 20px;
+    }
+
+    .seo-content h3 {
+        font-size: 14px;
+    }
+
+    .seo-content p,
+    .seo-content ol,
+    .seo-content ul {
+        font-size: 11px;
+        line-height: 1.75;
+    }
+
+    .more-games {
+        padding:
+            23px
+            15px;
+
+        border-radius: 20px;
+    }
+
+    .more-games nav {
+        gap: 7px;
+    }
+
+    .more-games nav a {
+        min-height: 36px;
+
+        padding:
+            0
+            11px;
+
+        font-size: 9px;
+    }
+}
+

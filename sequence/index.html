@@ -3,15 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#080b19">
-    <meta name="description" content="Sequence — Crack the Pattern.">
-    <title>Sequence — Crack the Pattern</title>
 
+    <meta name="theme-color" content="#080b19">
+
+    <meta
+        name="description"
+        content="Play Sequence, a free online pattern recognition and logic puzzle game. Find the hidden rule, discover what comes next, and test your brain."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://thunderquiz.com/sequence/"
+    >
+
+    <title>Sequence Puzzle Game – Find the Pattern | ThunderQuiz</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ThunderQuiz">
+    <meta
+        property="og:title"
+        content="Sequence Puzzle Game – Find the Pattern | ThunderQuiz"
+    >
+    <meta
+        property="og:description"
+        content="Can you discover the hidden pattern? Play Sequence free and test your pattern recognition and logical reasoning."
+    >
+    <meta
+        property="og:url"
+        content="https://thunderquiz.com/sequence/"
+    >
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Sequence Puzzle Game",
+        "url": "https://thunderquiz.com/sequence/",
+        "description": "A free online sequence and pattern recognition puzzle game.",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "isAccessibleForFree": true,
+        "author": {
+            "@type": "Organization",
+            "name": "ThunderQuiz",
+            "url": "https://thunderquiz.com/"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -27,18 +83,28 @@
     <!-- HEADER -->
     <header class="topbar">
 
-        <a href="../../" class="brand">
+        <a href="../" class="brand" aria-label="ThunderQuiz home">
             <span class="brand-icon">✦</span>
             <span>Se<span>quence</span></span>
         </a>
 
         <div class="header-right">
 
-            <button class="sound-btn" id="soundBtn">
+            <button
+                class="sound-btn"
+                id="soundBtn"
+                type="button"
+                aria-label="Toggle sound"
+            >
                 🔊
             </button>
 
-            <button class="level-btn" id="levelBtn">
+            <button
+                class="level-btn"
+                id="levelBtn"
+                type="button"
+                aria-label="View your level"
+            >
                 <small>LVL</small>
                 <strong id="levelDisplay">1</strong>
             </button>
@@ -59,21 +125,25 @@
                 <b id="dailyStatus">READY</b>
             </div>
 
-            <div class="hero-symbol">
+            <div class="hero-symbol" aria-hidden="true">
                 <div>?</div>
             </div>
 
             <h1>
-                Crack the<br>
-                <span>Pattern.</span>
+                Sequence Puzzle Game:<br>
+                <span>Crack the Pattern.</span>
             </h1>
 
             <p class="subtitle">
-                Something is missing.<br>
-                Can your mind figure out what comes next?
+                Find the hidden pattern.<br>
+                Can you figure out what comes next?
             </p>
 
-            <button class="play-button" id="playButton">
+            <button
+                class="play-button"
+                id="playButton"
+                type="button"
+            >
                 <span>START GAME</span>
                 <b>→</b>
             </button>
@@ -193,7 +263,11 @@
         <!-- PATTERN -->
         <div class="pattern-card">
 
-            <div class="pattern" id="pattern"></div>
+            <div
+                class="pattern"
+                id="pattern"
+                aria-label="Sequence puzzle"
+            ></div>
 
         </div>
 
@@ -203,7 +277,10 @@
         </div>
 
 
-        <div class="answers" id="answers"></div>
+        <div
+            class="answers"
+            id="answers"
+        ></div>
 
 
         <div class="game-bottom">
@@ -226,7 +303,11 @@
                 </div>
             </div>
 
-            <button class="quit" id="quitButton">
+            <button
+                class="quit"
+                id="quitButton"
+                type="button"
+            >
                 QUIT
             </button>
 
@@ -295,7 +376,10 @@
             <div class="xp-section">
 
                 <div class="xp-top">
-                    <span>LEVEL <b id="resultLevel">1</b></span>
+                    <span>
+                        LEVEL <b id="resultLevel">1</b>
+                    </span>
+
                     <span>
                         <b id="currentXp">0</b> /
                         <b id="requiredXp">100</b>
@@ -311,12 +395,20 @@
 
             <div class="result-buttons">
 
-                <button class="play-button" id="againButton">
+                <button
+                    class="play-button"
+                    id="againButton"
+                    type="button"
+                >
                     <span>PLAY AGAIN</span>
                     <b>→</b>
                 </button>
 
-                <button class="home-button" id="homeButton">
+                <button
+                    class="home-button"
+                    id="homeButton"
+                    type="button"
+                >
                     BACK TO HOME
                 </button>
 
@@ -328,13 +420,24 @@
 
 
     <!-- LEVEL MODAL -->
-    <div class="modal" id="levelModal">
+    <div
+        class="modal"
+        id="levelModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalLevelTitle"
+    >
 
         <div class="modal-background"></div>
 
         <div class="level-card">
 
-            <button class="close" id="closeModal">
+            <button
+                class="close"
+                id="closeModal"
+                type="button"
+                aria-label="Close level information"
+            >
                 ×
             </button>
 
@@ -342,7 +445,7 @@
                 LVL <span id="modalLevel">1</span>
             </div>
 
-            <h3>
+            <h3 id="modalLevelTitle">
                 Keep thinking.
             </h3>
 
@@ -369,12 +472,18 @@
 
 
     <!-- TOAST -->
-    <div class="toast" id="toast">
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    >
 
         <span id="toastIcon">✨</span>
 
         <div>
             <strong id="toastTitle">Nice!</strong>
+
             <p id="toastMessage">
                 You spotted it.
             </p>
@@ -384,7 +493,181 @@
 
 
     <!-- PARTICLES -->
-    <div class="particles" id="particles"></div>
+    <div
+        class="particles"
+        id="particles"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- SEO CONTENT -->
+    <section class="seo-content">
+
+        <h2>Sequence Puzzle Game</h2>
+
+        <p>
+            Test your pattern recognition and logical reasoning with
+            Sequence, a free online sequence puzzle game from ThunderQuiz.
+            Study the numbers, symbols, or shapes, discover the hidden rule,
+            and choose what comes next.
+        </p>
+
+        <p>
+            Each round challenges you to spot relationships and patterns
+            under time pressure. Start with simpler sequences and work your
+            way toward increasingly difficult challenges as you improve
+            your score and build your streak.
+        </p>
+
+
+        <h2>How to Play Sequence</h2>
+
+        <ol>
+            <li>Study the sequence shown on the screen.</li>
+            <li>Look for the rule connecting the pieces.</li>
+            <li>Work out what should come next.</li>
+            <li>Choose the missing piece from the available answers.</li>
+            <li>Keep playing to improve your score and streak.</li>
+        </ol>
+
+
+        <h2>What Are Sequence Puzzles?</h2>
+
+        <p>
+            Sequence puzzles are logic and pattern-recognition challenges
+            where you identify the rule connecting a series of numbers,
+            symbols, shapes, or other elements. The goal is to use the
+            information provided to predict the missing or next element.
+        </p>
+
+        <p>
+            Some sequence puzzles use simple arithmetic such as addition,
+            subtraction, multiplication, or division. Others use repeating
+            patterns, alternating rules, changes in position, or multiple
+            relationships working together.
+        </p>
+
+
+        <h2>What Skills Does Sequence Test?</h2>
+
+        <p>
+            Sequence focuses on pattern recognition, observation, logical
+            reasoning, problem solving, and quick decision-making. As the
+            difficulty increases, you may need to compare several parts of
+            a sequence before identifying the rule.
+        </p>
+
+
+        <h2>Tips for Solving Sequence Puzzles</h2>
+
+        <ul>
+            <li>
+                Check whether the difference between numbers stays constant.
+            </li>
+
+            <li>
+                Look for multiplication or division patterns.
+            </li>
+
+            <li>
+                Check whether two or more patterns alternate.
+            </li>
+
+            <li>
+                Look for repeating groups or cycles.
+            </li>
+
+            <li>
+                Compare adjacent elements as well as the sequence as a whole.
+            </li>
+
+            <li>
+                If the obvious rule does not work, try looking for a
+                second-order pattern.
+            </li>
+        </ul>
+
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Is the Sequence game free?</h3>
+
+        <p>
+            Yes. Sequence is free to play online on ThunderQuiz. You can
+            play directly in your web browser without downloading an app.
+        </p>
+
+        <h3>What is a sequence puzzle?</h3>
+
+        <p>
+            A sequence puzzle is a logic challenge where you identify the
+            relationship or rule connecting a series of elements and use
+            that rule to determine what comes next.
+        </p>
+
+        <h3>What skills does the Sequence game test?</h3>
+
+        <p>
+            The game tests pattern recognition, logical reasoning,
+            observation, problem solving, and your ability to make decisions
+            quickly.
+        </p>
+
+        <h3>Can I play Sequence on my phone?</h3>
+
+        <p>
+            Yes. Sequence is designed to work in a modern web browser on
+            phones, tablets, and desktop computers.
+        </p>
+
+        <h3>Does Sequence get harder?</h3>
+
+        <p>
+            Yes. As you progress, the game introduces harder patterns so
+            you can continue challenging yourself and improving your score.
+        </p>
+
+    </section>
+
+
+    <!-- MORE GAMES -->
+    <section class="more-games">
+
+        <h2>More Brain Games</h2>
+
+        <p>
+            Enjoy Sequence? Try another free brain game from ThunderQuiz.
+        </p>
+
+        <nav aria-label="More ThunderQuiz games">
+
+            <a href="../iq/">
+                IQ Level Estimator
+            </a>
+
+            <a href="../mindmatch/">
+                Mind Match
+            </a>
+
+            <a href="../brainstorm/">
+                BrainStorm Quiz Battle
+            </a>
+
+            <a href="../pattern-hacker/">
+                Pattern Hacker
+            </a>
+
+            <a href="../whoslying/">
+                Who's Lying?
+            </a>
+
+            <a href="../turncards/">
+                Turn Cards
+            </a>
+
+        </nav>
+
+    </section>
 
 </main>
 
@@ -392,3 +675,4 @@
 
 </body>
 </html>
+
