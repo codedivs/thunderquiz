@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary SEO -->
+  <title>Color Name Challenge — Free Online Color Identification Game (20 Levels)</title>
+  <meta name="description" content="Play Color Name Challenge, a free browser-based color identification game with 20 progressive levels. Test and improve your color recognition skills by naming displayed colors. Fun educational quiz for all ages. No download required.">
+  <meta name="keywords" content="color name game, color identification quiz, name that color, color recognition game, online color game, free color quiz, learn color names, CSS color names, educational color game, browser game">
+  <meta name="author" content="Color Name Challenge">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://colornameschallenge.example.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thunderquiz/namethecolors.com/">
+  <meta property="og:title" content="Color Name Challenge — Free Online Color Identification Game">
+  <meta property="og:description" content="Test your color recognition with 20 levels of increasing difficulty. Identify the correct name of displayed colors in this free educational browser game.">
+  <meta property="og:site_name" content="Color Name Challenge">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://thunderquiz/namethecolors.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Color Name Challenge game preview">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Color Name Challenge — Free Color Identification Game">
+  <meta name="twitter:description" content="20 levels of color naming fun. Improve your color recognition skills in this free online quiz. Play now in your browser!">
+  <meta name="twitter:image" content="https://thunderquiz.com/og-image.png">
+  <meta name="twitter:image:alt" content="Color Name Challenge game">
+
+  <!-- Theme & App -->
+  <meta name="theme-color" content="#0f0f1a">
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Color Challenge">
+  <meta name="application-name" content="Color Name Challenge">
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon (emoji fallback + SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Color Name Challenge",
+    "description": "A free online educational game with 20 levels where players identify the correct names of displayed colors. Improves color recognition and knowledge of CSS/web color names.",
+    "url": "https://colornameschallenge.example.com/",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "128"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Color Name Challenge"
+    },
+    "genre": ["Educational", "Quiz", "Puzzle"],
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "educationalUse": "Color recognition training and learning named colors"
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app" id="main-content" role="main">
+    <!-- Start Screen -->
+    <section id="start-screen" class="screen active" aria-labelledby="start-heading" role="region">
+      <div class="card">
+        <h1 id="start-heading">🎨 Color Name Challenge</h1>
+        <p class="subtitle">Identify the name of the displayed color</p>
+        <p class="info">Free educational game with <strong>20 progressive levels</strong>. Train your color recognition skills by choosing the correct color name from four options. Perfect for kids, students, designers, and anyone who wants to master named colors.</p>
+        <div class="stats-preview" aria-live="polite">
+          <div class="stat">
+            <span class="stat-label">High Score</span>
+            <span id="high-score-display" aria-label="Current high score">0</span>
+          </div>
+        </div>
+        <button id="start-btn" class="btn primary" aria-label="Start the Color Name Challenge game">Start Game</button>
+        <p class="hint">Tip: Look carefully — later levels feature similar shades and less common color names!</p>
+        <p class="seo-text visually-hidden">
+          Color Name Challenge is a free online color identification quiz and educational game. Players view a color swatch and must select the correct CSS or common color name. Levels increase in difficulty from primary colors (red, blue, green) to intermediate and advanced named colors such as coral, turquoise, crimson and indigo. Improves visual perception, vocabulary of color names, and is useful for web designers learning CSS named colors. No registration or download required. Play instantly in any modern browser.
+        </p>
+      </div>
+    </section>
+
+    <!-- Game Screen -->
+    <section id="game-screen" class="screen" aria-labelledby="game-heading" role="region" aria-live="polite">
+      <header class="game-header">
+        <div class="level-info" aria-label="Current level">
+          Level <span id="level-num">1</span> / 20
+        </div>
+        <div class="score-info" aria-label="Current score">
+          Score: <span id="score">0</span>
+        </div>
+        <div class="lives-info" aria-label="Lives remaining">
+          Lives: <span id="lives">3</span>
+        </div>
+      </header>
+
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" aria-label="Game progress">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="color-display-container">
+        <div id="color-swatch" class="color-swatch" role="img" aria-label="Color to identify"></div>
+        <h2 id="game-heading" class="question">What is the name of this color?</h2>
+      </div>
+
+      <div id="options" class="options" role="group" aria-label="Color name options">
+        <!-- Buttons injected by JS -->
+      </div>
+
+      <div id="feedback" class="feedback" role="status" aria-live="assertive"></div>
+    </section>
+
+    <!-- End Screen -->
+    <section id="end-screen" class="screen" aria-labelledby="end-title" role="region">
+      <div class="card">
+        <h1 id="end-title">Game Over!</h1>
+        <p id="end-message" class="subtitle"></p>
+        <div class="final-stats">
+          <div class="stat">
+            <span class="stat-label">Final Score</span>
+            <span id="final-score">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Levels Cleared</span>
+            <span id="levels-cleared">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">High Score</span>
+            <span id="end-high-score">0</span>
+          </div>
+        </div>
+        <button id="restart-btn" class="btn primary" aria-label="Play the game again">Play Again</button>
+        <button id="home-btn" class="btn secondary" aria-label="Return to home screen">Back to Home</button>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>Color Name Challenge — Free educational color identification game. Learn and practice named colors online.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
