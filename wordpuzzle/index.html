@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Word Hunt — a classic hidden word search puzzle game."
+    >
+
+    <title>Word Hunt — Hidden Word Puzzle</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Game stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         APP
+    ====================================================== -->
+
+    <div class="app">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div
+                    class="brand-mark"
+                    aria-hidden="true"
+                >
+                    ✦
+                </div>
+
+                <div class="brand-copy">
+
+                    <h1>Word Hunt</h1>
+
+                    <span>
+                        Hidden Word Puzzle
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <!-- Level -->
+
+                <div class="level-badge">
+
+                    <span>LEVEL</span>
+
+                    <strong id="levelNumber">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <!-- Streak -->
+
+                <div class="stat-card">
+
+                    <span
+                        class="stat-icon"
+                        aria-hidden="true"
+                    >
+                        🔥
+                    </span>
+
+                    <div>
+
+                        <strong id="streak">
+                            0
+                        </strong>
+
+                        <small>
+                            streak
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Timer -->
+
+                <div class="stat-card">
+
+                    <span
+                        class="stat-icon"
+                        aria-hidden="true"
+                    >
+                        ◷
+                    </span>
+
+                    <div>
+
+                        <strong id="timer">
+                            00:00
+                        </strong>
+
+                        <small>
+                            time
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Theme -->
+
+                <button
+                    class="icon-button"
+                    id="themeButton"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+                    ◐
+                </button>
+
+
+                <!-- Help -->
+
+                <button
+                    class="icon-button"
+                    id="helpButton"
+                    type="button"
+                    aria-label="How to play"
+                    title="How to play"
+                >
+                    ?
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             LEVEL PROGRESS
+        ================================================== -->
+
+        <section class="level-progress">
+
+            <div class="level-progress-info">
+
+                <span>
+                    Level <strong id="currentLevel">1</strong>
+                </span>
+
+                <span>
+                    <strong id="levelsCompleted">0</strong>
+                    completed
+                </span>
+
+            </div>
+
+
+            <div
+                class="level-progress-track"
+                role="progressbar"
+                aria-label="Level progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                id="levelProgressBar"
+            >
+
+                <div
+                    class="level-progress-fill"
+                    id="levelProgressFill"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAIN GAME
+        ================================================== -->
+
+        <main class="game-layout">
+
+
+            <!-- =================================================
+                 PUZZLE SECTION
+            ================================================== -->
+
+            <section class="puzzle-panel">
+
+
+                <!-- Puzzle header -->
+
+                <div class="puzzle-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            FIND THE HIDDEN WORDS
+                        </span>
+
+                        <h2 id="categoryTitle">
+                            Animals
+                        </h2>
+
+                        <p id="categoryDescription">
+                            Find every hidden animal.
+                        </p>
+
+                    </div>
+
+
+                    <div class="difficulty-badge">
+
+                        <span
+                            class="difficulty-dot"
+                            id="difficultyDot"
+                        ></span>
+
+                        <span id="difficultyText">
+                            Easy
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     WORD SEARCH BOARD
+                ================================================== -->
+
+                <div class="board-area">
+
+                    <div
+                        class="word-grid"
+                        id="wordGrid"
+                        role="grid"
+                        aria-label="Word search puzzle"
+                    >
+
+                        <!--
+
+                            JavaScript generates the grid here.
+
+                            Example:
+
+                            <button
+                                class="grid-letter"
+                                data-row="0"
+                                data-col="0"
+                            >
+                                A
+                            </button>
+
+                        -->
+
+                    </div>
+
+
+                    <!-- Selection line / overlay -->
+
+                    <div
+                        class="selection-overlay"
+                        id="selectionOverlay"
+                        aria-hidden="true"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     GAME CONTROLS
+                ================================================== -->
+
+                <div class="game-controls">
+
+                    <button
+                        class="control-button primary"
+                        id="hintButton"
+                        type="button"
+                    >
+
+                        <span aria-hidden="true">
+                            💡
+                        </span>
+
+                        Hint
+
+                    </button>
+
+
+                    <button
+                        class="control-button"
+                        id="shuffleButton"
+                        type="button"
+                    >
+
+                        <span aria-hidden="true">
+                            🔀
+                        </span>
+
+                        Shuffle
+
+                    </button>
+
+
+                    <button
+                        class="control-button"
+                        id="pauseButton"
+                        type="button"
+                    >
+
+                        <span aria-hidden="true">
+                            ❚❚
+                        </span>
+
+                        Pause
+
+                    </button>
+
+
+                    <button
+                        class="control-button"
+                        id="restartButton"
+                        type="button"
+                    >
+
+                        <span aria-hidden="true">
+                            ↻
+                        </span>
+
+                        Restart
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 WORD LIST
+            ================================================== -->
+
+            <aside class="words-panel">
+
+
+                <!-- Panel heading -->
+
+                <div class="words-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            YOUR MISSION
+                        </span>
+
+                        <h2>
+                            Find these words
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        class="words-counter"
+                        id="wordsCounter"
+                    >
+                        0 / 0
+                    </div>
+
+                </div>
+
+
+
+                <!-- Completion progress -->
+
+                <div class="words-progress">
+
+                    <div class="words-progress-track">
+
+                        <div
+                            class="words-progress-fill"
+                            id="wordsProgressFill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Word list -->
+
+                <div
+                    class="word-list"
+                    id="wordList"
+                    aria-label="Words to find"
+                >
+
+                    <!--
+                        JavaScript generates words here.
+                    -->
+
+                </div>
+
+
+
+                <!-- Tip -->
+
+                <div class="game-tip">
+
+                    <span
+                        class="tip-icon"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Tip
+                        </strong>
+
+                        <p id="gameTip">
+                            Words can be hidden horizontally,
+                            vertically, or diagonally.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+
+
+        <!-- =================================================
+             LEVEL SELECTOR
+        ================================================== -->
+
+        <section class="level-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ADVENTURE
+                    </span>
+
+                    <h2>
+                        Choose a level
+                    </h2>
+
+                </div>
+
+                <span
+                    class="level-count"
+                    id="levelCount"
+                >
+                    1 / 30
+                </span>
+
+            </div>
+
+
+            <div
+                class="level-map"
+                id="levelMap"
+                aria-label="Available levels"
+            >
+
+                <!--
+                    JavaScript creates level buttons.
+
+                    Example:
+
+                    <button
+                        class="level-button current"
+                        data-level="1"
+                    >
+                        <span>1</span>
+                    </button>
+                -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KEYBOARD
+        ================================================== -->
+
+        <section class="keyboard-section">
+
+            <div class="keyboard-heading">
+
+                <span>
+                    Keyboard
+                </span>
+
+                <small>
+                    Type to search · Arrow keys to move
+                </small>
+
+            </div>
+
+
+            <div
+                class="virtual-keyboard"
+                id="virtualKeyboard"
+                aria-label="On-screen keyboard"
+            >
+
+                <div class="keyboard-row">
+
+                    <button type="button" data-key="Q">Q</button>
+                    <button type="button" data-key="W">W</button>
+                    <button type="button" data-key="E">E</button>
+                    <button type="button" data-key="R">R</button>
+                    <button type="button" data-key="T">T</button>
+                    <button type="button" data-key="Y">Y</button>
+                    <button type="button" data-key="U">U</button>
+                    <button type="button" data-key="I">I</button>
+                    <button type="button" data-key="O">O</button>
+                    <button type="button" data-key="P">P</button>
+
+                </div>
+
+
+                <div class="keyboard-row">
+
+                    <button type="button" data-key="A">A</button>
+                    <button type="button" data-key="S">S</button>
+                    <button type="button" data-key="D">D</button>
+                    <button type="button" data-key="F">F</button>
+                    <button type="button" data-key="G">G</button>
+                    <button type="button" data-key="H">H</button>
+                    <button type="button" data-key="J">J</button>
+                    <button type="button" data-key="K">K</button>
+                    <button type="button" data-key="L">L</button>
+
+                </div>
+
+
+                <div class="keyboard-row">
+
+                    <button type="button" data-key="Z">Z</button>
+                    <button type="button" data-key="X">X</button>
+                    <button type="button" data-key="C">C</button>
+                    <button type="button" data-key="V">V</button>
+                    <button type="button" data-key="B">B</button>
+                    <button type="button" data-key="N">N</button>
+                    <button type="button" data-key="M">M</button>
+
+                    <button
+                        type="button"
+                        class="keyboard-action"
+                        data-key="BACKSPACE"
+                        aria-label="Backspace"
+                    >
+                        ⌫
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            <div class="footer-brand">
+
+                <strong>
+                    Word Hunt
+                </strong>
+
+                <span>
+                    Find. Focus. Conquer.
+                </span>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <button
+                    type="button"
+                    id="settingsButton"
+                >
+                    Settings
+                </button>
+
+                <span>•</span>
+
+                <button
+                    type="button"
+                    id="aboutButton"
+                >
+                    About
+                </button>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PAUSE MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay hidden"
+        id="pauseModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="pauseTitle"
+    >
+
+        <div class="modal pause-modal">
+
+            <div class="modal-icon">
+                ❚❚
+            </div>
+
+            <span class="modal-eyebrow">
+                GAME PAUSED
+            </span>
+
+            <h2 id="pauseTitle">
+                Take a breather
+            </h2>
+
+            <p>
+                Your puzzle is safely paused.
+                Come back whenever you're ready.
+            </p>
+
+            <button
+                class="primary-button"
+                id="resumeButton"
+                type="button"
+            >
+                Resume Game
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HELP MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay hidden"
+        id="helpModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="helpTitle"
+    >
+
+        <div class="modal">
+
+            <button
+                class="modal-close"
+                id="closeHelpButton"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <span class="modal-eyebrow">
+                HOW TO PLAY
+            </span>
+
+            <h2 id="helpTitle">
+                Find the hidden words
+            </h2>
+
+            <p>
+                Search the letter grid and find every word
+                shown in your mission list.
+            </p>
+
+
+            <div class="help-items">
+
+                <div class="help-item">
+
+                    <span>🖱</span>
+
+                    <div>
+
+                        <strong>
+                            Click & drag
+                        </strong>
+
+                        <small>
+                            Drag across letters to select a word.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="help-item">
+
+                    <span>👆</span>
+
+                    <div>
+
+                        <strong>
+                            Touch & swipe
+                        </strong>
+
+                        <small>
+                            On mobile, swipe across the letters.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="help-item">
+
+                    <span>↗</span>
+
+                    <div>
+
+                        <strong>
+                            Look everywhere
+                        </strong>
+
+                        <small>
+                            Words may run in eight directions.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="help-item">
+
+                    <span>💡</span>
+
+                    <div>
+
+                        <strong>
+                            Need a hand?
+                        </strong>
+
+                        <small>
+                            Use a hint to reveal part of a word.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                id="gotItButton"
+                type="button"
+            >
+                Let's Play
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         LEVEL COMPLETE MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay hidden"
+        id="completeModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="completeTitle"
+    >
+
+        <div class="modal completion-modal">
+
+            <div
+                class="completion-icon"
+                aria-hidden="true"
+            >
+                ✦
+            </div>
+
+            <span class="modal-eyebrow">
+                LEVEL COMPLETE
+            </span>
+
+            <h2 id="completeTitle">
+                Excellent!
+            </h2>
+
+            <p>
+                You found every hidden word.
+            </p>
+
+
+            <div class="completion-stats">
+
+                <div>
+
+                    <strong id="completeTime">
+                        00:00
+                    </strong>
+
+                    <span>
+                        Time
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="completeWords">
+                        0
+                    </strong>
+
+                    <span>
+                        Words
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="completeScore">
+                        100
+                    </strong>
+
+                    <span>
+                        Score
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="completion-actions">
+
+                <button
+                    class="secondary-button"
+                    id="retryLevelButton"
+                    type="button"
+                >
+                    Replay
+                </button>
+
+                <button
+                    class="primary-button"
+                    id="nextLevelButton"
+                    type="button"
+                >
+                    Next Level →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         GAME OVER / FINAL MODAL
+    ====================================================== -->
+
+    <div
+        class="modal-overlay hidden"
+        id="finalModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="finalTitle"
+    >
+
+        <div class="modal completion-modal">
+
+            <div
+                class="completion-icon trophy"
+                aria-hidden="true"
+            >
+                🏆
+            </div>
+
+            <span class="modal-eyebrow">
+                ADVENTURE COMPLETE
+            </span>
+
+            <h2 id="finalTitle">
+                Word master!
+            </h2>
+
+            <p>
+                You've conquered every level.
+            </p>
+
+
+            <div class="completion-stats">
+
+                <div>
+
+                    <strong id="finalLevels">
+                        30
+                    </strong>
+
+                    <span>
+                        Levels
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="finalWords">
+                        0
+                    </strong>
+
+                    <span>
+                        Words
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="finalScore">
+                        0
+                    </strong>
+
+                    <span>
+                        Score
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                id="playAgainButton"
+                type="button"
+            >
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TOASTS
+    ====================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+        aria-atomic="true"
+    >
+        <!-- JavaScript inserts notifications here -->
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
