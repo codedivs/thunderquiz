@@ -1,0 +1,1697 @@
+/* =========================================================
+   CROSSWORD — STYLE SHEET
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(110, 87, 255, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(44, 199, 172, 0.07),
+            transparent 30%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   2. THEME VARIABLES
+   ========================================================= */
+
+:root {
+    --bg: #f5f6fa;
+    --surface: #ffffff;
+    --surface-soft: #f8f9fc;
+    --surface-hover: #f0f1f7;
+
+    --text: #181a22;
+    --text-secondary: #686b78;
+    --text-muted: #9699a6;
+
+    --border: #e4e5eb;
+    --border-strong: #d5d7e0;
+
+    --accent: #6658e8;
+    --accent-dark: #5144ce;
+    --accent-light: #eeecff;
+
+    --success: #21a879;
+    --success-light: #e6f8f1;
+
+    --warning: #e69a28;
+    --warning-light: #fff4df;
+
+    --error: #e45454;
+    --error-light: #fff0f0;
+
+    --black-cell: #20222a;
+
+    --cell-size: min(9vw, 58px);
+
+    --shadow-sm:
+        0 2px 8px rgba(24, 26, 34, 0.06);
+
+    --shadow-md:
+        0 10px 35px rgba(24, 26, 34, 0.09);
+
+    --shadow-lg:
+        0 25px 70px rgba(24, 26, 34, 0.13);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+body.dark {
+    --bg: #101117;
+    --surface: #181a22;
+    --surface-soft: #1d2029;
+    --surface-hover: #252833;
+
+    --text: #f4f4f7;
+    --text-secondary: #a8aab5;
+    --text-muted: #727581;
+
+    --border: #2b2e39;
+    --border-strong: #3a3d49;
+
+    --accent: #8a7dff;
+    --accent-dark: #7466ed;
+    --accent-light: #29254c;
+
+    --success: #39c999;
+    --success-light: #18382f;
+
+    --warning: #f0ae43;
+    --warning-light: #3c2d18;
+
+    --error: #f06b6b;
+    --error-light: #402020;
+
+    --black-cell: #08090d;
+
+    --shadow-sm:
+        0 2px 8px rgba(0, 0, 0, 0.25);
+
+    --shadow-md:
+        0 10px 35px rgba(0, 0, 0, 0.3);
+
+    --shadow-lg:
+        0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   3. APP CONTAINER
+   ========================================================= */
+
+.app {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 28px 32px 40px;
+}
+
+
+/* =========================================================
+   4. TOP BAR
+   ========================================================= */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 64px;
+
+    margin-bottom: 34px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 14px;
+
+    color: white;
+    font-size: 21px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #8174ff,
+            #5849d8
+        );
+
+    box-shadow:
+        0 8px 20px rgba(102, 88, 232, 0.25);
+}
+
+.brand-text h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: -0.4px;
+}
+
+.brand-text span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 72px;
+    padding: 8px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-icon {
+    font-size: 17px;
+}
+
+.stat strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 13px;
+    line-height: 1.1;
+}
+
+.stat small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.icon-button {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    color: var(--text-secondary);
+    background: var(--surface);
+
+    font-size: 18px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.icon-button:hover {
+    color: var(--accent);
+    background: var(--surface-hover);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   5. GAME LAYOUT
+   ========================================================= */
+
+.game-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        390px;
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+.game-panel,
+.clues-panel {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow-md);
+}
+
+.game-panel {
+    min-width: 0;
+    padding: 34px;
+}
+
+
+/* =========================================================
+   6. PUZZLE HEADING
+   ========================================================= */
+
+.puzzle-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+.puzzle-heading h2 {
+    margin-top: 7px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.15;
+
+    letter-spacing: -0.7px;
+}
+
+.puzzle-heading p {
+    margin-top: 7px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+.difficulty {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    color: var(--text-secondary);
+
+    background: var(--surface-soft);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.difficulty-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--warning);
+
+    box-shadow:
+        0 0 0 3px var(--warning-light);
+}
+
+
+/* =========================================================
+   7. CROSSWORD BOARD
+   ========================================================= */
+
+.board-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 8px 0 20px;
+}
+
+.crossword-board {
+    display: grid;
+
+    /*
+       JavaScript sets these dynamically:
+
+       grid-template-columns:
+       repeat(numberOfColumns, var(--cell-size));
+    */
+
+    gap: 1px;
+
+    padding: 5px;
+
+    border: 1px solid var(--border-strong);
+    border-radius: 5px;
+
+    background: var(--border-strong);
+
+    box-shadow:
+        0 14px 30px rgba(24, 26, 34, 0.08);
+}
+
+.cell {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: var(--cell-size);
+    height: var(--cell-size);
+
+    min-width: 0;
+    min-height: 0;
+
+    border-radius: 1px;
+
+    color: var(--text);
+
+    background: var(--surface);
+
+    font-size: clamp(16px, 3vw, 27px);
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.12s ease,
+        box-shadow 0.12s ease,
+        color 0.12s ease;
+}
+
+.cell:not(.blocked):hover {
+    background: var(--surface-hover);
+}
+
+.cell.blocked {
+    background: var(--black-cell);
+
+    cursor: default;
+}
+
+.cell-number {
+    position: absolute;
+
+    top: 3px;
+    left: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: clamp(6px, 1vw, 9px);
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.cell-letter {
+    display: block;
+
+    transform: translateY(2px);
+}
+
+.cell.selected {
+    z-index: 2;
+
+    background: var(--accent-light);
+
+    box-shadow:
+        inset 0 0 0 2px var(--accent);
+}
+
+.cell.word-selected {
+    background: color-mix(
+        in srgb,
+        var(--accent-light) 72%,
+        var(--surface)
+    );
+}
+
+.cell.correct {
+    color: var(--success);
+
+    background: var(--success-light);
+}
+
+.cell.incorrect {
+    color: var(--error);
+
+    background: var(--error-light);
+
+    animation: shake 0.3s ease;
+}
+
+.cell.hint {
+    color: var(--accent);
+
+    background: var(--accent-light);
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
+
+
+/* =========================================================
+   8. GAME CONTROLS
+   ========================================================= */
+
+.game-controls {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    padding-top: 10px;
+}
+
+.control-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    color: var(--text-secondary);
+    background: var(--surface);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.control-button span {
+    font-size: 14px;
+}
+
+.control-button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+
+    background: var(--accent-light);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   9. PROGRESS
+   ========================================================= */
+
+.progress-area {
+    margin-top: 27px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.progress-label strong {
+    color: var(--accent);
+}
+
+.progress-track {
+    overflow: hidden;
+
+    width: 100%;
+    height: 7px;
+
+    border-radius: 20px;
+
+    background: var(--surface-soft);
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--accent),
+            #8d81ff
+        );
+
+    box-shadow:
+        0 0 12px rgba(102, 88, 232, 0.25);
+
+    transition: width 0.35s ease;
+}
+
+
+/* =========================================================
+   10. CLUES PANEL
+   ========================================================= */
+
+.clues-panel {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 650px;
+
+    overflow: hidden;
+}
+
+
+/* Active clue */
+
+.active-clue {
+    position: relative;
+
+    padding: 27px 27px 24px;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-light),
+            transparent
+        );
+}
+
+.active-clue-direction {
+    color: var(--accent);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.active-clue-number {
+    margin-top: 9px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.active-clue-text {
+    margin-top: 4px;
+
+    color: var(--text);
+
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* Clue tabs */
+
+.clue-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 4px;
+
+    padding: 7px;
+
+    border-bottom: 1px solid var(--border);
+
+    background: var(--surface-soft);
+}
+
+.clue-tab {
+    min-height: 37px;
+
+    border-radius: 9px;
+
+    color: var(--text-muted);
+
+    background: transparent;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.clue-tab:hover {
+    color: var(--text);
+}
+
+.clue-tab.active {
+    color: var(--accent);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* Clue container */
+
+.clues-container {
+    flex: 1;
+
+    overflow: hidden;
+}
+
+.clue-section {
+    height: 100%;
+}
+
+.clue-section.hidden {
+    display: none;
+}
+
+.clue-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 21px 10px;
+
+    color: var(--text);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.clue-section-header span:last-child {
+    display: grid;
+    place-items: center;
+
+    min-width: 22px;
+    height: 22px;
+
+    border-radius: 7px;
+
+    color: var(--text-muted);
+    background: var(--surface-soft);
+
+    font-size: 9px;
+}
+
+.clue-list {
+    height: calc(100% - 45px);
+
+    overflow-y: auto;
+
+    padding: 0 9px 20px;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+}
+
+.clue {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border-radius: 11px;
+
+    text-align: left;
+
+    color: var(--text-secondary);
+
+    background: transparent;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.clue:hover {
+    color: var(--text);
+
+    background: var(--surface-hover);
+}
+
+.clue.active {
+    color: var(--text);
+
+    background: var(--accent-light);
+}
+
+.clue.solved {
+    color: var(--text-muted);
+}
+
+.clue-number {
+    flex: 0 0 31px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.clue-text {
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+.clue.solved .clue-text {
+    text-decoration: line-through;
+    text-decoration-color: var(--text-muted);
+}
+
+
+/* =========================================================
+   11. VIRTUAL KEYBOARD
+   ========================================================= */
+
+.keyboard-section {
+    margin-top: 26px;
+
+    padding: 22px 24px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.keyboard-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.keyboard-heading span {
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.keyboard-heading small {
+    color: var(--text-muted);
+
+    font-size: 10px;
+}
+
+.virtual-keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.keyboard-row {
+    display: flex;
+
+    gap: 6px;
+}
+
+.keyboard-row button {
+    display: grid;
+    place-items: center;
+
+    width: 43px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    color: var(--text-secondary);
+    background: var(--surface-soft);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow:
+        0 2px 0 var(--border);
+
+    transition:
+        transform 0.08s ease,
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.keyboard-row button:hover {
+    color: var(--accent);
+
+    background: var(--accent-light);
+
+    transform: translateY(-1px);
+}
+
+.keyboard-row button:active {
+    transform: translateY(2px);
+
+    box-shadow: none;
+}
+
+.keyboard-row button.key-used {
+    color: var(--text-muted);
+}
+
+.keyboard-row button.key-correct {
+    color: var(--success);
+
+    background: var(--success-light);
+}
+
+.keyboard-action {
+    width: 62px !important;
+
+    color: var(--error) !important;
+}
+
+
+/* =========================================================
+   12. FOOTER
+   ========================================================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 4px 0;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+}
+
+.footer strong {
+    margin-right: 5px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links button {
+    color: var(--text-muted);
+
+    background: transparent;
+
+    font-size: 10px;
+}
+
+.footer-links button:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   13. MODALS
+   ========================================================= */
+
+.modal-overlay {
+    position: fixed;
+    z-index: 1000;
+
+    inset: 0;
+
+    display: grid;
+    place-items: center;
+
+    padding: 20px;
+
+    background: rgba(12, 13, 18, 0.62);
+
+    backdrop-filter: blur(7px);
+
+    animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal {
+    position: relative;
+
+    width: min(450px, 100%);
+
+    padding: 36px;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    color: var(--text);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow-lg);
+
+    animation: modalIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    display: grid;
+    place-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+
+    color: var(--text-muted);
+    background: var(--surface-soft);
+
+    font-size: 22px;
+}
+
+.modal-close:hover {
+    color: var(--text);
+
+    background: var(--surface-hover);
+}
+
+.modal-eyebrow {
+    color: var(--accent);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.modal h2 {
+    margin-top: 7px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+}
+
+.modal > p {
+    margin-top: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* Help items */
+
+.help-items {
+    display: grid;
+
+    gap: 8px;
+
+    margin: 23px 0;
+}
+
+.help-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px;
+
+    border-radius: 12px;
+
+    background: var(--surface-soft);
+}
+
+.help-item > span {
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    flex: 0 0 32px;
+
+    border-radius: 9px;
+
+    color: var(--accent);
+
+    background: var(--accent-light);
+}
+
+.help-item strong {
+    display: block;
+
+    font-size: 11px;
+}
+
+.help-item small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+}
+
+
+/* Primary button */
+
+.primary-button {
+    width: 100%;
+    min-height: 46px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            var(--accent-dark)
+        );
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 18px rgba(102, 88, 232, 0.24);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(102, 88, 232, 0.32);
+}
+
+
+/* =========================================================
+   14. COMPLETION MODAL
+   ========================================================= */
+
+.completion-modal {
+    text-align: center;
+}
+
+.completion-icon {
+    display: grid;
+    place-items: center;
+
+    width: 66px;
+    height: 66px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #8d81ff,
+            #5c4cdc
+        );
+
+    font-size: 28px;
+
+    box-shadow:
+        0 12px 28px rgba(102, 88, 232, 0.3);
+}
+
+.completion-modal h2 {
+    font-size: 32px;
+}
+
+.completion-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin: 25px 0;
+}
+
+.completion-stats > div {
+    padding: 13px 8px;
+
+    border-radius: 12px;
+
+    background: var(--surface-soft);
+}
+
+.completion-stats strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 16px;
+}
+
+.completion-stats span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   15. TOASTS
+   ========================================================= */
+
+.toast-container {
+    position: fixed;
+    z-index: 2000;
+
+    right: 22px;
+    bottom: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 8px;
+
+    pointer-events: none;
+}
+
+.toast {
+    padding: 11px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    color: var(--text);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow-md);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    animation:
+        toastIn 0.25s ease,
+        toastOut 0.25s ease 2.75s forwards;
+}
+
+.toast.success {
+    color: var(--success);
+
+    border-color: var(--success);
+
+    background: var(--success-light);
+}
+
+.toast.error {
+    color: var(--error);
+
+    border-color: var(--error);
+
+    background: var(--error-light);
+}
+
+.toast.warning {
+    color: var(--warning);
+
+    border-color: var(--warning);
+
+    background: var(--warning-light);
+}
+
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes toastOut {
+    to {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+
+/* =========================================================
+   16. SCROLLBARS
+   ========================================================= */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color:
+        var(--border-strong)
+        transparent;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+
+    background: var(--border-strong);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+
+/* =========================================================
+   17. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .app {
+        padding: 22px;
+    }
+
+    .game-layout {
+        grid-template-columns: minmax(0, 1fr) 330px;
+
+        gap: 18px;
+    }
+
+    .game-panel {
+        padding: 25px;
+    }
+
+    .clues-panel {
+        min-height: 600px;
+    }
+
+    :root {
+        --cell-size: min(7.3vw, 52px);
+    }
+
+}
+
+
+/* =========================================================
+   18. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .app {
+        padding: 14px;
+    }
+
+    .topbar {
+        margin-bottom: 18px;
+    }
+
+    .brand-mark {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 12px;
+    }
+
+    .brand-text h1 {
+        font-size: 19px;
+    }
+
+    .stat {
+        min-width: auto;
+        padding: 7px 9px;
+    }
+
+    .stat-icon {
+        font-size: 14px;
+    }
+
+    .timer-stat {
+        display: none;
+    }
+
+    .icon-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .game-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-panel {
+        padding: 20px 14px;
+    }
+
+    .puzzle-heading {
+        margin-bottom: 20px;
+    }
+
+    .puzzle-heading h2 {
+        font-size: 25px;
+    }
+
+    .puzzle-heading p {
+        font-size: 11px;
+    }
+
+    .difficulty {
+        padding: 7px 9px;
+
+        font-size: 9px;
+    }
+
+    :root {
+        --cell-size: min(
+            calc((100vw - 50px) / 12),
+            43px
+        );
+    }
+
+    .crossword-board {
+        padding: 3px;
+    }
+
+    .cell-number {
+        top: 2px;
+        left: 3px;
+    }
+
+    .cell-letter {
+        transform: translateY(1px);
+    }
+
+    .game-controls {
+        justify-content: center;
+    }
+
+    .control-button {
+        flex: 1 1 calc(50% - 9px);
+    }
+
+    .clues-panel {
+        min-height: 520px;
+    }
+
+    .active-clue {
+        padding: 20px;
+    }
+
+    .active-clue-text {
+        font-size: 15px;
+    }
+
+    .keyboard-section {
+        padding: 17px 8px;
+    }
+
+    .keyboard-heading {
+        display: block;
+
+        text-align: center;
+    }
+
+    .keyboard-heading small {
+        display: block;
+
+        margin-top: 4px;
+    }
+
+    .keyboard-row {
+        gap: 4px;
+    }
+
+    .keyboard-row button {
+        width: calc(
+            (100vw - 62px) / 10
+        );
+
+        max-width: 38px;
+        height: 39px;
+
+        border-radius: 8px;
+
+        font-size: 11px;
+    }
+
+    .keyboard-action {
+        width: 48px !important;
+    }
+
+    .footer {
+        padding-top: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   19. VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .topbar-actions {
+        gap: 5px;
+    }
+
+    .stat {
+        display: none;
+    }
+
+    :root {
+        --cell-size: min(
+            calc((100vw - 44px) / 12),
+            31px
+        );
+    }
+
+    .cell {
+        font-size: 14px;
+    }
+
+    .cell-number {
+        font-size: 6px;
+    }
+
+    .keyboard-row {
+        gap: 3px;
+    }
+
+    .keyboard-row button {
+        width: calc(
+            (100vw - 50px) / 10
+        );
+
+        height: 35px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   20. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
