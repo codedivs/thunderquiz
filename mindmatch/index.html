@@ -1,306 +1,535 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0d1025" />
-  <meta
-    name="description"
-    content="Mind Match — a beautiful fast-paced visual brain game."
-  />
-  <title>Mind Match — Find the Odd One</title>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+<meta name="theme-color" content="#080a18" /> <meta name="color-scheme" content="dark" />
 
-<body>
+<meta name="description" content="Play Mind Match, a fast-paced visual brain game. Find the odd tile before time runs out, build combos, earn XP, and sharpen your visual focus." />
 
-  <div class="background">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
+<meta name="keywords" content="Mind Match, brain game, visual brain game, puzzle game, reaction game, find the odd one, focus game, memory game, free online game" />
+
+<meta name="robots" content="index, follow, max-image-preview:large" /> <meta name="googlebot" content="index, follow" /> <link rel="canonical" href="https://thunderquiz.com/mindmatch/" /> <!-- Performance --> <link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /> <!-- Favicon --> <link rel="icon" href="favicon.svg" type="image/svg+xml" /> <link rel="apple-touch-icon" href="favicon.svg" /> <!-- PWA --> <link rel="manifest" href="manifest.webmanifest" /> <!-- Open Graph --> <meta property="og:type" content="website" /> <meta property="og:site_name" content="Mind Match" /> <meta property="og:title" content="Mind Match — Free Visual Brain Game" /> <meta property="og:description" content="Find the odd tile before time runs out. Build combos, earn XP, and sharpen your visual focus." /> <meta property="og:url" content="https://YOUR-DOMAIN.com/mindmatch/" /> <meta property="og:image" content="https://YOUR-DOMAIN.com/mindmatch/og-image.png" /> <meta property="og:image:alt" content="Mind Match — Find the Odd One" /> <!-- X / Twitter --> <meta name="twitter:card" content="summary_large_image" /> <meta name="twitter:title" content="Mind Match — Free Visual Brain Game" /> <meta name="twitter:description" content="Can you find the odd one before time runs out?" /> <meta name="twitter:image" content="https://YOUR-DOMAIN.com/mindmatch/og-image.png" /> <meta name="twitter:image:alt" content="Mind Match — Find the Odd One" /> <!-- Structured data --> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "WebApplication", "name": "Mind Match", "url": "https://YOUR-DOMAIN.com/mindmatch/", "description": "A fast-paced visual brain game where players find the odd tile before time runs out.", "applicationCategory": "GameApplication", "applicationSubCategory": "Puzzle Game", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "inLanguage": "en", "genre": [ "Puzzle", "Brain Game", "Reaction Game" ] } </script> <title>Mind Match — Free Visual Brain Game</title> <link rel="stylesheet" href="style.css" /> </head> <body> <!-- Decorative background --> <div class="background" aria-hidden="true"> <div class="orb orb-1"></div> <div class="orb orb-2"></div> <div class="orb orb-3"></div> </div> <main class="app">
+<!-- HEADER -->
+<header class="topbar">
+
+  <a
+    class="brand"
+    href="../../"
+    aria-label="Mind Match home"
+  >
+    <span class="brand-mark" aria-hidden="true">✦</span>
+
+    <span>
+      Mind<span>Match</span>
+    </span>
+  </a>
+
+  <div class="header-actions">
+
+    <button
+      class="icon-btn"
+      id="soundBtn"
+      type="button"
+      aria-label="Turn sound off"
+      aria-pressed="true"
+      title="Toggle sound"
+    >
+      🔊
+    </button>
+
+    <button
+      class="profile-level"
+      id="levelButton"
+      type="button"
+      aria-label="View your level and XP"
+      aria-haspopup="dialog"
+    >
+      <span>LVL</span>
+      <strong id="levelDisplay">1</strong>
+    </button>
+
+  </div>
+</header>
+
+<!-- START SCREEN -->
+<section
+  class="screen active"
+  id="startScreen"
+  aria-labelledby="gameTitle"
+>
+
+  <div class="hero">
+
+    <button
+      class="daily-pill"
+      type="button"
+      aria-label="Open today's daily challenge"
+    >
+      <span
+        class="pulse-dot"
+        aria-hidden="true"
+      ></span>
+
+      DAILY CHALLENGE
+
+      <strong id="dailyLabel">READY</strong>
+    </button>
+
+    <div
+      class="hero-icon"
+      aria-hidden="true"
+    >
+      <div class="brain-glow">🧠</div>
+    </div>
+
+    <h1 id="gameTitle">
+      Find the<br>
+      <span>Odd One.</span>
+    </h1>
+
+    <p class="hero-copy">
+      Train your eyes. Sharpen your mind.<br>
+      Find what's different before time runs out.
+    </p>
+
+    <button
+      class="play-btn"
+      id="playBtn"
+      type="button"
+    >
+      <span>PLAY NOW</span>
+      <b aria-hidden="true">→</b>
+    </button>
+
+    <div
+      class="quick-stats"
+      aria-label="Your game statistics"
+    >
+
+      <div>
+        <small>BEST</small>
+        <strong id="bestScore">0</strong>
+      </div>
+
+      <div
+        class="stat-divider"
+        aria-hidden="true"
+      ></div>
+
+      <div>
+        <small>STREAK</small>
+        <strong>
+          🔥
+          <span id="streakDisplay">0</span>
+        </strong>
+      </div>
+
+      <div
+        class="stat-divider"
+        aria-hidden="true"
+      ></div>
+
+      <div>
+        <small>LEVEL</small>
+        <strong id="startLevel">1</strong>
+      </div>
+
+    </div>
+
   </div>
 
-  <main class="app">
+  <div
+    class="how-card"
+    aria-label="How to play"
+  >
 
-    <!-- HEADER -->
-    <header class="topbar">
-      <a class="brand" href="../../">
-        <span class="brand-mark">✦</span>
-        <span>Mind<span>Match</span></span>
-      </a>
+    <div class="how-item">
+      <span
+        class="how-number"
+        aria-hidden="true"
+      >01</span>
 
-      <div class="header-actions">
-        <button class="icon-btn" id="soundBtn" aria-label="Toggle sound">
-          🔊
-        </button>
-
-        <button class="profile-level" id="levelButton">
-          <span>LVL</span>
-          <strong id="levelDisplay">1</strong>
-        </button>
-      </div>
-    </header>
-
-    <!-- START SCREEN -->
-    <section class="screen active" id="startScreen">
-
-      <div class="hero">
-
-        <div class="daily-pill">
-          <span class="pulse-dot"></span>
-          DAILY CHALLENGE
-          <strong id="dailyLabel">READY</strong>
-        </div>
-
-        <div class="hero-icon">
-          <div class="brain-glow">🧠</div>
-        </div>
-
-        <h1>Find the<br><span>Odd One.</span></h1>
-
-        <p class="hero-copy">
-          Train your eyes. Sharpen your mind.<br>
-          Find what's different before time runs out.
-        </p>
-
-        <button class="play-btn" id="playBtn">
-          <span>PLAY NOW</span>
-          <b>→</b>
-        </button>
-
-        <div class="quick-stats">
-          <div>
-            <small>BEST</small>
-            <strong id="bestScore">0</strong>
-          </div>
-
-          <div class="stat-divider"></div>
-
-          <div>
-            <small>STREAK</small>
-            <strong>🔥 <span id="streakDisplay">0</span></strong>
-          </div>
-
-          <div class="stat-divider"></div>
-
-          <div>
-            <small>LEVEL</small>
-            <strong id="startLevel">1</strong>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="how-card">
-        <div class="how-item">
-          <span class="how-number">01</span>
-          <div>
-            <strong>Look</strong>
-            <p>Study the grid.</p>
-          </div>
-        </div>
-
-        <div class="how-item">
-          <span class="how-number">02</span>
-          <div>
-            <strong>Spot</strong>
-            <p>Find what's different.</p>
-          </div>
-        </div>
-
-        <div class="how-item">
-          <span class="how-number">03</span>
-          <div>
-            <strong>Tap</strong>
-            <p>Beat the clock.</p>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- GAME SCREEN -->
-    <section class="screen" id="gameScreen">
-
-      <div class="game-top">
-
-        <div class="game-stat">
-          <small>SCORE</small>
-          <strong id="scoreDisplay">0</strong>
-        </div>
-
-        <div class="game-stat combo-stat">
-          <small>COMBO</small>
-          <strong>×<span id="comboDisplay">0</span></strong>
-        </div>
-
-        <div class="game-stat">
-          <small>ROUND</small>
-          <strong><span id="roundDisplay">1</span></strong>
-        </div>
-
-      </div>
-
-      <div class="timer-wrap">
-        <div class="timer-track">
-          <div class="timer-bar" id="timerBar"></div>
-        </div>
-
-        <div class="timer-text">
-          <span id="timerDisplay">10.0</span>s
-        </div>
-      </div>
-
-      <div class="instruction">
-        <span id="instructionIcon">👁</span>
-        <div>
-          <strong id="instructionTitle">Find the odd one</strong>
-          <p id="instructionText">One tile is different. Can you spot it?</p>
-        </div>
-      </div>
-
-      <div class="game-board" id="gameBoard"></div>
-
-      <div class="game-footer">
-        <div class="lives" id="livesDisplay">
-          <span>♥</span>
-          <span>♥</span>
-          <span>♥</span>
-        </div>
-
-        <div class="difficulty">
-          <span>DIFFICULTY</span>
-          <div class="difficulty-dots" id="difficultyDots">
-            <i></i><i></i><i></i><i></i><i></i>
-          </div>
-        </div>
-
-        <button class="quit-btn" id="quitBtn">QUIT</button>
-      </div>
-
-    </section>
-
-    <!-- RESULT SCREEN -->
-    <section class="screen" id="resultScreen">
-
-      <div class="result-card">
-
-        <div class="result-badge" id="resultBadge">ROUND COMPLETE</div>
-
-        <div class="result-icon" id="resultIcon">✨</div>
-
-        <h2 id="resultTitle">Brilliant.</h2>
-
-        <p id="resultMessage">
-          Your eyes were seriously sharp.
-        </p>
-
-        <div class="final-score">
-          <small>YOUR SCORE</small>
-          <strong id="finalScore">0</strong>
-
-          <div class="new-record" id="newRecord">
-            ✦ NEW PERSONAL BEST
-          </div>
-        </div>
-
-        <div class="result-stats">
-
-          <div>
-            <span>ROUNDS</span>
-            <strong id="finalRounds">0</strong>
-          </div>
-
-          <div>
-            <span>BEST COMBO</span>
-            <strong id="finalCombo">0</strong>
-          </div>
-
-          <div>
-            <span>XP EARNED</span>
-            <strong id="finalXp">+0</strong>
-          </div>
-
-        </div>
-
-        <div class="xp-progress">
-          <div class="xp-header">
-            <span>LEVEL <b id="resultLevel">1</b></span>
-            <span><b id="xpCurrent">0</b> / <b id="xpRequired">100</b> XP</span>
-          </div>
-
-          <div class="xp-track">
-            <div id="xpBar"></div>
-          </div>
-        </div>
-
-        <div class="result-buttons">
-          <button class="play-btn" id="againBtn">
-            <span>PLAY AGAIN</span>
-            <b>→</b>
-          </button>
-
-          <button class="secondary-btn" id="homeBtn">
-            BACK TO HOME
-          </button>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- LEVEL PANEL -->
-    <div class="modal" id="levelModal">
-      <div class="modal-backdrop"></div>
-
-      <div class="level-modal-card">
-
-        <button class="close-modal" id="closeLevel">×</button>
-
-        <div class="level-big">LVL <span id="modalLevel">1</span></div>
-
-        <h3>Keep sharpening.</h3>
-
-        <p>
-          Every game earns XP. Keep playing to unlock higher difficulty.
-        </p>
-
-        <div class="modal-xp">
-          <div>
-            <span>XP</span>
-            <strong id="modalXp">0 / 100</strong>
-          </div>
-
-          <div class="xp-track">
-            <div id="modalXpBar"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- TOAST -->
-    <div class="toast" id="toast">
-      <span id="toastIcon">✨</span>
       <div>
-        <strong id="toastTitle">Nice!</strong>
-        <p id="toastText">Your eyes are getting sharper.</p>
+        <strong>Look</strong>
+        <p>Study the grid.</p>
       </div>
     </div>
 
-    <!-- PARTICLES -->
-    <div class="particles" id="particles"></div>
+    <div class="how-item">
+      <span
+        class="how-number"
+        aria-hidden="true"
+      >02</span>
 
-  </main>
+      <div>
+        <strong>Spot</strong>
+        <p>Find what's different.</p>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class="how-item">
+      <span
+        class="how-number"
+        aria-hidden="true"
+      >03</span>
+
+      <div>
+        <strong>Tap</strong>
+        <p>Beat the clock.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Helpful SEO content that remains useful to players -->
+  <div class="game-description">
+    <h2>Test your visual focus</h2>
+
+    <p>
+      Mind Match is a fast visual brain game where you search a
+      changing grid and find the one tile that doesn't match.
+      Play quick rounds, build your combo, beat your high score,
+      and challenge yourself to react faster.
+    </p>
+  </div>
+
+</section>
+
+<!-- GAME SCREEN -->
+<section
+  class="screen"
+  id="gameScreen"
+  aria-labelledby="instructionTitle"
+  aria-live="polite"
+>
+
+  <div class="game-top">
+
+    <div class="game-stat">
+      <small>SCORE</small>
+      <strong id="scoreDisplay">0</strong>
+    </div>
+
+    <div class="game-stat combo-stat">
+      <small>COMBO</small>
+      <strong>
+        ×<span id="comboDisplay">0</span>
+      </strong>
+    </div>
+
+    <div class="game-stat">
+      <small>ROUND</small>
+      <strong>
+        <span id="roundDisplay">1</span>
+      </strong>
+    </div>
+
+  </div>
+
+  <div
+    class="timer-wrap"
+    role="timer"
+    aria-label="Time remaining"
+  >
+
+    <div
+      class="timer-track"
+      aria-hidden="true"
+    >
+      <div
+        class="timer-bar"
+        id="timerBar"
+      ></div>
+    </div>
+
+    <div class="timer-text">
+      <span id="timerDisplay">10.0</span>s
+    </div>
+
+  </div>
+
+  <div class="instruction">
+
+    <span
+      id="instructionIcon"
+      aria-hidden="true"
+    >👁</span>
+
+    <div>
+      <strong id="instructionTitle">
+        Find the odd one
+      </strong>
+
+      <p id="instructionText">
+        One tile is different. Can you spot it?
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Game board is populated by JavaScript -->
+  <div
+    class="game-board"
+    id="gameBoard"
+    role="group"
+    aria-label="Game board. Find the tile that is different."
+  ></div>
+
+  <div class="game-footer">
+
+    <div
+      class="lives"
+      id="livesDisplay"
+      aria-label="Lives remaining"
+    >
+      <span aria-hidden="true">♥</span>
+      <span aria-hidden="true">♥</span>
+      <span aria-hidden="true">♥</span>
+    </div>
+
+    <div class="difficulty">
+
+      <span>DIFFICULTY</span>
+
+      <div
+        class="difficulty-dots"
+        id="difficultyDots"
+        aria-label="Current difficulty"
+      >
+        <i aria-hidden="true"></i>
+        <i aria-hidden="true"></i>
+        <i aria-hidden="true"></i>
+        <i aria-hidden="true"></i>
+        <i aria-hidden="true"></i>
+      </div>
+
+    </div>
+
+    <button
+      class="quit-btn"
+      id="quitBtn"
+      type="button"
+    >
+      QUIT
+    </button>
+
+  </div>
+
+</section>
+
+<!-- RESULT SCREEN -->
+<section
+  class="screen"
+  id="resultScreen"
+  aria-labelledby="resultTitle"
+  aria-live="polite"
+>
+
+  <div class="result-card">
+
+    <div
+      class="result-badge"
+      id="resultBadge"
+    >
+      ROUND COMPLETE
+    </div>
+
+    <div
+      class="result-icon"
+      id="resultIcon"
+      aria-hidden="true"
+    >
+      ✨
+    </div>
+
+    <h2 id="resultTitle">
+      Brilliant.
+    </h2>
+
+    <p id="resultMessage">
+      Your eyes were seriously sharp.
+    </p>
+
+    <div class="final-score">
+
+      <small>YOUR SCORE</small>
+
+      <strong id="finalScore">
+        0
+      </strong>
+
+      <div
+        class="new-record"
+        id="newRecord"
+        role="status"
+      >
+        ✦ NEW PERSONAL BEST
+      </div>
+
+    </div>
+
+    <div class="result-stats">
+
+      <div>
+        <span>ROUNDS</span>
+        <strong id="finalRounds">0</strong>
+      </div>
+
+      <div>
+        <span>BEST COMBO</span>
+        <strong id="finalCombo">0</strong>
+      </div>
+
+      <div>
+        <span>XP EARNED</span>
+        <strong id="finalXp">+0</strong>
+      </div>
+
+    </div>
+
+    <div class="xp-progress">
+
+      <div class="xp-header">
+        <span>
+          LEVEL
+          <b id="resultLevel">1</b>
+        </span>
+
+        <span>
+          <b id="xpCurrent">0</b>
+          /
+          <b id="xpRequired">100</b>
+          XP
+        </span>
+      </div>
+
+      <div
+        class="xp-track"
+        role="progressbar"
+        aria-label="Experience progress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
+        <div id="xpBar"></div>
+      </div>
+
+    </div>
+
+    <div class="result-buttons">
+
+      <button
+        class="play-btn"
+        id="againBtn"
+        type="button"
+      >
+        <span>PLAY AGAIN</span>
+        <b aria-hidden="true">→</b>
+      </button>
+
+      <button
+        class="secondary-btn"
+        id="homeBtn"
+        type="button"
+      >
+        BACK TO HOME
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LEVEL PANEL -->
+<div
+  class="modal"
+  id="levelModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="levelModalTitle"
+  aria-hidden="true"
+>
+
+  <div
+    class="modal-backdrop"
+    aria-hidden="true"
+  ></div>
+
+  <div class="level-modal-card">
+
+    <button
+      class="close-modal"
+      id="closeLevel"
+      type="button"
+      aria-label="Close level information"
+    >
+      ×
+    </button>
+
+    <div class="level-big">
+      LVL
+      <span id="modalLevel">1</span>
+    </div>
+
+    <h2 id="levelModalTitle">
+      Keep sharpening.
+    </h2>
+
+    <p>
+      Every game earns XP. Keep playing to unlock
+      higher difficulty.
+    </p>
+
+    <div class="modal-xp">
+
+      <div>
+        <span>XP</span>
+        <strong id="modalXp">0 / 100</strong>
+      </div>
+
+      <div
+        class="xp-track"
+        role="progressbar"
+        aria-label="Level experience progress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
+        <div id="modalXpBar"></div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- TOAST -->
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+>
+  <span
+    id="toastIcon"
+    aria-hidden="true"
+  >✨</span>
+
+  <div>
+    <strong id="toastTitle">Nice!</strong>
+    <p id="toastText">
+      Your eyes are getting sharper.
+    </p>
+  </div>
+</div>
+
+<!-- PARTICLES -->
+<div
+  class="particles"
+  id="particles"
+  aria-hidden="true"
+></div>
+
+</main> <noscript> <div style="padding: 2rem; text-align: center;"> <h1>Mind Match — Find the Odd One</h1> <p> Mind Match is a visual brain game that requires JavaScript to play. Please enable JavaScript in your browser to start the game. </p> </div> </noscript> <script src="script.js" defer></script> </body> </html>
