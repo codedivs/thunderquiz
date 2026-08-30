@@ -17,7 +17,6 @@
         gtag('config', 'G-G2KEEGCF0Y');
     </script>
 
-
     <meta charset="utf-8">
 
     <meta
@@ -25,15 +24,13 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-
     <title>
         ThunderQuiz – Free Brain Games, IQ Tests & Puzzles Online
     </title>
 
-
     <meta
         name="description"
-        content="Play free online brain games, IQ tests, logic puzzles and memory challenges on ThunderQuiz. Test your reasoning, pattern recognition and problem-solving skills."
+        content="Play free online brain games, IQ tests, logic puzzles and memory challenges on ThunderQuiz."
     >
 
     <meta
@@ -51,7 +48,6 @@
         href="https://thunderquiz.com/"
     >
 
-
     <link
         rel="icon"
         href="/favicon.ico"
@@ -61,7 +57,6 @@
         rel="apple-touch-icon"
         href="/apple-touch-icon.png"
     >
-
 
     <!-- Open Graph -->
 
@@ -100,7 +95,6 @@
         content="ThunderQuiz free online brain games and IQ tests"
     >
 
-
     <!-- Twitter / X -->
 
     <meta
@@ -123,11 +117,9 @@
         content="https://thunderquiz.com/images/og-image.jpg"
     >
 
-
     <!-- Structured Data -->
 
     <script type="application/ld+json">
-
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
@@ -135,9 +127,7 @@
         "url": "https://thunderquiz.com/",
         "description": "Free online brain games, IQ tests, logic puzzles and memory challenges."
     }
-
     </script>
-
 
     <link
         rel="stylesheet"
@@ -150,13 +140,28 @@
 <body>
 
 
-<header>
+<!-- =========================================
+     NAVIGATION
+========================================= -->
 
-    <h1>Ready to play?</h1>
+<header class="site-header">
 
-    <p>
-        INTELLIGENCE • KNOWLEDGE • CHALLENGE
-    </p>
+    <a class="brand" href="/">
+        <span class="brand-mark">⚡</span>
+        <span>THUNDERQUIZ</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+
+        <a href="#featured">Featured</a>
+        <a href="#games">Games</a>
+        <a href="#quick-play">Quick Play</a>
+
+    </nav>
+
+    <a class="header-play" href="#games">
+        PLAY
+    </a>
 
 </header>
 
@@ -164,142 +169,461 @@
 <main>
 
 
-    <a href="iq/index.html">
+<!-- =========================================
+     HERO / FEATURED GAME
+========================================= -->
 
-        <div class="game-card">
+<section
+    class="featured"
+    id="featured"
+>
 
-            <h2>IQ Level Estimator</h2>
+    <a
+        href="brainstorm/index.html"
+        class="featured-game"
+    >
+
+        <img
+            src="/images/brainstorm.jpg"
+            alt="BrainStorm Quiz Battle"
+        >
+
+        <div class="featured-overlay"></div>
+
+        <div class="featured-content">
+
+            <span class="eyebrow">
+                FEATURED GAME
+            </span>
+
+            <h1>
+                BrainStorm
+            </h1>
 
             <p>
-                Try 9 questions and discover how sharp your reasoning skills are.
+                Fast questions. Power-ups. One final Boss battle.
             </p>
+
+            <span class="featured-button">
+                PLAY NOW
+                <span>→</span>
+            </span>
 
         </div>
 
     </a>
 
+</section>
 
-    <a href="mindmatch/index.html">
 
-        <div class="game-card">
+<!-- =========================================
+     QUICK PLAY
+========================================= -->
 
-            <h2>Mind Match</h2>
+<section
+    class="game-section"
+    id="quick-play"
+>
 
-            <p>
-                Find the odd one before time runs out. Test your focus, speed and visual memory.
-            </p>
+    <div class="section-heading">
+
+        <div>
+            <span class="section-kicker">
+                PLAY SOMETHING
+            </span>
+
+            <h2>
+                Quick Play
+            </h2>
+        </div>
+
+        <span class="game-count">
+            04 GAMES
+        </span>
+
+    </div>
+
+
+    <div class="game-row">
+
+
+        <!-- IQ -->
+
+        <a
+            href="iq/index.html"
+            class="game-card"
+        >
+
+            <div class="game-image">
+
+                <img
+                    src="/images/iq.jpg"
+                    alt="IQ Level Estimator"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    IQ Level Estimator
+                </h3>
+
+                <span>
+                    IQ · REASONING
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Mind Match -->
+
+        <a
+            href="mindmatch/index.html"
+            class="game-card"
+        >
+
+            <div class="game-image">
+
+                <img
+                    src="/images/mindmatch.jpg"
+                    alt="Mind Match"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    Mind Match
+                </h3>
+
+                <span>
+                    MEMORY · SPEED
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Sequence -->
+
+        <a
+            href="sequence/index.html"
+            class="game-card"
+        >
+
+            <div class="game-image">
+
+                <img
+                    src="/images/sequence.jpg"
+                    alt="Sequence"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    Sequence
+                </h3>
+
+                <span>
+                    LOGIC · PATTERNS
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Pattern Hacker -->
+
+        <a
+            href="pattern-hacker/index.html"
+            class="game-card"
+        >
+
+            <div class="game-image">
+
+                <img
+                    src="/images/pattern-hacker.jpg"
+                    alt="Pattern Hacker"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    Pattern Hacker
+                </h3>
+
+                <span>
+                    LOGIC · CHALLENGE
+                </span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     DETECTIVE / CHALLENGE
+========================================= -->
+
+<section
+    class="game-section"
+    id="games"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-kicker">
+                TEST YOUR INSTINCTS
+            </span>
+
+            <h2>
+                Challenge
+            </h2>
 
         </div>
 
-    </a>
+        <span class="game-count">
+            03 GAMES
+        </span>
+
+    </div>
 
 
-    <a href="sequence/index.html">
+    <div class="game-row">
 
-        <div class="game-card">
 
-            <h2>Sequence</h2>
+        <!-- Who Is Lying -->
 
-            <p>
-                Crack mysterious patterns, beat the clock and discover how sharp your mind really is.
-            </p>
+        <a
+            href="whoslying/index.html"
+            class="game-card"
+        >
+
+            <div class="game-image">
+
+                <img
+                    src="/images/whoslying.jpg"
+                    alt="Who Is Lying?"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    Who Is Lying?
+                </h3>
+
+                <span>
+                    DETECTIVE · CLUES
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Color Memory -->
+
+        <a
+            href="turncards/index.html"
+            class="game-card"
+        >
+
+            <div class="game-image">
+
+                <img
+                    src="/images/color-memory.jpg"
+                    alt="Color Memory"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    Color Memory
+                </h3>
+
+                <span>
+                    MEMORY · CASUAL
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Name The Colors -->
+
+        <a
+            href="namethecolors/index.html"
+            class="game-card"
+        >
+
+            <div class="game-image">
+
+                <img
+                    src="/images/name-the-colors.jpg"
+                    alt="Name the Colors"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    Name the Colors
+                </h3>
+
+                <span>
+                    SPEED · FOCUS
+                </span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     WORD GAMES
+========================================= -->
+
+<section class="game-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-kicker">
+                WORDS & PUZZLES
+            </span>
+
+            <h2>
+                Puzzle Room
+            </h2>
 
         </div>
 
-    </a>
+        <span class="game-count">
+            02 GAMES
+        </span>
+
+    </div>
 
 
-    <a href="brainstorm/index.html">
-
-        <div class="game-card">
-
-            <h2>⚡ BrainStorm Quiz Battle</h2>
-
-            <p>
-                Challenge your brain with fast questions, power-ups and a final Boss battle.
-            </p>
-
-        </div>
-
-    </a>
+    <div class="game-row">
 
 
-    <a href="pattern-hacker/index.html">
+        <!-- Crossword -->
 
-        <div class="game-card">
+        <a
+            href="crossword/index.html"
+            class="game-card"
+        >
 
-            <h2>Pattern Hacker</h2>
+            <div class="game-image">
 
-            <p>
-                Crack the hidden pattern before time runs out.
-            </p>
+                <img
+                    src="/images/crossword.jpg"
+                    alt="Crossword"
+                    loading="lazy"
+                >
 
-        </div>
+            </div>
 
-    </a>
+            <div class="game-info">
 
-    <a href="whoslying/index.html">
+                <h3>
+                    Crossword
+                </h3>
 
-        <div class="game-card">
+                <span>
+                    WORDS · PUZZLE
+                </span>
 
-            <h2>🕵️ Who Is Lying?</h2>
+            </div>
 
-            <p>
-                Study the suspects, find the clues and catch the liar.
-            </p>
-
-        </div>
-
-    </a>
+        </a>
 
 
-    <a href="turncards/index.html">
+        <!-- Word Hunt -->
 
-        <div class="game-card">
+        <a
+            href="wordpuzzle/index.html"
+            class="game-card"
+        >
 
-            <h2>🎨 Color Memory</h2>
+            <div class="game-image">
 
-            <p>
-                Remember the colors, find the matching pairs and beat John.
-            </p>
+                <img
+                    src="/images/word-hunt.jpg"
+                    alt="Word Hunt Puzzle"
+                    loading="lazy"
+                >
 
-        </div>
+            </div>
 
-    </a>
+            <div class="game-info">
 
-    <a href="namethecolors/index.html">
-	    <div class="game-card">
-		    
-		    <h2>Name the colors</h2>
+                <h3>
+                    Word Hunt
+                </h3>
 
-		    <p>
-		    Can you identify the colors shown to you to beat all levels?
-		    </p>
-	    </div>
-    </a>
+                <span>
+                    WORDS · SEARCH
+                </span>
 
-    <a href="crossword/index.html">
-	    <div class="game-card">
+            </div>
 
-		    <h2>solve the crossword</h2>
+        </a>
 
-		    <p>
-		    Come on and try to solve this crossword
-		    </p>
-	    </div>
-    </a>
+    </div>
 
-    <a href="wordpuzzle/index.html">
-	    <div class="game-card">
-		    <h2>word hunt puzzle</h2>
+</section>
 
-		    <p>
-		    Look and search for the hidden words. Using your eyes of course.
-		    </p>
-	    </div>
-    </a>
 
 </main>
+
+
+<footer class="site-footer">
+
+    <span>
+        ⚡ THUNDERQUIZ
+    </span>
+
+    <span>
+        THINK FAST. PLAY SMART.
+    </span>
+
+</footer>
 
 
 <script src="script.js"></script>
@@ -307,3 +631,4 @@
 </body>
 
 </html>
+
