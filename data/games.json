@@ -1,0 +1,111 @@
+{
+    "settings": {
+        "adsEnabled": false
+    },
+
+    "games": [
+
+        {
+            "id": "iq",
+            "title": "IQ Level Estimator",
+            "folder": "iq",
+            "image": "/images/iq.jpg",
+            "category": "IQ · REASONING",
+            "section": "quick",
+            "active": true
+        },
+
+        {
+            "id": "mindmatch",
+            "title": "Mind Match",
+            "folder": "mindmatch",
+            "image": "/images/mindmatch.jpg",
+            "category": "MEMORY · SPEED",
+            "section": "quick",
+            "active": true
+        },
+
+        {
+            "id": "sequence",
+            "title": "Sequence",
+            "folder": "sequence",
+            "image": "/images/sequence.png",
+            "category": "LOGIC · PATTERNS",
+            "section": "quick",
+            "active": true
+        },
+
+        {
+            "id": "pattern-hacker",
+            "title": "Pattern Hacker",
+            "folder": "pattern-hacker",
+            "image": "/images/pattern-hacker.png",
+            "category": "LOGIC · CHALLENGE",
+            "section": "quick",
+            "active": true
+        },
+
+        {
+            "id": "whoslying",
+            "title": "Who Is Lying?",
+            "folder": "whoslying",
+            "image": "/images/whoslying.png",
+            "category": "DETECTIVE · CLUES",
+            "section": "challenge",
+            "active": true
+        },
+
+        {
+            "id": "turncards",
+            "title": "Color Memory",
+            "folder": "turncards",
+            "image": "/images/colormemory.png",
+            "category": "MEMORY · CASUAL",
+            "section": "challenge",
+            "active": true
+        },
+
+        {
+            "id": "namethecolors",
+            "title": "Name the Colors",
+            "folder": "namethecolors",
+            "image": "/images/namecolors.png",
+            "category": "SPEED · FOCUS",
+            "section": "challenge",
+            "active": true
+        },
+
+        {
+            "id": "crossword",
+            "title": "Crossword",
+            "folder": "crossword",
+            "image": "/images/crossword.png",
+            "category": "WORDS · PUZZLE",
+            "section": "puzzle",
+            "active": true
+        },
+
+        {
+            "id": "wordpuzzle",
+            "title": "Word Hunt",
+            "folder": "wordpuzzle",
+            "image": "/images/word-hunt.jpg",
+            "category": "WORDS · SEARCH",
+            "section": "puzzle",
+            "active": true
+        },
+
+	{
+	    "id": "chess",
+    	    "title": "Chess",
+    	    "folder": "chess",
+    	    "image": "/images/chess.jpg",
+    	    "category": "STRATEGY · CHESS",
+    	    "section": "challenge",
+    	    "active": true
+	}
+
+
+    ]
+}
+
