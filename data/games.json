@@ -89,7 +89,7 @@
             "id": "wordpuzzle",
             "title": "Word Hunt",
             "folder": "wordpuzzle",
-            "image": "/images/word-hunt.jpg",
+            "image": "/images/wordhunt.png",
             "category": "WORDS · SEARCH",
             "section": "puzzle",
             "active": true
