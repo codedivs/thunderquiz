@@ -99,7 +99,7 @@
 	    "id": "chess",
     	    "title": "Chess",
     	    "folder": "chess",
-    	    "image": "/images/chess.jpg",
+    	    "image": "/images/chess.png",
     	    "category": "STRATEGY · CHESS",
     	    "section": "challenge",
     	    "active": true
