@@ -3,19 +3,9 @@
 
 <head>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G2KEEGCF0Y"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-G2KEEGCF0Y');
-    </script>
+    <!-- =====================================================
+         BASIC SEO
+    ====================================================== -->
 
     <meta charset="utf-8">
 
@@ -30,7 +20,7 @@
 
     <meta
         name="description"
-        content="Play free online brain games, IQ tests, logic puzzles and memory challenges on ThunderQuiz."
+        content="Play free online brain games, IQ tests, logic puzzles, memory challenges and quick-thinking games on ThunderQuiz."
     >
 
     <meta
@@ -58,7 +48,10 @@
         href="/apple-touch-icon.png"
     >
 
-    <!-- Open Graph -->
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
 
     <meta
         property="og:type"
@@ -77,7 +70,7 @@
 
     <meta
         property="og:description"
-        content="Challenge your mind with free IQ tests, brain games, logic puzzles and memory challenges on ThunderQuiz."
+        content="Challenge your mind with free IQ tests, brain games, logic puzzles, memory challenges and quick-thinking games."
     >
 
     <meta
@@ -92,10 +85,13 @@
 
     <meta
         property="og:image:alt"
-        content="ThunderQuiz free online brain games and IQ tests"
+        content="ThunderQuiz free online brain games and puzzles"
     >
 
-    <!-- Twitter / X -->
+
+    <!-- =====================================================
+         TWITTER / X
+    ====================================================== -->
 
     <meta
         name="twitter:card"
@@ -117,7 +113,10 @@
         content="https://thunderquiz.com/images/og-image.jpg"
     >
 
-    <!-- Structured Data -->
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
 
     <script type="application/ld+json">
     {
@@ -125,9 +124,19 @@
         "@type": "WebSite",
         "name": "ThunderQuiz",
         "url": "https://thunderquiz.com/",
-        "description": "Free online brain games, IQ tests, logic puzzles and memory challenges."
+        "description": "Free online brain games, IQ tests, logic puzzles, memory challenges and quick-thinking games.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://thunderquiz.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
     }
     </script>
+
+
+    <!-- =====================================================
+         STYLES
+    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -140,58 +149,96 @@
 <body>
 
 
-<!-- =========================================
-     NAVIGATION
-========================================= -->
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
 <header class="site-header">
 
-    <a class="brand" href="/">
-        <span class="brand-mark">⚡</span>
-        <span>THUNDERQUIZ</span>
+    <a
+        class="brand"
+        href="/"
+        aria-label="ThunderQuiz Home"
+    >
+
+        <span
+            class="brand-mark"
+            aria-hidden="true"
+        >
+            ⚡
+        </span>
+
+        <span>
+            THUNDERQUIZ
+        </span>
+
     </a>
 
-    <nav class="main-nav" aria-label="Main navigation">
 
-        <a href="#featured">Featured</a>
-        <a href="#games">Games</a>
-        <a href="#quick-play">Quick Play</a>
+    <nav
+        class="main-nav"
+        aria-label="Main navigation"
+    >
+
+        <a href="#featured">
+            Featured
+        </a>
+
+        <a href="#games">
+            Games
+        </a>
+
+        <a href="#quick-play">
+            Quick Play
+        </a>
 
     </nav>
 
-    <a class="header-play" href="#games">
+
+    <a
+        class="header-play"
+        href="#games"
+    >
         PLAY
     </a>
 
 </header>
 
 
+
 <main>
 
 
-<!-- =========================================
-     HERO / FEATURED GAME
-========================================= -->
+<!-- =====================================================
+     FEATURED GAME
+====================================================== -->
 
 <section
     class="featured"
     id="featured"
+    aria-labelledby="featured-title"
 >
 
     <a
-        href="brainstorm/index.html"
+        href="/brainstorm/index.html"
         class="featured-game"
+        aria-label="Play BrainStorm Quiz Battle"
     >
 
         <img
             src="/images/brainstorm.jpg"
             alt="BrainStorm Quiz Battle"
-	    loading="eager"
-	    decoding="async"
-	    onerror="this.onerror=null; this.src='/images/brainstorm.jpg';"
+            width="1280"
+            height="580"
+            fetchpriority="high"
+            decoding="async"
         >
 
-        <div class="featured-overlay"></div>
+        <div
+            class="featured-overlay"
+            aria-hidden="true"
+        ></div>
+
 
         <div class="featured-content">
 
@@ -199,17 +246,18 @@
                 FEATURED GAME
             </span>
 
-            <h1>
+            <h1 id="featured-title">
                 BrainStorm
             </h1>
 
             <p>
-                Fast questions. Power-ups. One final Boss battle.
+                Fast questions, power-ups and one final boss battle.
+                Test your knowledge, speed and decision-making skills.
             </p>
 
             <span class="featured-button">
                 PLAY NOW
-                <span>→</span>
+                <span aria-hidden="true">→</span>
             </span>
 
         </div>
@@ -219,176 +267,60 @@
 </section>
 
 
-<!-- =========================================
+
+<!-- =====================================================
      QUICK PLAY
-========================================= -->
+====================================================== -->
 
 <section
     class="game-section"
     id="quick-play"
+    aria-labelledby="quick-title"
 >
 
     <div class="section-heading">
 
         <div>
+
             <span class="section-kicker">
                 PLAY SOMETHING
             </span>
 
-            <h2>
+            <h2 id="quick-title">
                 Quick Play
             </h2>
+
         </div>
 
-        <span class="game-count">
-            04 GAMES
+
+        <span
+            class="game-count"
+            id="quick-count"
+        >
+            00 GAMES
         </span>
 
     </div>
 
 
-    <div class="game-row">
-
-
-        <!-- IQ -->
-
-        <a
-            href="iq/index.html"
-            class="game-card"
-        >
-
-            <div class="game-image">
-
-                <img
-                    src="/images/iq.jpg"
-                    alt="IQ Level Estimator"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    IQ Level Estimator
-                </h3>
-
-                <span>
-                    IQ · REASONING
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- Mind Match -->
-
-        <a
-            href="mindmatch/index.html"
-            class="game-card"
-        >
-
-            <div class="game-image">
-
-                <img
-                    src="/images/mindmatch.jpg"
-                    alt="Mind Match"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    Mind Match
-                </h3>
-
-                <span>
-                    MEMORY · SPEED
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- Sequence -->
-
-        <a
-            href="sequence/index.html"
-            class="game-card"
-        >
-
-            <div class="game-image">
-
-                <img
-                    src="/images/sequence.png"
-                    alt="Sequence"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    Sequence
-                </h3>
-
-                <span>
-                    LOGIC · PATTERNS
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- Pattern Hacker -->
-
-        <a
-            href="pattern-hacker/index.html"
-            class="game-card"
-        >
-
-            <div class="game-image">
-
-                <img
-                    src="/images/pattern-hacker.jpg"
-                    alt="Pattern Hacker"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    Pattern Hacker
-                </h3>
-
-                <span>
-                    LOGIC · CHALLENGE
-                </span>
-
-            </div>
-
-        </a>
-
-    </div>
+    <div
+        class="game-row"
+        id="quick-games"
+        aria-live="polite"
+    ></div>
 
 </section>
 
 
-<!-- =========================================
-     DETECTIVE / CHALLENGE
-========================================= -->
+
+<!-- =====================================================
+     CHALLENGE
+====================================================== -->
 
 <section
     class="game-section"
     id="games"
+    aria-labelledby="challenge-title"
 >
 
     <div class="section-heading">
@@ -399,127 +331,41 @@
                 TEST YOUR INSTINCTS
             </span>
 
-            <h2>
+            <h2 id="challenge-title">
                 Challenge
             </h2>
 
         </div>
 
-        <span class="game-count">
-            03 GAMES
+
+        <span
+            class="game-count"
+            id="challenge-count"
+        >
+            00 GAMES
         </span>
 
     </div>
 
 
-    <div class="game-row">
-
-
-        <!-- Who Is Lying -->
-
-        <a
-            href="whoslying/index.html"
-            class="game-card"
-        >
-
-            <div class="game-image">
-
-                <img
-                    src="/images/whoslying.jpg"
-                    alt="Who Is Lying?"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    Who Is Lying?
-                </h3>
-
-                <span>
-                    DETECTIVE · CLUES
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- Color Memory -->
-
-        <a
-            href="turncards/index.html"
-            class="game-card"
-        >
-
-            <div class="game-image">
-
-                <img
-                    src="/images/color-memory.jpg"
-                    alt="Color Memory"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    Color Memory
-                </h3>
-
-                <span>
-                    MEMORY · CASUAL
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- Name The Colors -->
-
-        <a
-            href="namethecolors/index.html"
-            class="game-card"
-        >
-
-            <div class="game-image">
-
-                <img
-                    src="/images/name-the-colors.jpg"
-                    alt="Name the Colors"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    Name the Colors
-                </h3>
-
-                <span>
-                    SPEED · FOCUS
-                </span>
-
-            </div>
-
-        </a>
-
-    </div>
+    <div
+        class="game-row"
+        id="challenge-games"
+        aria-live="polite"
+    ></div>
 
 </section>
 
 
-<!-- =========================================
-     WORD GAMES
-========================================= -->
 
-<section class="game-section">
+<!-- =====================================================
+     PUZZLE ROOM
+====================================================== -->
+
+<section
+    class="game-section"
+    aria-labelledby="puzzle-title"
+>
 
     <div class="section-heading">
 
@@ -529,84 +375,79 @@
                 WORDS & PUZZLES
             </span>
 
-            <h2>
+            <h2 id="puzzle-title">
                 Puzzle Room
             </h2>
 
         </div>
 
-        <span class="game-count">
-            02 GAMES
+
+        <span
+            class="game-count"
+            id="puzzle-count"
+        >
+            00 GAMES
         </span>
 
     </div>
 
 
-    <div class="game-row">
+    <div
+        class="game-row"
+        id="puzzle-games"
+        aria-live="polite"
+    ></div>
+
+</section>
 
 
-        <!-- Crossword -->
 
-        <a
-            href="crossword/index.html"
-            class="game-card"
-        >
+<!-- =====================================================
+     ABOUT THUNDERQUIZ
+====================================================== -->
 
-            <div class="game-image">
+<section
+    class="game-section"
+    aria-labelledby="about-title"
+>
 
-                <img
-                    src="/images/crossword.jpg"
-                    alt="Crossword"
-                    loading="eager"
-                >
+    <div class="section-heading">
 
-            </div>
+        <div>
 
-            <div class="game-info">
+            <span class="section-kicker">
+                WELCOME TO THUNDERQUIZ
+            </span>
 
-                <h3>
-                    Crossword
-                </h3>
+            <h2 id="about-title">
+                Free Brain Games Online
+            </h2>
 
-                <span>
-                    WORDS · PUZZLE
-                </span>
+        </div>
 
-            </div>
-
-        </a>
+    </div>
 
 
-        <!-- Word Hunt -->
+    <div class="seo-content">
 
-        <a
-            href="wordpuzzle/index.html"
-            class="game-card"
-        >
+        <p>
+            ThunderQuiz is a collection of free online brain games,
+            puzzles and mental challenges designed for quick,
+            entertaining play.
+        </p>
 
-            <div class="game-image">
+        <p>
+            Test your IQ and reasoning skills, improve your memory,
+            solve logic puzzles, identify patterns and challenge
+            yourself with fast-thinking games.
+        </p>
 
-                <img
-                    src="/images/word-hunt.jpg"
-                    alt="Word Hunt Puzzle"
-                    loading="eager"
-                >
-
-            </div>
-
-            <div class="game-info">
-
-                <h3>
-                    Word Hunt
-                </h3>
-
-                <span>
-                    WORDS · SEARCH
-                </span>
-
-            </div>
-
-        </a>
+        <p>
+            Whether you have a few minutes or want a longer challenge,
+            ThunderQuiz gives you simple games that work directly
+            in your web browser on desktop computers, tablets and
+            mobile phones.
+        </p>
 
     </div>
 
@@ -615,6 +456,11 @@
 
 </main>
 
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer class="site-footer">
 
@@ -629,7 +475,16 @@
 </footer>
 
 
-<script src="script.js"></script>
+
+<!-- =====================================================
+     GAME CATALOGUE
+====================================================== -->
+
+<script
+    src="/js/games.js"
+    defer
+></script>
+
 
 </body>
 

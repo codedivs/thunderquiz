@@ -890,3 +890,40 @@ a:focus-visible {
     }
 }
 
+/* =========================================================
+   SEO / INTRO CONTENT
+========================================================= */
+
+.seo-content {
+    max-width: 760px;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.seo-content p {
+    margin: 0 0 18px;
+}
+
+.seo-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SEO CONTENT — MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .seo-content {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+}
+
