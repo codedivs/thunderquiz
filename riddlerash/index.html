@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Riddle Rush - Puzzle Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Celebration Effects -->
+    <div id="celebration"></div>
+
+    <!-- Main Game -->
+    <main class="game-container">
+
+        <!-- Header -->
+        <header class="game-header">
+            <h1>🧠 Riddle Rush</h1>
+            <p>Think smart. Solve riddles. Have fun!</p>
+        </header>
+
+
+        <!-- Game Stats -->
+        <section class="stats">
+
+            <div class="stat-box">
+                <span class="stat-label">Riddle</span>
+                <strong id="riddle-number">1 / 6</strong>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-label">Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+
+        <!-- Riddle Card -->
+        <section class="riddle-card">
+
+            <div class="riddle-icon">🤔</div>
+
+            <h2 id="riddle-text">
+                Loading your riddle...
+            </h2>
+
+        </section>
+
+
+        <!-- Answer Area -->
+        <section class="answer-area">
+
+            <input
+                type="text"
+                id="answer-input"
+                placeholder="Type your answer here..."
+                autocomplete="off"
+            >
+
+            <button id="submit-btn">
+                Check Answer
+            </button>
+
+        </section>
+
+
+        <!-- Message -->
+        <div id="message"></div>
+
+
+        <!-- Next Button -->
+        <button id="next-btn" class="hidden">
+            Next Riddle →
+        </button>
+
+
+        <!-- Restart Button -->
+        <button id="restart-btn" class="hidden">
+            🔄 Play Again
+        </button>
+
+
+        <!-- Game Footer -->
+        <footer>
+            <p>🎯 Each game randomly selects 6 riddles from over 100 puzzles!</p>
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

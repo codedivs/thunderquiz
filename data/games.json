@@ -103,8 +103,25 @@
     	    "category": "STRATEGY · CHESS",
     	    "section": "challenge",
     	    "active": true
+	},
+	{
+		"id":"wordtrap",
+		"title":"wordtrap",
+		"folder":"wordtrap",
+		"image":"/images/wordtrap.png",
+		"category":"WORDS . PUZZLE",
+		"section":"puzzle",
+		"active":"true"
+	},
+	{
+		"id":"riddlerash",
+		"title":"riddlerash",
+		"folder":"riddlerash",
+		"image":"/images/riddlerash.png",
+		"category":"WORDS . PUZZLE",
+		"section":"puzzle",
+		"active":"true"
 	}
-
 
     ]
 }

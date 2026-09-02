@@ -1,0 +1,1764 @@
+/* =========================================================
+   WORD TRAP — PUZZLE EDITION
+   Visual style:
+   - warm mystery-book atmosphere
+   - bold editorial typography
+   - colorful puzzle cards
+   - playful buttons
+   - premium mobile-first layout
+   ========================================================= */
+
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    --ink: #17151c;
+    --ink-soft: #34313b;
+
+    --cream: #f8f1df;
+    --paper: #fffaf0;
+    --paper-dark: #eee3ca;
+
+    --purple: #6d4aff;
+    --purple-dark: #4c2dd1;
+
+    --yellow: #ffd447;
+    --orange: #ff8b4a;
+
+    --pink: #ff5f86;
+    --cyan: #39d9c4;
+
+    --green: #37bd7c;
+    --red: #ee4d5f;
+
+    --muted: #77717d;
+
+    --shadow:
+        0 18px 45px rgba(35, 27, 17, .18);
+
+    --deep-shadow:
+        0 28px 80px rgba(35, 27, 17, .28);
+
+    --radius: 24px;
+
+    font-family:
+        "DM Sans",
+        system-ui,
+        sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+
+    min-height: 100vh;
+
+    color: var(--ink);
+
+    background:
+        #f2ead7;
+
+    overflow-x: hidden;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+#game {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255,212,71,.35),
+            transparent 22%
+        ),
+
+        radial-gradient(
+            circle at 92% 25%,
+            rgba(57,217,196,.22),
+            transparent 23%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255,95,134,.13),
+            transparent 35%
+        ),
+
+        var(--cream);
+}
+
+
+/* giant decorative letters */
+
+#game::before {
+
+    content: "?";
+
+    position: fixed;
+
+    right: -40px;
+    bottom: -100px;
+
+    z-index: 0;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(250px, 40vw, 600px);
+
+    line-height: 1;
+
+    color:
+        rgba(109,74,255,.055);
+
+    pointer-events: none;
+
+    transform: rotate(-8deg);
+}
+
+
+/* paper grain */
+
+#game::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    opacity: .16;
+
+    background-image:
+
+        radial-gradient(
+            rgba(23,21,28,.25) .7px,
+            transparent .7px
+        );
+
+    background-size:
+        7px 7px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.game-header {
+
+    position: relative;
+
+    z-index: 10;
+
+    width:
+        min(920px, 92%);
+
+    margin: auto;
+
+    padding:
+        24px 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* logo */
+
+.logo {
+
+    position: relative;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(28px, 6vw, 42px);
+
+    line-height: .9;
+
+    letter-spacing:
+        .08em;
+
+    color: var(--ink);
+
+    transform: rotate(-2deg);
+
+    text-shadow:
+        3px 3px 0 var(--yellow);
+}
+
+
+/* small underline */
+
+.logo::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+    bottom: -7px;
+
+    width: 45px;
+    height: 4px;
+
+    background:
+        var(--pink);
+
+    border-radius: 10px;
+
+    transform:
+        rotate(-3deg);
+}
+
+
+/* round indicator */
+
+.progress {
+
+    padding:
+        9px 14px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--ink);
+
+    color:
+        var(--cream);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow:
+        4px 4px 0 var(--purple);
+
+    white-space: nowrap;
+}
+
+#roundNumber {
+
+    color:
+        var(--yellow);
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.game-main {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(800px, 92%);
+
+    margin:
+        35px auto 90px;
+}
+
+
+/* =========================================================
+   PUZZLE TYPE
+   ========================================================= */
+
+.puzzle-type {
+
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        0 auto 12px;
+
+    padding:
+        7px 13px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--purple);
+
+    color:
+        white;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        .12em;
+
+    transform:
+        rotate(-1deg);
+
+    box-shadow:
+        3px 3px 0 var(--ink);
+}
+
+
+/* =========================================================
+   PUZZLE CARD
+   ========================================================= */
+
+.puzzle-card {
+
+    position: relative;
+
+    padding:
+        clamp(25px, 6vw, 48px);
+
+    border:
+        3px solid var(--ink);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        var(--paper);
+
+    box-shadow:
+        var(--deep-shadow),
+        9px 9px 0 var(--purple);
+
+    overflow: hidden;
+
+    animation:
+        puzzleEnter .5s cubic-bezier(.2,.9,.3,1);
+}
+
+
+@keyframes puzzleEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            rotate(1deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+    }
+
+}
+
+
+/* corner decoration */
+
+.puzzle-card::before {
+
+    content: "THINK";
+
+    position: absolute;
+
+    top: 15px;
+    right: -38px;
+
+    padding:
+        5px 40px;
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--ink);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    transform:
+        rotate(40deg);
+
+}
+
+
+/* colored circle */
+
+.puzzle-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: -55px;
+    bottom: -55px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--cyan);
+
+    opacity: .22;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   DIFFICULTY
+   ========================================================= */
+
+.difficulty {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--pink);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        .13em;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+#puzzleTitle {
+
+    margin-bottom:
+        15px;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(40px, 9vw, 68px);
+
+    line-height:
+        .9;
+
+    letter-spacing:
+        .015em;
+
+    color:
+        var(--ink);
+}
+
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
+.question {
+
+    max-width:
+        680px;
+
+    margin-bottom:
+        28px;
+
+    color:
+        var(--ink-soft);
+
+    font-size:
+        clamp(18px, 4vw, 23px);
+
+    line-height:
+        1.55;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   PUZZLE CONTENT
+   ========================================================= */
+
+.puzzle-content {
+
+    position: relative;
+
+    min-height:
+        110px;
+
+    margin-bottom:
+        22px;
+
+    padding:
+        28px 20px;
+
+    display: flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        3px dashed
+        var(--purple);
+
+    border-radius:
+        18px;
+
+    background:
+        #f1e9ff;
+
+    color:
+        var(--purple-dark);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size:
+        clamp(22px, 5vw, 34px);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.4;
+
+    box-shadow:
+        inset 0 0 0 4px
+        rgba(255,255,255,.55);
+
+}
+
+
+/* little puzzle icon */
+
+.puzzle-content::before {
+
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    left:
+        13px;
+
+    top:
+        8px;
+
+    color:
+        var(--orange);
+
+    font-size:
+        20px;
+
+}
+
+
+/* =========================================================
+   ANSWERS
+   ========================================================= */
+
+.answers {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        13px;
+}
+
+
+/* =========================================================
+   ANSWER BUTTON
+   ========================================================= */
+
+.answer {
+
+    position:
+        relative;
+
+    min-height:
+        70px;
+
+    padding:
+        12px 15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    border:
+        2px solid
+        var(--ink);
+
+    border-radius:
+        16px;
+
+    background:
+        #fffdf7;
+
+    color:
+        var(--ink);
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.35;
+
+    box-shadow:
+        4px 4px 0
+        var(--paper-dark);
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease;
+}
+
+
+/* answer letter */
+
+.answer::before {
+
+    content:
+        "";
+
+    flex:
+        0 0 auto;
+
+    width:
+        31px;
+
+    height:
+        31px;
+
+    margin-right:
+        11px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        10px;
+
+    background:
+        var(--ink);
+
+    color:
+        white;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+}
+
+
+.answer:nth-child(1)::before {
+    content: "A";
+}
+
+.answer:nth-child(2)::before {
+    content: "B";
+}
+
+.answer:nth-child(3)::before {
+    content: "C";
+}
+
+.answer:nth-child(4)::before {
+    content: "D";
+}
+
+
+/* hover */
+
+.answer:hover {
+
+    transform:
+        translate(-2px,-3px);
+
+    box-shadow:
+        7px 8px 0
+        var(--purple);
+
+    background:
+        #f4efff;
+}
+
+
+/* active */
+
+.answer:active {
+
+    transform:
+        translate(2px,2px);
+
+    box-shadow:
+        1px 1px 0
+        var(--paper-dark);
+}
+
+
+/* disabled */
+
+.answer:disabled {
+
+    cursor:
+        default;
+}
+
+
+/* =========================================================
+   CORRECT
+   ========================================================= */
+
+.answer.correct {
+
+    background:
+        #d9f7e9;
+
+    border-color:
+        var(--green);
+
+    color:
+        #176d49;
+
+    box-shadow:
+        5px 5px 0
+        #9de2c1;
+
+    animation:
+        correctPop .35s ease;
+}
+
+
+.answer.correct::before {
+
+    content:
+        "✓";
+
+    background:
+        var(--green);
+
+    color:
+        white;
+}
+
+
+@keyframes correctPop {
+
+    0% {
+        transform: scale(.96);
+    }
+
+    70% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   WRONG
+   ========================================================= */
+
+.answer.wrong {
+
+    background:
+        #ffe1e5;
+
+    border-color:
+        var(--red);
+
+    color:
+        #a82f40;
+
+    box-shadow:
+        5px 5px 0
+        #f5adb7;
+
+    animation:
+        wrongShake .4s ease;
+}
+
+
+.answer.wrong::before {
+
+    content:
+        "×";
+
+    background:
+        var(--red);
+}
+
+
+@keyframes wrongShake {
+
+    0%,100% {
+        transform:
+            translateX(0);
+    }
+
+    25% {
+        transform:
+            translateX(-7px);
+    }
+
+    75% {
+        transform:
+            translateX(7px);
+    }
+
+}
+
+
+/* =========================================================
+   RESULT CARD
+   ========================================================= */
+
+.result {
+
+    margin-top:
+        22px;
+
+    padding:
+        20px;
+
+    border:
+        2px solid
+        var(--ink);
+
+    border-radius:
+        18px;
+
+    background:
+        #fff7d8;
+
+    box-shadow:
+        5px 5px 0
+        var(--yellow);
+
+    animation:
+        resultAppear .35s ease;
+}
+
+
+@keyframes resultAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.result-icon {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    margin-bottom:
+        10px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--ink);
+
+    color:
+        var(--yellow);
+
+    font-size:
+        22px;
+
+    font-weight:
+        900;
+}
+
+
+.result h2 {
+
+    margin-bottom:
+        6px;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        32px;
+
+    letter-spacing:
+        .03em;
+}
+
+
+.result p {
+
+    margin-bottom:
+        17px;
+
+    color:
+        var(--ink-soft);
+
+    line-height:
+        1.6;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   NEXT BUTTON
+   ========================================================= */
+
+.next-button {
+
+    padding:
+        13px 21px;
+
+    border:
+        2px solid
+        var(--ink);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--purple);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    box-shadow:
+        4px 4px 0
+        var(--ink);
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+}
+
+
+.next-button:hover {
+
+    transform:
+        translate(-2px,-2px);
+
+    box-shadow:
+        6px 6px 0
+        var(--ink);
+}
+
+
+.next-button:active {
+
+    transform:
+        translate(2px,2px);
+
+    box-shadow:
+        1px 1px 0
+        var(--ink);
+}
+
+
+/* =========================================================
+   SCORE PANEL
+   ========================================================= */
+
+.score-panel {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        12px;
+
+    margin-top:
+        18px;
+}
+
+
+.score-item {
+
+    padding:
+        14px 10px;
+
+    border:
+        2px solid
+        var(--ink);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,250,240,.75);
+
+    text-align:
+        center;
+
+    box-shadow:
+        3px 3px 0
+        rgba(23,21,28,.12);
+}
+
+
+.score-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--muted);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.score-item strong {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        28px;
+
+    letter-spacing:
+        .03em;
+}
+
+
+/* =========================================================
+   START / END SCREEN
+   ========================================================= */
+
+.overlay {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        100;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        20px;
+
+    background:
+        rgba(23,21,28,.78);
+
+    backdrop-filter:
+        blur(10px);
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity .35s ease;
+}
+
+
+.overlay.active {
+
+    opacity:
+        1;
+
+    pointer-events:
+        auto;
+}
+
+
+/* =========================================================
+   OVERLAY CARD
+   ========================================================= */
+
+.overlay-card {
+
+    position:
+        relative;
+
+    width:
+        min(500px,100%);
+
+    padding:
+        clamp(30px,7vw,55px);
+
+    border:
+        3px solid
+        var(--ink);
+
+    border-radius:
+        27px;
+
+    background:
+        var(--paper);
+
+    box-shadow:
+        10px 10px 0
+        var(--yellow),
+
+        var(--deep-shadow);
+
+    text-align:
+        center;
+
+    overflow:
+        hidden;
+
+    animation:
+        overlayPop .55s cubic-bezier(.2,1.2,.3,1);
+}
+
+
+@keyframes overlayPop {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(.88)
+            rotate(-2deg);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+
+}
+
+
+/* decorative circle */
+
+.overlay-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    left:
+        -75px;
+
+    top:
+        -75px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--pink);
+
+    opacity:
+        .25;
+}
+
+
+/* =========================================================
+   SYMBOL
+   ========================================================= */
+
+.game-symbol {
+
+    position:
+        relative;
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        58px;
+
+    animation:
+        floating .9s ease-in-out infinite alternate;
+}
+
+
+@keyframes floating {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(-4deg);
+    }
+
+    to {
+        transform:
+            translateY(-7px)
+            rotate(4deg);
+    }
+
+}
+
+
+/* =========================================================
+   OVERLAY TITLE
+   ========================================================= */
+
+.overlay-card h1 {
+
+    position:
+        relative;
+
+    margin-bottom:
+        13px;
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(55px,12vw,82px);
+
+    line-height:
+        .82;
+
+    letter-spacing:
+        .025em;
+
+    color:
+        var(--ink);
+
+    text-shadow:
+        4px 4px 0
+        var(--cyan);
+}
+
+
+/* =========================================================
+   OVERLAY TEXT
+   ========================================================= */
+
+.overlay-card p {
+
+    max-width:
+        380px;
+
+    margin:
+        0 auto 25px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   START BUTTON
+   ========================================================= */
+
+.start-button {
+
+    min-width:
+        200px;
+
+    padding:
+        16px 25px;
+
+    border:
+        2px solid
+        var(--ink);
+
+    border-radius:
+        14px;
+
+    background:
+        var(--purple);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        5px 5px 0
+        var(--ink);
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+}
+
+
+.start-button:hover {
+
+    transform:
+        translate(-2px,-3px);
+
+    box-shadow:
+        8px 8px 0
+        var(--ink);
+}
+
+
+.start-button:active {
+
+    transform:
+        translate(3px,3px);
+
+    box-shadow:
+        1px 1px 0
+        var(--ink);
+}
+
+
+/* =========================================================
+   FINAL SCORE
+   ========================================================= */
+
+.final-score {
+
+    margin-bottom:
+        23px;
+
+    padding:
+        14px;
+
+    border:
+        2px solid
+        var(--ink);
+
+    border-radius:
+        15px;
+
+    background:
+        #f1e9ff;
+}
+
+
+.final-score span {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        var(--muted);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size:
+        10px;
+}
+
+
+.final-score strong {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        55px;
+
+    color:
+        var(--purple);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:600px) {
+
+    .game-header {
+
+        width:
+            94%;
+
+        padding-top:
+            20px;
+    }
+
+
+    .game-main {
+
+        width:
+            94%;
+
+        margin-top:
+            25px;
+    }
+
+
+    .puzzle-card {
+
+        padding:
+            24px 17px;
+
+        border-radius:
+            20px;
+
+        box-shadow:
+            6px 6px 0
+            var(--purple),
+            var(--shadow);
+    }
+
+
+    #puzzleTitle {
+
+        font-size:
+            48px;
+    }
+
+
+    .question {
+
+        font-size:
+            17px;
+    }
+
+
+    .puzzle-content {
+
+        min-height:
+            95px;
+
+        padding:
+            20px 13px;
+
+        font-size:
+            21px;
+    }
+
+
+    .answers {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .answer {
+
+        min-height:
+            62px;
+    }
+
+
+    .score-panel {
+
+        gap:
+            7px;
+    }
+
+
+    .score-item {
+
+        padding:
+            11px 5px;
+    }
+
+
+    .score-item strong {
+
+        font-size:
+            24px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width:360px) {
+
+    .logo {
+
+        font-size:
+            25px;
+    }
+
+
+    .progress {
+
+        padding:
+            7px 9px;
+
+        font-size:
+            10px;
+    }
+
+
+    #puzzleTitle {
+
+        font-size:
+            43px;
+    }
+
+
+    .puzzle-card {
+
+        padding:
+            22px 14px;
+    }
+
+
+    .overlay-card {
+
+        padding:
+            30px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .001ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .001ms !important;
+    }
+
+}
+

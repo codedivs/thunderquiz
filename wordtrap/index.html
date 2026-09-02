@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#10131f"
+    >
+
+    <title>Word Trap</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="game">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="game-header">
+
+        <div class="logo">
+            WORD TRAP
+        </div>
+
+        <div class="progress">
+            <span id="roundNumber">1</span>
+            /
+            <span id="totalRounds">15</span>
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="game-main">
+
+
+        <!-- INTRO / CATEGORY -->
+
+        <div
+            class="puzzle-type"
+            id="puzzleType"
+        >
+            WORD PUZZLE
+        </div>
+
+
+        <!-- PUZZLE CARD -->
+
+        <section
+            class="puzzle-card"
+            id="puzzleCard"
+        >
+
+            <div
+                class="difficulty"
+                id="difficulty"
+            >
+                EASY
+            </div>
+
+
+            <h1
+                id="puzzleTitle"
+            >
+                The Odd One
+            </h1>
+
+
+            <div
+                class="question"
+                id="question"
+            >
+                Which word does not belong?
+            </div>
+
+
+            <!-- =================================================
+                 PUZZLE CONTENT
+                 ================================================= -->
+
+            <div
+                class="puzzle-content"
+                id="puzzleContent"
+            >
+
+                <!--
+                    JavaScript places the actual
+                    puzzle here.
+                -->
+
+            </div>
+
+
+            <!-- =================================================
+                 ANSWER OPTIONS
+                 ================================================= -->
+
+            <div
+                class="answers"
+                id="answers"
+            >
+
+                <button
+                    class="answer"
+                    data-answer="0"
+                >
+                    Answer A
+                </button>
+
+                <button
+                    class="answer"
+                    data-answer="1"
+                >
+                    Answer B
+                </button>
+
+                <button
+                    class="answer"
+                    data-answer="2"
+                >
+                    Answer C
+                </button>
+
+                <button
+                    class="answer"
+                    data-answer="3"
+                >
+                    Answer D
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+                class="result"
+                id="result"
+                hidden
+            >
+
+                <div
+                    class="result-icon"
+                    id="resultIcon"
+                >
+                    ✓
+                </div>
+
+                <h2
+                    id="resultTitle"
+                >
+                    Correct!
+                </h2>
+
+                <p
+                    id="resultText"
+                >
+                </p>
+
+                <button
+                    class="next-button"
+                    id="nextButton"
+                >
+                    Next Trap →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SCORE
+             ===================================================== -->
+
+        <section class="score-panel">
+
+            <div class="score-item">
+
+                <span class="score-label">
+                    SCORE
+                </span>
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-item">
+
+                <span class="score-label">
+                    STREAK
+                </span>
+
+                <strong id="streak">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-item">
+
+                <span class="score-label">
+                    TRAPS
+                </span>
+
+                <strong id="traps">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         START SCREEN
+         ===================================================== -->
+
+    <div
+        class="overlay active"
+        id="startScreen"
+    >
+
+        <div class="overlay-card">
+
+            <div class="game-symbol">
+                🧠
+            </div>
+
+            <h1>
+                WORD TRAP
+            </h1>
+
+            <p>
+                Don't just read the question.
+                Think about what it is really asking.
+            </p>
+
+            <button
+                class="start-button"
+                id="startButton"
+            >
+                START GAME
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         GAME OVER
+         ===================================================== -->
+
+    <div
+        class="overlay"
+        id="gameOver"
+    >
+
+        <div class="overlay-card">
+
+            <div class="game-symbol">
+                🏆
+            </div>
+
+            <h1>
+                YOU ESCAPED
+            </h1>
+
+            <p id="finalMessage">
+                You survived all the traps.
+            </p>
+
+            <div class="final-score">
+
+                <span>
+                    Final Score
+                </span>
+
+                <strong id="finalScore">
+                    0
+                </strong>
+
+            </div>
+
+            <button
+                class="start-button"
+                id="restartButton"
+            >
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+
+</div>
+
+</body>
+</html>
+

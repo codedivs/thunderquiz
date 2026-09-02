@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "riddle": "I have cities but no houses, forests but no trees, and rivers but no water. What am I?",
+    "answers": ["map", "a map"]
+  },
+  {
+    "id": 2,
+    "riddle": "The more you take away from me, the larger I become. What am I?",
+    "answers": ["hole", "a hole"]
+  },
+  {
+    "id": 3,
+    "riddle": "I speak without a mouth and hear without ears. I have no body, but I come alive when the wind blows. What am I?",
+    "answers": ["echo", "an echo"]
+  },
+  {
+    "id": 4,
+    "riddle": "What has many keys but cannot open a single lock?",
+    "answers": ["piano", "a piano", "keyboard", "a keyboard"]
+  },
+  {
+    "id": 5,
+    "riddle": "I get wetter the more I dry. What am I?",
+    "answers": ["towel", "a towel"]
+  },
+  {
+    "id": 6,
+    "riddle": "What can travel all around the world while staying in one corner?",
+    "answers": ["stamp", "a stamp", "postage stamp"]
+  },
+  {
+    "id": 7,
+    "riddle": "I have one eye but cannot see. What am I?",
+    "answers": ["needle", "a needle"]
+  },
+  {
+    "id": 8,
+    "riddle": "What has hands but cannot clap?",
+    "answers": ["clock", "a clock"]
+  },
+  {
+    "id": 9,
+    "riddle": "What has a head and a tail but no body?",
+    "answers": ["coin", "a coin"]
+  },
+  {
+    "id": 10,
+    "riddle": "The more of me there is, the less you can see. What am I?",
+    "answers": ["darkness"]
+  },
+  {
+    "id": 11,
+    "riddle": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+    "answers": ["m", "the letter m", "letter m"]
+  },
+  {
+    "id": 12,
+    "riddle": "I am full of holes, but I can still hold water. What am I?",
+    "answers": ["sponge", "a sponge"]
+  },
+  {
+    "id": 13,
+    "riddle": "What has legs but does not walk?",
+    "answers": ["table", "a table"]
+  },
+  {
+    "id": 14,
+    "riddle": "What can run but never walks, has a mouth but never talks, and has a bed but never sleeps?",
+    "answers": ["river", "a river"]
+  },
+  {
+    "id": 15,
+    "riddle": "What has a neck but no head?",
+    "answers": ["bottle", "a bottle"]
+  },
+  {
+    "id": 16,
+    "riddle": "I have branches, but no fruit, trunk, or leaves. What am I?",
+    "answers": ["bank", "a bank"]
+  },
+  {
+    "id": 17,
+    "riddle": "What can you catch but not throw?",
+    "answers": ["cold", "a cold"]
+  },
+  {
+    "id": 18,
+    "riddle": "What goes up but never comes down?",
+    "answers": ["age", "your age"]
+  },
+  {
+    "id": 19,
+    "riddle": "What has words but never speaks?",
+    "answers": ["book", "a book"]
+  },
+  {
+    "id": 20,
+    "riddle": "What has a thumb and four fingers but is not alive?",
+    "answers": ["glove", "a glove"]
+  },
+  {
+    "id": 21,
+    "riddle": "What building has the most stories?",
+    "answers": ["library", "a library"]
+  },
+  {
+    "id": 22,
+    "riddle": "What can fill a room but takes up no space?",
+    "answers": ["light"]
+  },
+  {
+    "id": 23,
+    "riddle": "What breaks when you say its name?",
+    "answers": ["silence"]
+  },
+  {
+    "id": 24,
+    "riddle": "What is always in front of you but cannot be seen?",
+    "answers": ["future", "the future"]
+  },
+  {
+    "id": 25,
+    "riddle": "I have teeth but cannot bite. What am I?",
+    "answers": ["comb", "a comb"]
+  },
+  {
+    "id": 26,
+    "riddle": "What goes through a door but never goes in or comes out?",
+    "answers": ["keyhole", "a keyhole"]
+  },
+  {
+    "id": 27,
+    "riddle": "What has an endless supply of letters but starts empty?",
+    "answers": ["mailbox", "a mailbox"]
+  },
+  {
+    "id": 28,
+    "riddle": "What can be cracked, made, told, and played?",
+    "answers": ["joke", "a joke"]
+  },
+  {
+    "id": 29,
+    "riddle": "What kind of band never plays music?",
+    "answers": ["rubber band", "a rubber band"]
+  },
+  {
+    "id": 30,
+    "riddle": "What has many rings but no fingers?",
+    "answers": ["telephone", "phone", "a telephone", "a phone"]
+  },
+  {
+    "id": 31,
+    "riddle": "What has to be broken before you can use it?",
+    "answers": ["egg", "an egg"]
+  },
+  {
+    "id": 32,
+    "riddle": "What invention lets you look right through a wall?",
+    "answers": ["window", "a window"]
+  },
+  {
+    "id": 33,
+    "riddle": "What can you hold without ever touching it?",
+    "answers": ["conversation", "a conversation", "your breath", "breath"]
+  },
+  {
+    "id": 34,
+    "riddle": "What has four wheels and flies?",
+    "answers": ["garbage truck", "a garbage truck"]
+  },
+  {
+    "id": 35,
+    "riddle": "What gets bigger the more you remove from it?",
+    "answers": ["hole", "a hole"]
+  },
+  {
+    "id": 36,
+    "riddle": "What can be stolen, mistaken, or altered, yet remains invisible?",
+    "answers": ["identity", "an identity"]
+  },
+  {
+    "id": 37,
+    "riddle": "What begins with T, ends with T, and has T inside it?",
+    "answers": ["teapot", "a teapot"]
+  },
+  {
+    "id": 38,
+    "riddle": "What comes down but never goes up?",
+    "answers": ["rain"]
+  },
+  {
+    "id": 39,
+    "riddle": "What has one head, one foot, and four legs?",
+    "answers": ["bed", "a bed"]
+  },
+  {
+    "id": 40,
+    "riddle": "What belongs to you but other people use it more than you do?",
+    "answers": ["your name", "name", "my name"]
+  },
+  {
+    "id": 41,
+    "riddle": "What can be swallowed but can also swallow you?",
+    "answers": ["pride"]
+  },
+  {
+    "id": 42,
+    "riddle": "I am tall when I am young and short when I am old. What am I?",
+    "answers": ["candle", "a candle"]
+  },
+  {
+    "id": 43,
+    "riddle": "What has a bottom at the top?",
+    "answers": ["legs", "your legs"]
+  },
+  {
+    "id": 44,
+    "riddle": "What kind of coat can only be put on when wet?",
+    "answers": ["coat of paint", "paint"]
+  },
+  {
+    "id": 45,
+    "riddle": "What has 13 hearts but no organs?",
+    "answers": ["deck of cards", "a deck of cards", "cards"]
+  },
+  {
+    "id": 46,
+    "riddle": "What can you keep after giving it to someone?",
+    "answers": ["your word", "word", "a promise", "promise"]
+  },
+  {
+    "id": 47,
+    "riddle": "What has a face and two hands but no arms or legs?",
+    "answers": ["clock", "a clock"]
+  },
+  {
+    "id": 48,
+    "riddle": "What is easy to get into but hard to get out of?",
+    "answers": ["trouble"]
+  },
+  {
+    "id": 49,
+    "riddle": "What can jump higher than a building?",
+    "answers": ["anything", "anything that can jump"]
+  },
+  {
+    "id": 50,
+    "riddle": "What has many needles but cannot sew?",
+    "answers": ["christmas tree", "a christmas tree", "pine tree", "a pine tree"]
+  },
+  {
+    "id": 51,
+    "riddle": "What has an eye at its center but cannot see?",
+    "answers": ["hurricane", "a hurricane"]
+  },
+  {
+    "id": 52,
+    "riddle": "What kind of room has no doors or windows?",
+    "answers": ["mushroom", "a mushroom"]
+  },
+  {
+    "id": 53,
+    "riddle": "What can you serve but never eat?",
+    "answers": ["tennis ball", "a tennis ball", "volleyball", "a volleyball"]
+  },
+  {
+    "id": 54,
+    "riddle": "What gets sharper the more you use it?",
+    "answers": ["your mind", "mind", "brain", "your brain"]
+  },
+  {
+    "id": 55,
+    "riddle": "What has no beginning, end, or middle?",
+    "answers": ["donut", "a donut", "doughnut", "a doughnut"]
+  },
+  {
+    "id": 56,
+    "riddle": "What can be seen once in a year, twice in a week, but never in a day?",
+    "answers": ["e", "the letter e", "letter e"]
+  },
+  {
+    "id": 57,
+    "riddle": "What kind of tree can you carry in your hand?",
+    "answers": ["palm", "palm tree", "a palm tree"]
+  },
+  {
+    "id": 58,
+    "riddle": "What has bark but no bite?",
+    "answers": ["tree", "a tree"]
+  },
+  {
+    "id": 59,
+    "riddle": "What can be opened but cannot be closed?",
+    "answers": ["an egg", "egg"]
+  },
+  {
+    "id": 60,
+    "riddle": "What gets answered but never asks a question?",
+    "answers": ["telephone", "phone", "a telephone", "a phone"]
+  },
+  {
+    "id": 61,
+    "riddle": "What can fall but never gets hurt?",
+    "answers": ["night"]
+  },
+  {
+    "id": 62,
+    "riddle": "What has many pages but is not a book?",
+    "answers": ["calendar", "a calendar"]
+  },
+  {
+    "id": 63,
+    "riddle": "What kind of lion never roars?",
+    "answers": ["dandelion", "a dandelion"]
+  },
+  {
+    "id": 64,
+    "riddle": "What can you make that no one can see?",
+    "answers": ["noise", "a noise"]
+  },
+  {
+    "id": 65,
+    "riddle": "What is black when clean and white when dirty?",
+    "answers": ["blackboard", "a blackboard", "chalkboard", "a chalkboard"]
+  },
+  {
+    "id": 66,
+    "riddle": "What has a spine but no bones?",
+    "answers": ["book", "a book"]
+  },
+  {
+    "id": 67,
+    "riddle": "What can be long or short, grown or bought, painted or left bare?",
+    "answers": ["nails", "nail", "your nails"]
+  },
+  {
+    "id": 68,
+    "riddle": "What can you see in the middle of March and April that you cannot see at the beginning or end of either month?",
+    "answers": ["r", "the letter r", "letter r"]
+  },
+  {
+    "id": 69,
+    "riddle": "What has many eyes but cannot see?",
+    "answers": ["potato", "a potato"]
+  },
+  {
+    "id": 70,
+    "riddle": "What has a ring but no finger?",
+    "answers": ["telephone", "phone", "a telephone", "a phone"]
+  },
+  {
+    "id": 71,
+    "riddle": "What comes at night without being called and disappears by day without being stolen?",
+    "answers": ["stars", "the stars"]
+  },
+  {
+    "id": 72,
+    "riddle": "What is always coming but never arrives?",
+    "answers": ["tomorrow"]
+  },
+  {
+    "id": 73,
+    "riddle": "What can be measured but has no length, width, or height?",
+    "answers": ["temperature", "time"]
+  },
+  {
+    "id": 74,
+    "riddle": "What can be raised without lifting it?",
+    "answers": ["question", "a question"]
+  },
+  {
+    "id": 75,
+    "riddle": "What kind of ship has two mates but no captain?",
+    "answers": ["relationship", "a relationship"]
+  },
+  {
+    "id": 76,
+    "riddle": "What has a head like a cat, feet like a cat, a tail like a cat, but is not a cat?",
+    "answers": ["kitten", "a kitten"]
+  },
+  {
+    "id": 77,
+    "riddle": "What can you hear but not touch or see?",
+    "answers": ["sound", "a sound"]
+  },
+  {
+    "id": 78,
+    "riddle": "What has a bed but never sleeps and a mouth but never eats?",
+    "answers": ["river", "a river"]
+  },
+  {
+    "id": 79,
+    "riddle": "What is so fragile that saying its name breaks it?",
+    "answers": ["silence"]
+  },
+  {
+    "id": 80,
+    "riddle": "What can be lost even when you know exactly where it is?",
+    "answers": ["temper", "your temper"]
+  },
+  {
+    "id": 81,
+    "riddle": "What can run around a backyard without moving?",
+    "answers": ["fence", "a fence"]
+  },
+  {
+    "id": 82,
+    "riddle": "What has a tongue but cannot talk?",
+    "answers": ["shoe", "a shoe"]
+  },
+  {
+    "id": 83,
+    "riddle": "What can fly without wings?",
+    "answers": ["time"]
+  },
+  {
+    "id": 84,
+    "riddle": "What has an ear but cannot hear?",
+    "answers": ["corn", "an ear of corn", "ear of corn"]
+  },
+  {
+    "id": 85,
+    "riddle": "What is bought by the yard but worn by the foot?",
+    "answers": ["carpet", "a carpet"]
+  },
+  {
+    "id": 86,
+    "riddle": "What can you hold in your right hand but never in your left hand?",
+    "answers": ["your left elbow", "left elbow"]
+  },
+  {
+    "id": 87,
+    "riddle": "What kind of music do balloons hate?",
+    "answers": ["pop music", "pop"]
+  },
+  {
+    "id": 88,
+    "riddle": "What is always running but never gets tired?",
+    "answers": ["water", "a river", "river"]
+  },
+  {
+    "id": 89,
+    "riddle": "What has lots of teeth but cannot chew?",
+    "answers": ["zipper", "a zipper"]
+  },
+  {
+    "id": 90,
+    "riddle": "What can go up a chimney down, but cannot go down a chimney up?",
+    "answers": ["umbrella", "an umbrella"]
+  },
+  {
+    "id": 91,
+    "riddle": "What kind of apple is not an apple?",
+    "answers": ["pineapple", "a pineapple"]
+  },
+  {
+    "id": 92,
+    "riddle": "What has one eye but cannot see, yet helps people sew?",
+    "answers": ["needle", "a needle"]
+  },
+  {
+    "id": 93,
+    "riddle": "What can be taken before you get it?",
+    "answers": ["photograph", "photo", "a photograph", "a photo", "picture"]
+  },
+  {
+    "id": 94,
+    "riddle": "What goes up and down but never moves?",
+    "answers": ["stairs", "staircase", "a staircase"]
+  },
+  {
+    "id": 95,
+    "riddle": "What kind of bow cannot be tied?",
+    "answers": ["rainbow", "a rainbow"]
+  },
+  {
+    "id": 96,
+    "riddle": "What has 88 keys but cannot open a door?",
+    "answers": ["piano", "a piano"]
+  },
+  {
+    "id": 97,
+    "riddle": "What is always in front of you but cannot be seen or touched?",
+    "answers": ["future", "the future"]
+  },
+  {
+    "id": 98,
+    "riddle": "What can be shared, told, played, and cracked?",
+    "answers": ["joke", "a joke"]
+  },
+  {
+    "id": 99,
+    "riddle": "What has a head, a tail, is brown, and has no legs?",
+    "answers": ["penny", "a penny"]
+  },
+  {
+    "id": 100,
+    "riddle": "I disappear as soon as you say my name. What am I?",
+    "answers": ["silence"]
+  },
+  {
+    "id": 101,
+    "riddle": "What can bring tears to your eyes, make you move, and disappear in an instant?",
+    "answers": ["smoke"]
+  },
+  {
+    "id": 102,
+    "riddle": "What has no life but can die?",
+    "answers": ["battery", "a battery"]
+  },
+  {
+    "id": 103,
+    "riddle": "What is lighter than a feather, yet even the strongest person cannot hold it for very long?",
+    "answers": ["breath", "your breath"]
+  },
+  {
+    "id": 104,
+    "riddle": "What can you break without touching it?",
+    "answers": ["promise", "a promise"]
+  },
+  {
+    "id": 105,
+    "riddle": "What has many locks but no doors?",
+    "answers": ["hair", "head of hair"]
+  },
+  {
+    "id": 106,
+    "riddle": "What can be seen but never touched, and can disappear in a second?",
+    "answers": ["shadow", "a shadow"]
+  },
+  {
+    "id": 107,
+    "riddle": "What follows you everywhere but disappears when the lights go out?",
+    "answers": ["shadow", "your shadow", "a shadow"]
+  },
+  {
+    "id": 108,
+    "riddle": "What gets more valuable the older it becomes?",
+    "answers": ["antique", "an antique"]
+  },
+  {
+    "id": 109,
+    "riddle": "What can be given but never taken back?",
+    "answers": ["your word", "word", "a promise", "promise"]
+  },
+  {
+    "id": 110,
+    "riddle": "What has no voice but can tell you a story?",
+    "answers": ["book", "a book"]
+  }
+]
