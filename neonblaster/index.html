@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Blaster - Free Online Arcade Shooting Game | ThunderQuiz</title>
+
+    <meta name="description" content="Play Neon Blaster, a fast-paced neon arcade shooting game on ThunderQuiz. Blast enemies, dodge attacks, score points, and see how long you can survive.">
+
+    <meta name="keywords" content="Neon Blaster, neon shooting game, arcade game, shooting game, free online game, browser game, arcade shooting game, ThunderQuiz">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="ThunderQuiz">
+
+    <link rel="canonical" href="https://thunderquiz.com/neonblaster/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Neon Blaster - Free Online Arcade Shooting Game">
+    <meta property="og:description" content="Blast enemies, dodge attacks, score points, and survive the neon chaos in Neon Blaster. Play free on ThunderQuiz.">
+    <meta property="og:url" content="https://thunderquiz.com/neonblaster/">
+    <meta property="og:site_name" content="ThunderQuiz">
+    <meta property="og:image" content="https://thunderquiz.com/images/neonblaster.png">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Neon Blaster - Free Online Arcade Shooting Game">
+    <meta name="twitter:description" content="Blast enemies, dodge attacks, score points, and survive the neon chaos in this fast-paced free arcade game.">
+    <meta name="twitter:image" content="https://thunderquiz.com/images/neonblaster.png">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+
+        <!-- Header -->
+        <header>
+            <h1>NEON BLASTER</h1>
+            <p>Destroy. Survive. Dominate.</p>
+        </header>
+
+
+        <!-- Game Information -->
+        <div class="game-info">
+
+            <div class="info-box">
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>LIVES</span>
+                <strong id="lives">❤️ ❤️ ❤️</strong>
+            </div>
+
+            <div class="info-box">
+                <span>LEVEL</span>
+                <strong id="level">1</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Game Canvas -->
+        <div class="canvas-container">
+
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Start Screen -->
+            <div id="startScreen" class="screen">
+
+                <h2>READY TO BLAST?</h2>
+
+                <p>
+                    Move with ← → or A / D<br>
+                    Press SPACE to shoot
+                </p>
+
+                <button id="startBtn">
+                    START GAME 🚀
+                </button>
+
+            </div>
+
+
+            <!-- Game Over Screen -->
+            <div id="gameOverScreen" class="screen hidden">
+
+                <h2>GAME OVER</h2>
+
+                <p>
+                    Final Score:
+                    <strong id="finalScore">0</strong>
+                </p>
+
+                <button id="restartBtn">
+                    PLAY AGAIN 🔥
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <p>⌨️ Move: A / D or ← / →</p>
+
+            <p>🔥 Shoot: SPACEBAR</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

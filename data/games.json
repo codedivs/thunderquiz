@@ -269,7 +269,22 @@
 			"featured": false,
 			"dateAdded": "2026-09-08",
 			"active": true
+		},
+		{
+			"id": "neonblaster",
+			"title": "Neon Blaster",
+			"folder": "neonblaster",
+			"image": "/images/neonblaster.png",
+			"category": "arcade",
+			"section": "action",
+			"description": "Blast enemies,dodgeattacks,scorepoints,andtestyourreflexesinthisfast-pacedneonarcadeshootinggame.",
+			"tags": ["neonblaster", "arcade", "shooting", "action", "arcade game", "reflex", "space shooter"],
+			"difficulty": "medium",
+			"featured": false,
+			"dateAdded": "2026-09-08",
+			"active": true
 		}
+
 
 
 	]
