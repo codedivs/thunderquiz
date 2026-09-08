@@ -1,0 +1,884 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "First Words",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "GREETINGS",
+          "question": "Bonjour",
+          "french": "Bonjour",
+          "answers": ["Hello", "Goodbye", "Please", "Sorry"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "GREETINGS",
+          "question": "Bonsoir",
+          "french": "Bonsoir",
+          "answers": ["Good morning", "Good evening", "Thank you", "See you"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "GREETINGS",
+          "question": "Salut",
+          "french": "Salut",
+          "answers": ["Hello / Hi", "Good night", "Please", "Welcome"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "BASICS",
+          "question": "Merci",
+          "french": "Merci",
+          "answers": ["Sorry", "Thank you", "Please", "Yes"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "BASICS",
+          "question": "Oui",
+          "french": "Oui",
+          "answers": ["No", "Maybe", "Yes", "Never"],
+          "correct": 2
+        },
+        {
+          "type": "word",
+          "category": "BASICS",
+          "question": "Non",
+          "french": "Non",
+          "answers": ["Yes", "No", "Maybe", "Always"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "BASICS",
+          "question": "S'il vous plaît",
+          "french": "S'il vous plaît",
+          "answers": ["Excuse me", "Please", "Thank you", "Goodbye"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "BASICS",
+          "question": "Pardon",
+          "french": "Pardon",
+          "answers": ["Sorry / Excuse me", "Welcome", "Good evening", "Please"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "GREETINGS",
+          "question": "Au revoir",
+          "french": "Au revoir",
+          "answers": ["Goodbye", "Good morning", "Welcome", "See you tomorrow"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "GREETINGS",
+          "question": "À bientôt",
+          "french": "À bientôt",
+          "answers": ["See you soon", "Good night", "Good luck", "Thank you"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Numbers",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Un",
+          "french": "Un",
+          "answers": ["One", "Two", "Three", "Four"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Deux",
+          "french": "Deux",
+          "answers": ["One", "Two", "Three", "Ten"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Trois",
+          "french": "Trois",
+          "answers": ["Two", "Three", "Four", "Five"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Quatre",
+          "french": "Quatre",
+          "answers": ["Three", "Four", "Five", "Six"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Cinq",
+          "french": "Cinq",
+          "answers": ["Four", "Five", "Six", "Seven"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Six",
+          "french": "Six",
+          "answers": ["Five", "Six", "Seven", "Eight"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Sept",
+          "french": "Sept",
+          "answers": ["Six", "Seven", "Eight", "Nine"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Huit",
+          "french": "Huit",
+          "answers": ["Seven", "Eight", "Nine", "Ten"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Neuf",
+          "french": "Neuf",
+          "answers": ["Eight", "Nine", "Ten", "Eleven"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "NUMBERS",
+          "question": "Dix",
+          "french": "Dix",
+          "answers": ["Eight", "Nine", "Ten", "Twelve"],
+          "correct": 2
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "title": "People",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Homme",
+          "french": "Homme",
+          "answers": ["Woman", "Man", "Boy", "Father"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Femme",
+          "french": "Femme",
+          "answers": ["Woman", "Girl", "Mother", "Friend"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Garçon",
+          "french": "Garçon",
+          "answers": ["Boy", "Girl", "Man", "Child"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Fille",
+          "french": "Fille",
+          "answers": ["Boy", "Girl", "Woman", "Sister"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Enfant",
+          "french": "Enfant",
+          "answers": ["Child", "Parent", "Friend", "Baby"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Ami",
+          "french": "Ami",
+          "answers": ["Enemy", "Friend", "Brother", "Teacher"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Mère",
+          "french": "Mère",
+          "answers": ["Mother", "Sister", "Daughter", "Aunt"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Père",
+          "french": "Père",
+          "answers": ["Brother", "Father", "Grandfather", "Uncle"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Frère",
+          "french": "Frère",
+          "answers": ["Brother", "Father", "Son", "Friend"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "PEOPLE",
+          "question": "Sœur",
+          "french": "Sœur",
+          "answers": ["Mother", "Sister", "Daughter", "Cousin"],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "Food",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Pain",
+          "french": "Pain",
+          "answers": ["Bread", "Cake", "Rice", "Butter"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Fromage",
+          "french": "Fromage",
+          "answers": ["Milk", "Cheese", "Butter", "Cream"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Pomme",
+          "french": "Pomme",
+          "answers": ["Orange", "Apple", "Pear", "Peach"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Eau",
+          "french": "Eau",
+          "answers": ["Water", "Wine", "Juice", "Milk"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Lait",
+          "french": "Lait",
+          "answers": ["Milk", "Water", "Coffee", "Tea"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Café",
+          "french": "Café",
+          "answers": ["Coffee", "Tea", "Milk", "Juice"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Œuf",
+          "french": "Œuf",
+          "answers": ["Egg", "Onion", "Fish", "Potato"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Poisson",
+          "french": "Poisson",
+          "answers": ["Fish", "Chicken", "Meat", "Bread"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Poulet",
+          "french": "Poulet",
+          "answers": ["Chicken", "Fish", "Beef", "Egg"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "FOOD",
+          "question": "Sucre",
+          "french": "Sucre",
+          "answers": ["Salt", "Sugar", "Flour", "Honey"],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "title": "Animals",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Chat",
+          "french": "Chat",
+          "answers": ["Cat", "Dog", "Horse", "Bird"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Chien",
+          "french": "Chien",
+          "answers": ["Cat", "Dog", "Mouse", "Rabbit"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Cheval",
+          "french": "Cheval",
+          "answers": ["Cow", "Horse", "Sheep", "Goat"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Oiseau",
+          "french": "Oiseau",
+          "answers": ["Bird", "Fish", "Duck", "Chicken"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Poisson",
+          "french": "Poisson",
+          "answers": ["Fish", "Frog", "Bird", "Whale"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Souris",
+          "french": "Souris",
+          "answers": ["Mouse", "Rat", "Cat", "Rabbit"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Lapin",
+          "french": "Lapin",
+          "answers": ["Rabbit", "Hare", "Mouse", "Fox"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Lion",
+          "french": "Lion",
+          "answers": ["Lion", "Tiger", "Bear", "Wolf"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Tigre",
+          "french": "Tigre",
+          "answers": ["Tiger", "Lion", "Leopard", "Bear"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "ANIMALS",
+          "question": "Éléphant",
+          "french": "Éléphant",
+          "answers": ["Elephant", "Giraffe", "Rhino", "Hippo"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "title": "Everyday Verbs",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Manger",
+          "french": "Manger",
+          "answers": ["To eat", "To drink", "To sleep", "To run"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Boire",
+          "french": "Boire",
+          "answers": ["To eat", "To drink", "To cook", "To walk"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Dormir",
+          "french": "Dormir",
+          "answers": ["To wake", "To sleep", "To sit", "To stand"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Marcher",
+          "french": "Marcher",
+          "answers": ["To run", "To walk", "To jump", "To drive"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Courir",
+          "french": "Courir",
+          "answers": ["To walk", "To swim", "To run", "To fly"],
+          "correct": 2
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Parler",
+          "french": "Parler",
+          "answers": ["To speak", "To listen", "To read", "To write"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Écouter",
+          "french": "Écouter",
+          "answers": ["To speak", "To listen", "To hear", "To watch"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Lire",
+          "french": "Lire",
+          "answers": ["To write", "To read", "To learn", "To teach"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Écrire",
+          "french": "Écrire",
+          "answers": ["To read", "To write", "To draw", "To speak"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "VERBS",
+          "question": "Apprendre",
+          "french": "Apprendre",
+          "answers": ["To forget", "To learn", "To teach", "To remember"],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "id": 7,
+      "title": "Colors",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Rouge",
+          "french": "Rouge",
+          "answers": ["Red", "Blue", "Green", "Yellow"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Bleu",
+          "french": "Bleu",
+          "answers": ["Green", "Blue", "Black", "White"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Vert",
+          "french": "Vert",
+          "answers": ["Green", "Red", "Purple", "Orange"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Jaune",
+          "french": "Jaune",
+          "answers": ["White", "Yellow", "Brown", "Pink"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Noir",
+          "french": "Noir",
+          "answers": ["Black", "White", "Grey", "Blue"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Blanc",
+          "french": "Blanc",
+          "answers": ["Black", "White", "Brown", "Silver"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Orange",
+          "french": "Orange",
+          "answers": ["Orange", "Purple", "Yellow", "Red"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Rose",
+          "french": "Rose",
+          "answers": ["Pink", "Red", "Purple", "Orange"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Violet",
+          "french": "Violet",
+          "answers": ["Purple", "Blue", "Pink", "Brown"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "COLORS",
+          "question": "Marron",
+          "french": "Marron",
+          "answers": ["Brown", "Black", "Orange", "Grey"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "id": 8,
+      "title": "Travel",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Gare",
+          "french": "Gare",
+          "answers": ["Station", "Airport", "Hotel", "Street"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Aéroport",
+          "french": "Aéroport",
+          "answers": ["Airport", "Station", "Harbor", "Hotel"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Hôtel",
+          "french": "Hôtel",
+          "answers": ["Restaurant", "Hotel", "House", "Airport"],
+          "correct": 1
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Billet",
+          "french": "Billet",
+          "answers": ["Ticket", "Passport", "Map", "Bag"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Passeport",
+          "french": "Passeport",
+          "answers": ["Passport", "Ticket", "Wallet", "Suitcase"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Valise",
+          "french": "Valise",
+          "answers": ["Suitcase", "Bag", "Train", "Ticket"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Rue",
+          "french": "Rue",
+          "answers": ["Road / Street", "Station", "Square", "Bridge"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Voiture",
+          "french": "Voiture",
+          "answers": ["Car", "Bus", "Train", "Bike"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Train",
+          "french": "Train",
+          "answers": ["Train", "Plane", "Bus", "Boat"],
+          "correct": 0
+        },
+        {
+          "type": "word",
+          "category": "TRAVEL",
+          "question": "Avion",
+          "french": "Avion",
+          "answers": ["Plane", "Train", "Car", "Ship"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "id": 9,
+      "title": "Useful Phrases",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Comment allez-vous ?",
+          "french": "Comment allez-vous ?",
+          "answers": ["How are you?", "Where are you?", "What is your name?", "Are you coming?"],
+          "correct": 0
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Comment tu t'appelles ?",
+          "french": "Comment tu t'appelles ?",
+          "answers": ["Where do you live?", "What is your name?", "How old are you?", "Where are you going?"],
+          "correct": 1
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Je ne comprends pas.",
+          "french": "Je ne comprends pas.",
+          "answers": ["I don't know.", "I don't understand.", "I don't want it.", "I can't see."],
+          "correct": 1
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Parlez-vous anglais ?",
+          "french": "Parlez-vous anglais ?",
+          "answers": ["Do you speak English?", "Do you understand French?", "Are you English?", "Can you write English?"],
+          "correct": 0
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Où sont les toilettes ?",
+          "french": "Où sont les toilettes ?",
+          "answers": ["Where is the hotel?", "Where are the toilets?", "Where is the station?", "Where is the restaurant?"],
+          "correct": 1
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Combien ça coûte ?",
+          "french": "Combien ça coûte ?",
+          "answers": ["How much does it cost?", "What time is it?", "How far is it?", "What is this called?"],
+          "correct": 0
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Je voudrais de l'eau.",
+          "french": "Je voudrais de l'eau.",
+          "answers": ["I have some water.", "I would like some water.", "I drink water.", "Where is the water?"],
+          "correct": 1
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "À demain.",
+          "french": "À demain.",
+          "answers": ["See you today.", "See you tomorrow.", "See you soon.", "See you tonight."],
+          "correct": 1
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Bonne chance !",
+          "french": "Bonne chance !",
+          "answers": ["Good luck!", "Good night!", "Have fun!", "Be careful!"],
+          "correct": 0
+        },
+        {
+          "type": "phrase",
+          "category": "PHRASES",
+          "question": "Je suis désolé.",
+          "french": "Je suis désolé.",
+          "answers": ["I am tired.", "I am sorry.", "I am happy.", "I am ready."],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "id": 10,
+      "title": "Sentence Challenge",
+      "questionCount": 10,
+      "questions": [
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Je ___ français.",
+          "french": "Je parle français.",
+          "answers": ["parle", "parles", "parler", "parlant"],
+          "correct": 0
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Nous ___ au marché.",
+          "french": "Nous allons au marché.",
+          "answers": ["va", "allez", "allons", "aller"],
+          "correct": 2
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Il ___ du café.",
+          "french": "Il boit du café.",
+          "answers": ["bois", "boit", "boire", "buvez"],
+          "correct": 1
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Elle ___ un livre.",
+          "french": "Elle lit un livre.",
+          "answers": ["lis", "lit", "lire", "lisez"],
+          "correct": 1
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Je ___ une pomme.",
+          "french": "Je mange une pomme.",
+          "answers": ["mange", "manges", "manger", "mangé"],
+          "correct": 0
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Tu ___ français.",
+          "french": "Tu parles français.",
+          "answers": ["parle", "parles", "parler", "parlez"],
+          "correct": 1
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Ils ___ à Paris.",
+          "french": "Ils habitent à Paris.",
+          "answers": ["habite", "habites", "habitent", "habiter"],
+          "correct": 2
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Vous ___ le français.",
+          "french": "Vous apprenez le français.",
+          "answers": ["apprends", "apprend", "apprenez", "apprendre"],
+          "correct": 2
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Nous ___ une voiture.",
+          "french": "Nous avons une voiture.",
+          "answers": ["a", "avons", "avez", "avoir"],
+          "correct": 1
+        },
+        {
+          "type": "sentence",
+          "category": "SENTENCES",
+          "question": "Elle ___ très bien.",
+          "french": "Elle chante très bien.",
+          "answers": ["chante", "chantes", "chanter", "chantons"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}
+

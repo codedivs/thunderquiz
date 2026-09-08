@@ -1,0 +1,720 @@
+/* =========================================
+   FRENCH SPRINT
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f4f7fb;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top left,
+            #eef4ff,
+            transparent 40%
+        ),
+        #f4f7fb;
+
+    color: #172033;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   GAME CONTAINER
+========================================= */
+
+.game-container {
+    width: min(900px, 94%);
+    margin: 0 auto;
+    padding: 28px 0 40px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.flag {
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+
+    background: white;
+
+    font-size: 31px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.brand h1 {
+    font-size: clamp(24px, 4vw, 34px);
+    line-height: 1.1;
+    font-weight: 850;
+    letter-spacing: -1px;
+}
+
+.brand p {
+    margin-top: 4px;
+    color: #687386;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+    display: flex;
+    gap: 10px;
+}
+
+.stat {
+    min-width: 72px;
+    padding: 10px 12px;
+
+    text-align: center;
+
+    border-radius: 13px;
+
+    background: white;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.stat-label {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #8a94a6;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.stat strong {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress-section {
+    margin-bottom: 20px;
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #687386;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 99px;
+
+    background: #e1e6ee;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #3157d5,
+        #6b83ed
+    );
+
+    transition:
+        width 0.4s ease;
+}
+
+
+/* =========================================
+   QUESTION CARD
+========================================= */
+
+.question-card {
+    position: relative;
+
+    padding: clamp(26px, 5vw, 46px);
+
+    text-align: center;
+
+    border-radius: 26px;
+
+    background: white;
+
+    box-shadow:
+        0 18px 50px rgba(28, 43, 74, 0.10);
+}
+
+.category {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 99px;
+
+    background: #eef2ff;
+
+    color: #4b61bd;
+
+    font-size: 10px;
+    font-weight: 850;
+
+    letter-spacing: 1px;
+}
+
+.question-type {
+    margin-top: 18px;
+
+    color: #7a8495;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.question {
+    margin: 15px 0 12px;
+
+    color: #151d2e;
+
+    font-size: clamp(40px, 8vw, 70px);
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   SPEAK BUTTON
+========================================= */
+
+.speak-button {
+    border: 0;
+
+    padding: 9px 15px;
+
+    border-radius: 99px;
+
+    background: #f0f3f8;
+
+    color: #4d586a;
+
+    font-size: 13px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.speak-button:hover {
+    background: #e5eaf2;
+}
+
+.speak-button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   ANSWERS
+========================================= */
+
+.answers {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.answer-button {
+    min-height: 64px;
+
+    padding: 14px 18px;
+
+    border: 2px solid #e5e9f0;
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: #20293b;
+
+    font-size: 16px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.answer-button:hover {
+    border-color: #9eace4;
+
+    background: #f8f9ff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+.answer-button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   CORRECT / WRONG
+========================================= */
+
+.answer-button.correct {
+    border-color: #32a36a;
+
+    background: #eaf9f1;
+
+    color: #187044;
+}
+
+.answer-button.wrong {
+    border-color: #e35d6a;
+
+    background: #fff0f2;
+
+    color: #ad2738;
+
+    animation:
+        shake 0.3s ease;
+}
+
+.answer-button.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   FEEDBACK
+========================================= */
+
+.feedback {
+    min-height: 26px;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.feedback.correct {
+    color: #21804f;
+}
+
+.feedback.wrong {
+    color: #c63748;
+}
+
+
+/* =========================================
+   INSTRUCTION
+========================================= */
+
+.instruction-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 18px;
+
+    padding: 17px 20px;
+
+    border-radius: 17px;
+
+    background: white;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.05);
+}
+
+.instruction-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #f0f3ff;
+
+    font-size: 21px;
+}
+
+.instruction-card strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.instruction-card p {
+    margin-top: 3px;
+
+    color: #7a8495;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   GAME MESSAGE
+========================================= */
+
+.game-message {
+    min-height: 24px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #687386;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+.game-message.success {
+    color: #21804f;
+}
+
+.game-message.error {
+    color: #c63748;
+}
+
+.game-message.warning {
+    color: #b27512;
+}
+
+
+/* =========================================
+   LEVEL COMPLETE
+========================================= */
+
+.level-complete {
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(420px, 90%);
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 100;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.20);
+
+    animation:
+        popIn 0.3s ease;
+}
+
+.level-complete.hidden {
+    display: none;
+}
+
+.complete-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.level-complete h2 {
+    font-size: 28px;
+}
+
+.level-complete p {
+    margin-top: 8px;
+
+    color: #707b8e;
+
+    font-size: 14px;
+}
+
+.complete-score {
+    margin: 18px 0;
+
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.next-level-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 0;
+
+    border-radius: 14px;
+
+    background: #3157d5;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 850;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.next-level-button:hover {
+    background: #2749bb;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.game-footer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 25px;
+
+    color: #9aa3b2;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-6px);
+    }
+
+    75% {
+        transform: translateX(6px);
+    }
+}
+
+@keyframes popIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .game-container {
+        width: 92%;
+        padding-top: 18px;
+    }
+
+    .game-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats {
+        width: 100%;
+    }
+
+    .stat {
+        flex: 1;
+    }
+
+    .question-card {
+        padding: 25px 17px;
+        border-radius: 21px;
+    }
+
+    .question {
+        font-size: clamp(
+            40px,
+            14vw,
+            58px
+        );
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .answer-button {
+        min-height: 58px;
+    }
+
+    .instruction-card {
+        padding: 14px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .brand h1 {
+        font-size: 23px;
+    }
+
+    .flag {
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+    }
+
+    .stat {
+        min-width: 0;
+        padding: 8px;
+    }
+
+    .question-card {
+        padding: 22px 13px;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+button:focus-visible {
+    outline: 3px solid #8b9bea;
+    outline-offset: 3px;
+}
+
+
+/* Prevent browser translation UI from
+   being encouraged by selectable text. */
+
+[translate="no"] {
+    -webkit-user-select: none;
+    user-select: none;
+}

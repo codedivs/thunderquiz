@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="google"
+        content="notranslate"
+    >
+
+    <meta
+        name="description"
+        content="French Sprint - Learn French through quick vocabulary challenges."
+    >
+
+    <title>French Sprint 🇫🇷</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main
+        id="game"
+        class="game-container"
+        translate="no"
+    >
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="game-header">
+
+            <div class="brand">
+
+                <div class="flag">
+                    🇫🇷
+                </div>
+
+                <div>
+                    <h1>French Sprint</h1>
+
+                    <p>
+                        Learn French. Think fast.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span class="stat-label">
+                        LEVEL
+                    </span>
+
+                    <strong id="levelNumber">
+                        1
+                    </strong>
+                </div>
+
+
+                <div class="stat">
+                    <span class="stat-label">
+                        SCORE
+                    </span>
+
+                    <strong id="score">
+                        0
+                    </strong>
+                </div>
+
+
+                <div class="stat">
+                    <span class="stat-label">
+                        STREAK
+                    </span>
+
+                    <strong id="streak">
+                        0 🔥
+                    </strong>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             PROGRESS
+        ========================== -->
+
+        <div class="progress-section">
+
+            <div class="progress-info">
+
+                <span id="questionCounter">
+                    Question 1 / 10
+                </span>
+
+                <span id="hearts">
+                    ❤️ ❤️ ❤️
+                </span>
+
+            </div>
+
+
+            <div class="progress-track">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             GAME CARD
+        ========================== -->
+
+        <section
+            class="question-card"
+            aria-live="polite"
+        >
+
+            <div
+                id="category"
+                class="category"
+            >
+                VOCABULARY
+            </div>
+
+
+            <div
+                id="questionType"
+                class="question-type"
+            >
+                What does this mean?
+            </div>
+
+
+            <!-- French word is generated
+                 by JavaScript -->
+
+            <div
+                id="question"
+                class="question"
+                translate="no"
+                lang="fr"
+            >
+                Bonjour
+            </div>
+
+
+            <!-- Pronunciation -->
+
+            <button
+                id="speakBtn"
+                class="speak-button"
+                type="button"
+                aria-label="Hear pronunciation"
+            >
+                🔊 Hear it
+            </button>
+
+
+            <!-- Feedback -->
+
+            <div
+                id="feedback"
+                class="feedback"
+                aria-live="assertive"
+            ></div>
+
+
+            <!-- Answers -->
+
+            <div
+                id="answers"
+                class="answers"
+            >
+
+                <button
+                    class="answer-button"
+                    type="button"
+                    data-answer="0"
+                >
+                    Answer 1
+                </button>
+
+                <button
+                    class="answer-button"
+                    type="button"
+                    data-answer="1"
+                >
+                    Answer 2
+                </button>
+
+                <button
+                    class="answer-button"
+                    type="button"
+                    data-answer="2"
+                >
+                    Answer 3
+                </button>
+
+                <button
+                    class="answer-button"
+                    type="button"
+                    data-answer="3"
+                >
+                    Answer 4
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INSTRUCTION
+        ========================== -->
+
+        <section class="instruction-card">
+
+            <div class="instruction-icon">
+                🧠
+            </div>
+
+            <div>
+
+                <strong>
+                    Think before you answer
+                </strong>
+
+                <p>
+                    Choose the meaning you believe is correct.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MESSAGE
+        ========================== -->
+
+        <div
+            id="gameMessage"
+            class="game-message"
+            aria-live="polite"
+        ></div>
+
+
+        <!-- =========================
+             LEVEL COMPLETE
+        ========================== -->
+
+        <section
+            id="levelComplete"
+            class="level-complete hidden"
+        >
+
+            <div class="complete-icon">
+                🎉
+            </div>
+
+            <h2 id="completeTitle">
+                Excellent!
+            </h2>
+
+            <p id="completeText">
+                Level complete.
+            </p>
+
+            <div
+                id="completeScore"
+                class="complete-score"
+            >
+                0 points
+            </div>
+
+            <button
+                id="nextLevelBtn"
+                class="next-level-button"
+                type="button"
+            >
+                Next Level →
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="game-footer">
+
+            <span>
+                French Sprint
+            </span>
+
+            <span>
+                •
+            </span>
+
+            <span>
+                Learn a little every day 🇫🇷
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="script.js"
+        defer
+    ></script>
+
+</body>
+
+</html>
+
