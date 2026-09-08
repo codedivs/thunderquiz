@@ -1,0 +1,1330 @@
+{
+  "game": {
+    "id": "wordlock",
+    "title": "Word Lock",
+    "version": "1.0",
+    "totalLevels": 100,
+    "startingHints": 3
+  },
+
+  "levels": [
+
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A small animal that says meow","answer":"CAT"},
+        {"clue":"Something you wear on your head","answer":"HAT"},
+        {"clue":"The opposite of cold","answer":"HOT"},
+        {"clue":"A young dog","answer":"PUP"},
+        {"clue":"A place where you sleep","answer":"BED"}
+      ]
+    },
+
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A four-legged animal that barks","answer":"DOG"},
+        {"clue":"A bright star we see during the day","answer":"SUN"},
+        {"clue":"Frozen water","answer":"ICE"},
+        {"clue":"A vehicle with two wheels","answer":"BIKE"},
+        {"clue":"Something you use to unlock a door","answer":"KEY"}
+      ]
+    },
+
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"The color of grass","answer":"GREEN"},
+        {"clue":"A place where students learn","answer":"SCHOOL"},
+        {"clue":"A large body of salt water","answer":"OCEAN"},
+        {"clue":"A flying insect that makes honey","answer":"BEE"},
+        {"clue":"A round object used in many sports","answer":"BALL"}
+      ]
+    },
+
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"You use this to see","answer":"EYE"},
+        {"clue":"You use this to hear","answer":"EAR"},
+        {"clue":"A yellow fruit","answer":"PEAR"},
+        {"clue":"A red fruit often used in pies","answer":"APPLE"},
+        {"clue":"A drink that comes from cows","answer":"MILK"}
+      ]
+    },
+
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A place where you buy food","answer":"SHOP"},
+        {"clue":"The opposite of up","answer":"DOWN"},
+        {"clue":"The opposite of day","answer":"NIGHT"},
+        {"clue":"A person who teaches","answer":"TEACHER"},
+        {"clue":"A place where books are kept","answer":"LIBRARY"}
+      ]
+    },
+
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A large animal with a trunk","answer":"ELEPHANT"},
+        {"clue":"An animal known for its long neck","answer":"GIRAFFE"},
+        {"clue":"A wild animal with a mane","answer":"LION"},
+        {"clue":"An animal that swings through trees","answer":"MONKEY"},
+        {"clue":"A slow animal with a shell","answer":"TURTLE"}
+      ]
+    },
+
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"Something you read","answer":"BOOK"},
+        {"clue":"Something you write with","answer":"PEN"},
+        {"clue":"Something that tells time","answer":"CLOCK"},
+        {"clue":"Something you sit on","answer":"CHAIR"},
+        {"clue":"Something you sleep under","answer":"BLANKET"}
+      ]
+    },
+
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A hot drink made from leaves","answer":"TEA"},
+        {"clue":"A drink made from roasted beans","answer":"COFFEE"},
+        {"clue":"A sweet frozen dessert","answer":"ICECREAM"},
+        {"clue":"A baked food made from flour","answer":"BREAD"},
+        {"clue":"A yellow food made from milk","answer":"CHEESE"}
+      ]
+    },
+
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A vehicle that flies","answer":"PLANE"},
+        {"clue":"A vehicle that travels on rails","answer":"TRAIN"},
+        {"clue":"A vehicle used on water","answer":"BOAT"},
+        {"clue":"A vehicle with four wheels","answer":"CAR"},
+        {"clue":"A large vehicle carrying passengers","answer":"BUS"}
+      ]
+    },
+
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "attempts": 6,
+      "questions": [
+        {"clue":"The color of the sky on a clear day","answer":"BLUE"},
+        {"clue":"The color of snow","answer":"WHITE"},
+        {"clue":"The color of coal","answer":"BLACK"},
+        {"clue":"The color of blood","answer":"RED"},
+        {"clue":"The color of bananas","answer":"YELLOW"}
+      ]
+    },
+
+
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A person who flies an aircraft","answer":"PILOT"},
+        {"clue":"A person who treats sick people","answer":"DOCTOR"},
+        {"clue":"A person who builds houses","answer":"BUILDER"},
+        {"clue":"A person who prepares food professionally","answer":"CHEF"},
+        {"clue":"A person who writes books","answer":"AUTHOR"}
+      ]
+    },
+
+    {
+      "id": 12,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A place where planes arrive and leave","answer":"AIRPORT"},
+        {"clue":"A place where trains stop","answer":"STATION"},
+        {"clue":"A place where people stay while travelling","answer":"HOTEL"},
+        {"clue":"A place where you watch films","answer":"CINEMA"},
+        {"clue":"A place where animals are displayed","answer":"ZOO"}
+      ]
+    },
+
+    {
+      "id": 13,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"The opposite of ancient","answer":"MODERN"},
+        {"clue":"The opposite of narrow","answer":"WIDE"},
+        {"clue":"The opposite of weak","answer":"STRONG"},
+        {"clue":"The opposite of noisy","answer":"QUIET"},
+        {"clue":"The opposite of empty","answer":"FULL"}
+      ]
+    },
+
+    {
+      "id": 14,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A storm with thunder and lightning","answer":"THUNDERSTORM"},
+        {"clue":"Frozen rain that falls as small balls","answer":"HAIL"},
+        {"clue":"Moving air","answer":"WIND"},
+        {"clue":"Water falling from clouds","answer":"RAIN"},
+        {"clue":"A bright flash during a storm","answer":"LIGHTNING"}
+      ]
+    },
+
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A machine used to calculate numbers","answer":"COMPUTER"},
+        {"clue":"A portable computer","answer":"LAPTOP"},
+        {"clue":"A device used to make calls","answer":"PHONE"},
+        {"clue":"A device used to take photographs","answer":"CAMERA"},
+        {"clue":"A machine that prints documents","answer":"PRINTER"}
+      ]
+    },
+
+    {
+      "id": 16,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A place full of trees","answer":"FOREST"},
+        {"clue":"A very high natural landform","answer":"MOUNTAIN"},
+        {"clue":"Land surrounded by water","answer":"ISLAND"},
+        {"clue":"A stream larger than a creek","answer":"RIVER"},
+        {"clue":"A dry region with very little rain","answer":"DESERT"}
+      ]
+    },
+
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A feeling of great happiness","answer":"JOY"},
+        {"clue":"The feeling caused by danger","answer":"FEAR"},
+        {"clue":"The opposite of love","answer":"HATE"},
+        {"clue":"A feeling of being very tired","answer":"FATIGUE"},
+        {"clue":"A feeling of surprise","answer":"SHOCK"}
+      ]
+    },
+
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A person who studies science","answer":"SCIENTIST"},
+        {"clue":"A person who designs buildings","answer":"ARCHITECT"},
+        {"clue":"A person who flies into space","answer":"ASTRONAUT"},
+        {"clue":"A person who takes photographs","answer":"PHOTOGRAPHER"},
+        {"clue":"A person who paints pictures","answer":"ARTIST"}
+      ]
+    },
+
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A written message sent to someone","answer":"LETTER"},
+        {"clue":"A collection of pages bound together","answer":"BOOK"},
+        {"clue":"A daily publication containing news","answer":"NEWSPAPER"},
+        {"clue":"A story about someone's life","answer":"BIOGRAPHY"},
+        {"clue":"A short piece of news","answer":"REPORT"}
+      ]
+    },
+
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"The study of living things","answer":"BIOLOGY"},
+        {"clue":"The study of matter and energy","answer":"PHYSICS"},
+        {"clue":"The study of chemicals","answer":"CHEMISTRY"},
+        {"clue":"The study of Earth","answer":"GEOLOGY"},
+        {"clue":"The study of stars and planets","answer":"ASTRONOMY"}
+      ]
+    },
+
+
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A journey from one place to another","answer":"TRAVEL"},
+        {"clue":"A place where two roads meet","answer":"JUNCTION"},
+        {"clue":"A path for people to walk on","answer":"SIDEWALK"},
+        {"clue":"A road that crosses another road above it","answer":"OVERPASS"},
+        {"clue":"A structure that crosses a river","answer":"BRIDGE"}
+      ]
+    },
+
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"Something used to protect your head","answer":"HELMET"},
+        {"clue":"Something worn on your feet","answer":"SHOES"},
+        {"clue":"Something worn around your waist","answer":"BELT"},
+        {"clue":"Clothing worn on the upper body","answer":"SHIRT"},
+        {"clue":"Clothing worn over other clothes","answer":"JACKET"}
+      ]
+    },
+
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A large building where goods are sold","answer":"MARKET"},
+        {"clue":"A person who buys something","answer":"CUSTOMER"},
+        {"clue":"Money paid for something","answer":"PRICE"},
+        {"clue":"A reduction in price","answer":"DISCOUNT"},
+        {"clue":"Something purchased","answer":"PRODUCT"}
+      ]
+    },
+
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A natural satellite of Earth","answer":"MOON"},
+        {"clue":"The planet we live on","answer":"EARTH"},
+        {"clue":"The star at the center of our solar system","answer":"SUN"},
+        {"clue":"The planet known for its rings","answer":"SATURN"},
+        {"clue":"The red planet","answer":"MARS"}
+      ]
+    },
+
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "attempts": 6,
+      "questions": [
+        {"clue":"A person who works with computers and code","answer":"PROGRAMMER"},
+        {"clue":"A set of instructions for a computer","answer":"PROGRAM"},
+        {"clue":"Information stored on a computer","answer":"DATA"},
+        {"clue":"A secret word used to access an account","answer":"PASSWORD"},
+        {"clue":"A worldwide computer network","answer":"INTERNET"}
+      ]
+    },
+
+
+    {
+      "id": 26,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"Able to be changed or adapted","answer":"FLEXIBLE"},
+        {"clue":"Very important or necessary","answer":"ESSENTIAL"},
+        {"clue":"Difficult to understand","answer":"COMPLEX"},
+        {"clue":"Existing everywhere","answer":"UNIVERSAL"},
+        {"clue":"Based on reason or sound judgment","answer":"RATIONAL"}
+      ]
+    },
+
+    {
+      "id": 27,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A strong desire to achieve something","answer":"AMBITION"},
+        {"clue":"The ability to recover from difficulty","answer":"RESILIENCE"},
+        {"clue":"A careful examination","answer":"ANALYSIS"},
+        {"clue":"A possible explanation","answer":"HYPOTHESIS"},
+        {"clue":"A final decision or judgment","answer":"CONCLUSION"}
+      ]
+    },
+
+    {
+      "id": 28,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The quality of being honest","answer":"INTEGRITY"},
+        {"clue":"The ability to understand another person's feelings","answer":"EMPATHY"},
+        {"clue":"A belief that something is true","answer":"ASSUMPTION"},
+        {"clue":"Knowledge gained through experience","answer":"WISDOM"},
+        {"clue":"A strong belief in an idea","answer":"CONVICTION"}
+      ]
+    },
+
+    {
+      "id": 29,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A person who studies ancient cultures","answer":"ARCHAEOLOGIST"},
+        {"clue":"A person who studies language","answer":"LINGUIST"},
+        {"clue":"A person who studies society","answer":"SOCIOLOGIST"},
+        {"clue":"A person who studies human behavior","answer":"PSYCHOLOGIST"},
+        {"clue":"A person who studies the economy","answer":"ECONOMIST"}
+      ]
+    },
+
+    {
+      "id": 30,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A sudden and serious event","answer":"EMERGENCY"},
+        {"clue":"The act of protecting something","answer":"PRESERVATION"},
+        {"clue":"A gradual improvement","answer":"PROGRESS"},
+        {"clue":"A major change in society","answer":"TRANSFORMATION"},
+        {"clue":"The ability to continue despite difficulty","answer":"PERSEVERANCE"}
+      ]
+    },
+
+
+    {
+      "id": 31,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The process of making something better","answer":"IMPROVEMENT"},
+        {"clue":"A detailed plan for achieving something","answer":"STRATEGY"},
+        {"clue":"A result produced by an action","answer":"CONSEQUENCE"},
+        {"clue":"A reason given to support an idea","answer":"ARGUMENT"},
+        {"clue":"A difference between two things","answer":"CONTRAST"}
+      ]
+    },
+
+    {
+      "id": 32,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A complicated problem","answer":"CHALLENGE"},
+        {"clue":"A solution to a problem","answer":"REMEDY"},
+        {"clue":"A difficult situation","answer":"DILEMMA"},
+        {"clue":"A careful choice between possibilities","answer":"DECISION"},
+        {"clue":"A method used to solve something","answer":"APPROACH"}
+      ]
+    },
+
+    {
+      "id": 33,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The study of the mind","answer":"PSYCHOLOGY"},
+        {"clue":"The study of language","answer":"LINGUISTICS"},
+        {"clue":"The study of government","answer":"POLITICS"},
+        {"clue":"The study of past events","answer":"HISTORY"},
+        {"clue":"The study of numbers and patterns","answer":"MATHEMATICS"}
+      ]
+    },
+
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A very careful investigation","answer":"RESEARCH"},
+        {"clue":"Evidence used to support an idea","answer":"PROOF"},
+        {"clue":"A statement that can be tested","answer":"PROPOSITION"},
+        {"clue":"A person who provides information","answer":"WITNESS"},
+        {"clue":"A fact or circumstance supporting a conclusion","answer":"EVIDENCE"}
+      ]
+    },
+
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A system of beliefs and ideas","answer":"PHILOSOPHY"},
+        {"clue":"A general principle explaining something","answer":"THEORY"},
+        {"clue":"A way of thinking about something","answer":"PERSPECTIVE"},
+        {"clue":"A person's opinion or position","answer":"VIEWPOINT"},
+        {"clue":"A carefully reasoned belief","answer":"JUDGMENT"}
+      ]
+    },
+
+
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The ability to create new ideas","answer":"CREATIVITY"},
+        {"clue":"The ability to solve problems","answer":"INTELLIGENCE"},
+        {"clue":"The ability to notice small differences","answer":"OBSERVATION"},
+        {"clue":"The ability to remember information","answer":"MEMORY"},
+        {"clue":"The ability to learn quickly","answer":"ADAPTABILITY"}
+      ]
+    },
+
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"Something that happens unexpectedly","answer":"ACCIDENT"},
+        {"clue":"An event that happens at a particular time","answer":"OCCASION"},
+        {"clue":"A series of connected events","answer":"SEQUENCE"},
+        {"clue":"An important event","answer":"MILESTONE"},
+        {"clue":"A period of history","answer":"ERA"}
+      ]
+    },
+
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A person who leads a group","answer":"LEADER"},
+        {"clue":"The ability to lead others","answer":"LEADERSHIP"},
+        {"clue":"Working together toward a goal","answer":"TEAMWORK"},
+        {"clue":"Agreement between people","answer":"COOPERATION"},
+        {"clue":"A group working together","answer":"COMMUNITY"}
+      ]
+    },
+
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A strong feeling of excitement","answer":"ENTHUSIASM"},
+        {"clue":"A feeling of deep sadness","answer":"SORROW"},
+        {"clue":"A feeling of calmness","answer":"SERENITY"},
+        {"clue":"A feeling of uncertainty","answer":"DOUBT"},
+        {"clue":"A feeling of confidence","answer":"ASSURANCE"}
+      ]
+    },
+
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The quality of being accurate","answer":"PRECISION"},
+        {"clue":"The quality of being reliable","answer":"RELIABILITY"},
+        {"clue":"The quality of being effective","answer":"EFFICIENCY"},
+        {"clue":"The quality of being consistent","answer":"STABILITY"},
+        {"clue":"The quality of being useful","answer":"PRACTICALITY"}
+      ]
+    },
+
+
+    {
+      "id": 41,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A situation in which two ideas conflict","answer":"CONTRADICTION"},
+        {"clue":"A subtle difference in meaning","answer":"NUANCE"},
+        {"clue":"A conclusion reached from evidence","answer":"INFERENCE"},
+        {"clue":"A statement that appears self-contradictory","answer":"PARADOX"},
+        {"clue":"A mistaken belief caused by faulty reasoning","answer":"FALLACY"}
+      ]
+    },
+
+    {
+      "id": 42,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The use of words to persuade","answer":"RHETORIC"},
+        {"clue":"The study of meaning in language","answer":"SEMANTICS"},
+        {"clue":"The study of language in context","answer":"PRAGMATICS"},
+        {"clue":"The study of sentence structure","answer":"SYNTAX"},
+        {"clue":"The smallest meaningful unit of language","answer":"MORPHEME"}
+      ]
+    },
+
+    {
+      "id": 43,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A word with the opposite meaning of another word","answer":"ANTONYM"},
+        {"clue":"A word with a similar meaning","answer":"SYNONYM"},
+        {"clue":"A word that sounds like another but differs in meaning","answer":"HOMOPHONE"},
+        {"clue":"A word formed from parts of other words","answer":"BLEND"},
+        {"clue":"A newly created word","answer":"NEOLOGISM"}
+      ]
+    },
+
+    {
+      "id": 44,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A statement that is accepted as true without proof","answer":"ASSUMPTION"},
+        {"clue":"A belief that is strongly supported by evidence","answer":"HYPOTHESIS"},
+        {"clue":"A logical result of something","answer":"IMPLICATION"},
+        {"clue":"A relationship between cause and effect","answer":"CAUSALITY"},
+        {"clue":"A reasoned explanation","answer":"RATIONALE"}
+      ]
+    },
+
+    {
+      "id": 45,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A system used to organize information","answer":"CLASSIFICATION"},
+        {"clue":"The process of examining something closely","answer":"INSPECTION"},
+        {"clue":"The process of judging quality","answer":"EVALUATION"},
+        {"clue":"The process of comparing alternatives","answer":"COMPARISON"},
+        {"clue":"A detailed description of something","answer":"SPECIFICATION"}
+      ]
+    },
+
+
+    {
+      "id": 46,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A complicated network of connected things","answer":"SYSTEM"},
+        {"clue":"A group of related elements","answer":"STRUCTURE"},
+        {"clue":"The way something is organized","answer":"ARRANGEMENT"},
+        {"clue":"A pattern that repeats","answer":"REGULARITY"},
+        {"clue":"A connection between two things","answer":"RELATIONSHIP"}
+      ]
+    },
+
+    {
+      "id": 47,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A very large number","answer":"MILLION"},
+        {"clue":"One thousand million","answer":"BILLION"},
+        {"clue":"A mathematical comparison between quantities","answer":"RATIO"},
+        {"clue":"A number representing part of a whole","answer":"FRACTION"},
+        {"clue":"A value expressed per hundred","answer":"PERCENTAGE"}
+      ]
+    },
+
+    {
+      "id": 48,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The ability to remain calm under pressure","answer":"COMPOSURE"},
+        {"clue":"The ability to control one's actions","answer":"DISCIPLINE"},
+        {"clue":"The ability to wait patiently","answer":"PATIENCE"},
+        {"clue":"The quality of continuing despite obstacles","answer":"DETERMINATION"},
+        {"clue":"The quality of being persistent","answer":"TENACITY"}
+      ]
+    },
+
+    {
+      "id": 49,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"A detailed investigation into a subject","answer":"EXAMINATION"},
+        {"clue":"The act of discovering something","answer":"DISCOVERY"},
+        {"clue":"The act of explaining something","answer":"INTERPRETATION"},
+        {"clue":"The process of reaching a conclusion","answer":"REASONING"},
+        {"clue":"A careful study of evidence","answer":"ASSESSMENT"}
+      ]
+    },
+
+    {
+      "id": 50,
+      "difficulty": "expert",
+      "attempts": 5,
+      "questions": [
+        {"clue":"The ability to understand difficult ideas","answer":"COMPREHENSION"},
+        {"clue":"A detailed understanding of a subject","answer":"KNOWLEDGE"},
+        {"clue":"The ability to make good decisions","answer":"JUDGMENT"},
+        {"clue":"The ability to think carefully","answer":"REASONING"},
+        {"clue":"A deep understanding gained over time","answer":"EXPERIENCE"}
+      ]
+    },
+
+
+    {
+      "id": 51,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A belief that is difficult to change","answer":"CONVICTION"},
+        {"clue":"A carefully considered opinion","answer":"ASSESSMENT"},
+        {"clue":"A tendency to prefer one side","answer":"BIAS"},
+        {"clue":"A neutral position","answer":"IMPARTIALITY"},
+        {"clue":"The absence of prejudice","answer":"OBJECTIVITY"}
+      ]
+    },
+
+    {
+      "id": 52,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A complex problem with several possible solutions","answer":"CONUNDRUM"},
+        {"clue":"A difficult or confusing situation","answer":"PREDICAMENT"},
+        {"clue":"A problem that is difficult to solve","answer":"OBSTACLE"},
+        {"clue":"A question with no obvious answer","answer":"PUZZLE"},
+        {"clue":"A difficult choice between alternatives","answer":"DILEMMA"}
+      ]
+    },
+
+    {
+      "id": 53,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"The process of changing from one form to another","answer":"CONVERSION"},
+        {"clue":"A major change in form or appearance","answer":"METAMORPHOSIS"},
+        {"clue":"The process of developing gradually","answer":"EVOLUTION"},
+        {"clue":"A complete change in character","answer":"REVOLUTION"},
+        {"clue":"The act of changing something","answer":"MODIFICATION"}
+      ]
+    },
+
+    {
+      "id": 54,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A person who is extremely skilled","answer":"EXPERT"},
+        {"clue":"A person with specialized knowledge","answer":"SPECIALIST"},
+        {"clue":"A person who studies a subject deeply","answer":"SCHOLAR"},
+        {"clue":"A highly experienced professional","answer":"AUTHORITY"},
+        {"clue":"A person who creates new ideas","answer":"INNOVATOR"}
+      ]
+    },
+
+    {
+      "id": 55,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A new method or idea","answer":"INNOVATION"},
+        {"clue":"The introduction of something new","answer":"CREATION"},
+        {"clue":"An improvement to an existing idea","answer":"REFINEMENT"},
+        {"clue":"The act of creating something","answer":"INVENTION"},
+        {"clue":"A new product or process","answer":"DEVELOPMENT"}
+      ]
+    },
+
+
+    {
+      "id": 56,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A detailed sequence of actions","answer":"PROCEDURE"},
+        {"clue":"A general plan for achieving a goal","answer":"STRATEGY"},
+        {"clue":"A series of steps to complete something","answer":"PROCESS"},
+        {"clue":"A method for doing something","answer":"TECHNIQUE"},
+        {"clue":"A standard way of doing something","answer":"PROTOCOL"}
+      ]
+    },
+
+    {
+      "id": 57,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A person who studies human cultures","answer":"ANTHROPOLOGIST"},
+        {"clue":"A person who studies Earth's atmosphere","answer":"METEOROLOGIST"},
+        {"clue":"A person who studies animals","answer":"ZOOLOGIST"},
+        {"clue":"A person who studies plants","answer":"BOTANIST"},
+        {"clue":"A person who studies fossils","answer":"PALEONTOLOGIST"}
+      ]
+    },
+
+    {
+      "id": 58,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"The science of heredity","answer":"GENETICS"},
+        {"clue":"The science of microorganisms","answer":"MICROBIOLOGY"},
+        {"clue":"The study of the human body","answer":"ANATOMY"},
+        {"clue":"The study of how organisms function","answer":"PHYSIOLOGY"},
+        {"clue":"The study of diseases","answer":"PATHOLOGY"}
+      ]
+    },
+
+    {
+      "id": 59,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A process in which something is broken down","answer":"DECOMPOSITION"},
+        {"clue":"The process of combining things","answer":"SYNTHESIS"},
+        {"clue":"The process of separating components","answer":"SEPARATION"},
+        {"clue":"A chemical reaction involving oxygen","answer":"OXIDATION"},
+        {"clue":"A substance that speeds up a chemical reaction","answer":"CATALYST"}
+      ]
+    },
+
+    {
+      "id": 60,
+      "difficulty": "expert",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A force that pulls objects toward Earth","answer":"GRAVITY"},
+        {"clue":"The energy of motion","answer":"KINETIC"},
+        {"clue":"Stored energy","answer":"POTENTIAL"},
+        {"clue":"The resistance of an object to change motion","answer":"INERTIA"},
+        {"clue":"The amount of matter in an object","answer":"MASS"}
+      ]
+    },
+
+
+    {
+      "id": 61,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A complicated and difficult problem","answer":"INTRICACY"},
+        {"clue":"The quality of being extremely complicated","answer":"COMPLEXITY"},
+        {"clue":"A subtle distinction","answer":"DISCRIMINATION"},
+        {"clue":"A detailed understanding of something","answer":"SOPHISTICATION"},
+        {"clue":"The quality of being difficult to understand","answer":"ABSTRUSENESS"}
+      ]
+    },
+
+    {
+      "id": 62,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"The ability to exist independently","answer":"AUTONOMY"},
+        {"clue":"The power to make decisions","answer":"AGENCY"},
+        {"clue":"Freedom from outside control","answer":"INDEPENDENCE"},
+        {"clue":"The right to govern oneself","answer":"SOVEREIGNTY"},
+        {"clue":"The ability to act freely","answer":"LIBERTY"}
+      ]
+    },
+
+    {
+      "id": 63,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A statement that summarizes a larger idea","answer":"GENERALIZATION"},
+        {"clue":"A conclusion drawn from specific examples","answer":"INDUCTION"},
+        {"clue":"Reasoning from a general rule to a specific case","answer":"DEDUCTION"},
+        {"clue":"A logical connection between ideas","answer":"IMPLICATION"},
+        {"clue":"A conclusion based on reasoning","answer":"INFERENCE"}
+      ]
+    },
+
+    {
+      "id": 64,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"The use of language to influence people","answer":"PERSUASION"},
+        {"clue":"The art of effective speaking","answer":"ELOQUENCE"},
+        {"clue":"A persuasive technique","answer":"RHETORIC"},
+        {"clue":"A convincing argument","answer":"APPEAL"},
+        {"clue":"A reason supporting an argument","answer":"JUSTIFICATION"}
+      ]
+    },
+
+    {
+      "id": 65,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A situation involving uncertainty","answer":"AMBIGUITY"},
+        {"clue":"A lack of clarity","answer":"VAGUENESS"},
+        {"clue":"Having several possible meanings","answer":"POLYSEMY"},
+        {"clue":"A hidden or indirect meaning","answer":"IMPLICATION"},
+        {"clue":"The exact meaning of a word","answer":"DENOTATION"}
+      ]
+    },
+
+
+    {
+      "id": 66,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A word's emotional association","answer":"CONNOTATION"},
+        {"clue":"The surrounding circumstances of an expression","answer":"CONTEXT"},
+        {"clue":"The study of word origins","answer":"ETYMOLOGY"},
+        {"clue":"The history of a word","answer":"ETYMOLOGY"},
+        {"clue":"The study of how words are formed","answer":"MORPHOLOGY"}
+      ]
+    },
+
+    {
+      "id": 67,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"The smallest unit of sound that distinguishes meaning","answer":"PHONEME"},
+        {"clue":"The study of speech sounds","answer":"PHONETICS"},
+        {"clue":"The organization of sounds in language","answer":"PHONOLOGY"},
+        {"clue":"The rhythm and melody of speech","answer":"PROSODY"},
+        {"clue":"A variation in pronunciation","answer":"ALLOPHONE"}
+      ]
+    },
+
+    {
+      "id": 68,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"A language variety associated with a region","answer":"DIALECT"},
+        {"clue":"A person's characteristic way of speaking","answer":"IDIOLECT"},
+        {"clue":"A language used between groups with different languages","answer":"LINGUA"},
+        {"clue":"A language variety used by a social group","answer":"SOCIOLECT"},
+        {"clue":"The use of two languages","answer":"BILINGUALISM"}
+      ]
+    },
+
+    {
+      "id": 69,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"The ability to use language effectively","answer":"FLUENCY"},
+        {"clue":"Knowledge of two languages","answer":"BILINGUALISM"},
+        {"clue":"The process of learning a language","answer":"ACQUISITION"},
+        {"clue":"A person's knowledge of language","answer":"COMPETENCE"},
+        {"clue":"Actual language use in real situations","answer":"PERFORMANCE"}
+      ]
+    },
+
+    {
+      "id": 70,
+      "difficulty": "master",
+      "attempts": 4,
+      "questions": [
+        {"clue":"The study of how language changes over time","answer":"HISTORICAL"},
+        {"clue":"The process by which languages change","answer":"EVOLUTION"},
+        {"clue":"The borrowing of words from another language","answer":"LOANWORD"},
+        {"clue":"A language family member","answer":"COGNATE"},
+        {"clue":"A language no longer spoken","answer":"EXTINCT"}
+      ]
+    },
+
+
+    {
+      "id": 71,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A statement that contradicts itself","answer":"PARADOX"},
+        {"clue":"A deliberate exaggeration","answer":"HYPERBOLE"},
+        {"clue":"A comparison using 'like' or 'as'","answer":"SIMILE"},
+        {"clue":"A direct comparison without 'like' or 'as'","answer":"METAPHOR"},
+        {"clue":"Giving human qualities to nonhuman things","answer":"PERSONIFICATION"}
+      ]
+    },
+
+    {
+      "id": 72,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A word that imitates a sound","answer":"ONOMATOPOEIA"},
+        {"clue":"A mild expression replacing a harsh one","answer":"EUPHEMISM"},
+        {"clue":"A deliberate contradiction for effect","answer":"OXYMORON"},
+        {"clue":"A reference to another work or event","answer":"ALLUSION"},
+        {"clue":"A repeated beginning sound","answer":"ALLITERATION"}
+      ]
+    },
+
+    {
+      "id": 73,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A short memorable saying","answer":"PROVERB"},
+        {"clue":"A common expression with a nonliteral meaning","answer":"IDIOM"},
+        {"clue":"A traditional saying expressing wisdom","answer":"MAXIM"},
+        {"clue":"A concise statement of a principle","answer":"APHORISM"},
+        {"clue":"A moral lesson in a story","answer":"MORAL"}
+      ]
+    },
+
+    {
+      "id": 74,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The use of irony to criticize","answer":"SATIRE"},
+        {"clue":"A humorous imitation of something","answer":"PARODY"},
+        {"clue":"A humorous play on words","answer":"PUN"},
+        {"clue":"A deliberately absurd idea","answer":"IRONY"},
+        {"clue":"A humorous imitation of a person","answer":"CARICATURE"}
+      ]
+    },
+
+    {
+      "id": 75,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The study of how words combine into sentences","answer":"SYNTAX"},
+        {"clue":"The study of meaning","answer":"SEMANTICS"},
+        {"clue":"The study of language use in context","answer":"PRAGMATICS"},
+        {"clue":"The study of word structure","answer":"MORPHOLOGY"},
+        {"clue":"The study of sound systems","answer":"PHONOLOGY"}
+      ]
+    },
+
+
+    {
+      "id": 76,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A system of signs used for communication","answer":"LANGUAGE"},
+        {"clue":"A symbol representing an idea","answer":"SIGN"},
+        {"clue":"The relationship between a word and what it represents","answer":"REFERENCE"},
+        {"clue":"A conventional association between sign and meaning","answer":"SYMBOLISM"},
+        {"clue":"A system of communication using visual symbols","answer":"WRITING"}
+      ]
+    },
+
+    {
+      "id": 77,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The study of communication through signs","answer":"SEMIOTICS"},
+        {"clue":"A sign that resembles what it represents","answer":"ICON"},
+        {"clue":"A sign connected to its meaning by association","answer":"INDEX"},
+        {"clue":"A sign whose meaning is conventional","answer":"SYMBOL"},
+        {"clue":"Meaning created through social convention","answer":"CONVENTION"}
+      ]
+    },
+
+    {
+      "id": 78,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A word that replaces a noun","answer":"PRONOUN"},
+        {"clue":"A word describing an action","answer":"VERB"},
+        {"clue":"A word describing a noun","answer":"ADJECTIVE"},
+        {"clue":"A word modifying a verb","answer":"ADVERB"},
+        {"clue":"A word connecting clauses","answer":"CONJUNCTION"}
+      ]
+    },
+
+    {
+      "id": 79,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A word naming a person, place, thing, or idea","answer":"NOUN"},
+        {"clue":"A word expressing an action or state","answer":"VERB"},
+        {"clue":"A word used before a noun","answer":"ARTICLE"},
+        {"clue":"A word showing relationship between things","answer":"PREPOSITION"},
+        {"clue":"A word expressing emotion","answer":"INTERJECTION"}
+      ]
+    },
+
+    {
+      "id": 80,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A sentence that asks a question","answer":"INTERROGATIVE"},
+        {"clue":"A sentence giving a command","answer":"IMPERATIVE"},
+        {"clue":"A sentence making a statement","answer":"DECLARATIVE"},
+        {"clue":"A sentence expressing strong emotion","answer":"EXCLAMATORY"},
+        {"clue":"A sentence containing two independent clauses","answer":"COMPOUND"}
+      ]
+    },
+
+
+    {
+      "id": 81,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A word containing two opposite meanings","answer":"CONTRONYM"},
+        {"clue":"A word borrowed from another language","answer":"LOANWORD"},
+        {"clue":"A word made by shortening another word","answer":"ABBREVIATION"},
+        {"clue":"A word formed from initials","answer":"ACRONYM"},
+        {"clue":"A word created by combining two words","answer":"COMPOUND"}
+      ]
+    },
+
+    {
+      "id": 82,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A word that can function as different parts of speech","answer":"CONVERSION"},
+        {"clue":"The creation of a new word from an existing one","answer":"DERIVATION"},
+        {"clue":"Adding a beginning to a word","answer":"PREFIXATION"},
+        {"clue":"Adding an ending to a word","answer":"SUFFIXATION"},
+        {"clue":"Changing a word's form to express grammar","answer":"INFLECTION"}
+      ]
+    },
+
+    {
+      "id": 83,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The study of how people use language socially","answer":"SOCIOLINGUISTICS"},
+        {"clue":"The study of language and the brain","answer":"NEUROLINGUISTICS"},
+        {"clue":"The study of language and culture","answer":"ANTHROPOLINGUISTICS"},
+        {"clue":"The study of language processing","answer":"PSYCHOLINGUISTICS"},
+        {"clue":"The study of language in society","answer":"SOCIOLINGUISTICS"}
+      ]
+    },
+
+    {
+      "id": 84,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A language that develops from contact between languages","answer":"PIDGIN"},
+        {"clue":"A stable language that develops from a pidgin","answer":"CREOLE"},
+        {"clue":"The mixing of languages in conversation","answer":"CODESWITCHING"},
+        {"clue":"The use of several languages in one community","answer":"MULTILINGUALISM"},
+        {"clue":"The loss of ability to speak a language","answer":"LANGUAGELOSS"}
+      ]
+    },
+
+    {
+      "id": 85,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A language that has no known relatives","answer":"ISOLATE"},
+        {"clue":"A group of related languages","answer":"FAMILY"},
+        {"clue":"A reconstructed ancestor language","answer":"PROTO-LANGUAGE"},
+        {"clue":"A language descended from another","answer":"DAUGHTER"},
+        {"clue":"A language from which others developed","answer":"ANCESTRAL"}
+      ]
+    },
+
+
+    {
+      "id": 86,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The study of how languages are related","answer":"COMPARATIVE"},
+        {"clue":"A word inherited from a common ancestor","answer":"COGNATE"},
+        {"clue":"A systematic difference between related languages","answer":"CORRESPONDENCE"},
+        {"clue":"A reconstructed earlier form of a language","answer":"PROTOFORM"},
+        {"clue":"A method for comparing related languages","answer":"COMPARISON"}
+      ]
+    },
+
+    {
+      "id": 87,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A change in the pronunciation of a sound","answer":"PHONETIC"},
+        {"clue":"A sound becoming more like a neighboring sound","answer":"ASSIMILATION"},
+        {"clue":"A sound becoming less like another sound","answer":"DISSIMILATION"},
+        {"clue":"The loss of a sound","answer":"DELETION"},
+        {"clue":"The addition of a sound","answer":"EPENTHESIS"}
+      ]
+    },
+
+    {
+      "id": 88,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A change in word meaning over time","answer":"SEMANTICSHIFT"},
+        {"clue":"A meaning becoming broader","answer":"GENERALIZATION"},
+        {"clue":"A meaning becoming narrower","answer":"SPECIALIZATION"},
+        {"clue":"A positive change in meaning","answer":"AMELIORATION"},
+        {"clue":"A negative change in meaning","answer":"PEJORATION"}
+      ]
+    },
+
+    {
+      "id": 89,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The disappearance of a word from common use","answer":"ARCHAISM"},
+        {"clue":"A word that is newly created","answer":"NEOLOGISM"},
+        {"clue":"An old-fashioned expression","answer":"ARCHAIC"},
+        {"clue":"A word no longer commonly used","answer":"OBSOLETE"},
+        {"clue":"A word used only in a particular field","answer":"JARGON"}
+      ]
+    },
+
+    {
+      "id": 90,
+      "difficulty": "master",
+      "attempts": 3,
+      "questions": [
+        {"clue":"Special vocabulary used by a profession","answer":"JARGON"},
+        {"clue":"Informal language","answer":"SLANG"},
+        {"clue":"Very formal language","answer":"FORMALITY"},
+        {"clue":"Language used in everyday conversation","answer":"COLLOQUIAL"},
+        {"clue":"A particular style of language","answer":"REGISTER"}
+      ]
+    },
+
+
+    {
+      "id": 91,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The ability of a sentence to have more than one interpretation","answer":"AMBIGUITY"},
+        {"clue":"A sentence whose structure allows multiple interpretations","answer":"STRUCTURAL"},
+        {"clue":"A word with multiple related meanings","answer":"POLYSEMY"},
+        {"clue":"Different words sharing the same form","answer":"HOMONYMY"},
+        {"clue":"A phrase interpreted differently depending on context","answer":"PRAGMATIC"}
+      ]
+    },
+
+    {
+      "id": 92,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The meaning of a word independent of context","answer":"DENOTATION"},
+        {"clue":"The associated emotional meaning of a word","answer":"CONNOTATION"},
+        {"clue":"Meaning inferred from context","answer":"IMPLICATURE"},
+        {"clue":"Meaning directly expressed by an utterance","answer":"EXPLICATURE"},
+        {"clue":"Information assumed to be true in an utterance","answer":"PRESUPPOSITION"}
+      ]
+    },
+
+    {
+      "id": 93,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"An implied meaning communicated by a speaker","answer":"IMPLICATURE"},
+        {"clue":"Something assumed before an utterance is made","answer":"PRESUPPOSITION"},
+        {"clue":"The intended purpose of an utterance","answer":"INTENTION"},
+        {"clue":"An action performed through speaking","answer":"SPEECHACT"},
+        {"clue":"The effect an utterance has on a listener","answer":"PERLOCUTION"}
+      ]
+    },
+
+    {
+      "id": 94,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The literal act of producing an utterance","answer":"LOCUTION"},
+        {"clue":"The intended function of an utterance","answer":"ILLOCUTION"},
+        {"clue":"The effect of an utterance on another person","answer":"PERLOCUTION"},
+        {"clue":"An utterance used to make a request","answer":"DIRECTIVE"},
+        {"clue":"An utterance used to make a promise","answer":"COMMISSIVE"}
+      ]
+    },
+
+    {
+      "id": 95,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A statement that describes its own truth conditions","answer":"PROPOSITION"},
+        {"clue":"The truth or falsity of a statement","answer":"TRUTHVALUE"},
+        {"clue":"The circumstances required for a statement to be true","answer":"CONDITIONS"},
+        {"clue":"A logical relationship where one statement guarantees another","answer":"ENTAILMENT"},
+        {"clue":"A relationship where two statements cannot both be true","answer":"CONTRADICTION"}
+      ]
+    },
+
+
+    {
+      "id": 96,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The organization of information in a sentence","answer":"STRUCTURE"},
+        {"clue":"A phrase containing a noun and its modifiers","answer":"NOUNPHRASE"},
+        {"clue":"A phrase containing a verb and its complements","answer":"VERBPHRASE"},
+        {"clue":"The person or thing performing an action","answer":"AGENT"},
+        {"clue":"The person or thing affected by an action","answer":"PATIENT"}
+      ]
+    },
+
+    {
+      "id": 97,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The study of meaning in sentences and words","answer":"SEMANTICS"},
+        {"clue":"The study of meaning in social context","answer":"PRAGMATICS"},
+        {"clue":"The study of sentence structure","answer":"SYNTAX"},
+        {"clue":"The study of word formation","answer":"MORPHOLOGY"},
+        {"clue":"The study of speech sounds","answer":"PHONETICS"}
+      ]
+    },
+
+    {
+      "id": 98,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"A systematic set of rules governing a language","answer":"GRAMMAR"},
+        {"clue":"The rules governing word order","answer":"SYNTAX"},
+        {"clue":"The rules governing word forms","answer":"MORPHOLOGY"},
+        {"clue":"The rules governing sound patterns","answer":"PHONOLOGY"},
+        {"clue":"The rules governing meaning","answer":"SEMANTICS"}
+      ]
+    },
+
+    {
+      "id": 99,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The scientific study of language","answer":"LINGUISTICS"},
+        {"clue":"The scientific study of human speech sounds","answer":"PHONETICS"},
+        {"clue":"The study of language structure","answer":"GRAMMAR"},
+        {"clue":"The study of language and society","answer":"SOCIOLINGUISTICS"},
+        {"clue":"The study of language and the mind","answer":"PSYCHOLINGUISTICS"}
+      ]
+    },
+
+    {
+      "id": 100,
+      "difficulty": "legendary",
+      "attempts": 3,
+      "questions": [
+        {"clue":"The scientific study of language and its structure","answer":"LINGUISTICS"},
+        {"clue":"The study of how language creates meaning","answer":"SEMANTICS"},
+        {"clue":"The study of language use in context","answer":"PRAGMATICS"},
+        {"clue":"The study of how words are constructed","answer":"MORPHOLOGY"},
+        {"clue":"The study of how sentences are constructed","answer":"SYNTAX"}
+      ]
+    }
+
+  ]
+}

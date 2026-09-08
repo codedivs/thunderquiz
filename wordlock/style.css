@@ -1,0 +1,1039 @@
+/* =========================================================
+   WORD LOCK
+   Complete responsive stylesheet
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #080b12;
+    --panel: #111722;
+    --panel-light: #171e2c;
+    --border: #283246;
+
+    --text: #f4f7fb;
+    --muted: #8d98aa;
+
+    --accent: #7c5cff;
+    --accent-light: #a995ff;
+
+    --green: #35d07f;
+    --red: #ff5570;
+    --yellow: #ffc857;
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #171d2d 0%,
+            var(--bg) 55%
+        );
+
+    color: var(--text);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   GAME CONTAINER
+   ========================================================= */
+
+#game {
+    width: min(100%, 1000px);
+
+    margin: 0 auto;
+
+    padding:
+        20px
+        clamp(12px, 3vw, 30px)
+        40px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.logo-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.lock-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--panel-light);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    font-size: 27px;
+
+    box-shadow: var(--shadow);
+}
+
+.logo-area h1 {
+    font-size: clamp(22px, 4vw, 32px);
+
+    letter-spacing: -0.5px;
+}
+
+.logo-area p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.stats {
+    display: flex;
+
+    gap: 10px;
+}
+
+.stat {
+    min-width: 75px;
+
+    padding: 8px 11px;
+
+    text-align: center;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+.stat span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.stat strong {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.progress-area {
+    margin-top: 20px;
+}
+
+.progress-text {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 6px;
+
+    overflow: hidden;
+
+    background: #202737;
+
+    border-radius: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--accent),
+            var(--accent-light)
+        );
+
+    border-radius: inherit;
+
+    transition: width 0.35s ease;
+}
+
+
+/* =========================================================
+   LOCK
+   ========================================================= */
+
+.lock-card {
+    margin: 28px auto 20px;
+
+    text-align: center;
+}
+
+.lock-top {
+    position: relative;
+
+    width: 120px;
+
+    margin: 0 auto;
+}
+
+.lock-shackle {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto -20px;
+
+    border:
+        10px solid #596274;
+
+    border-bottom: 0;
+
+    border-radius:
+        30px 30px 0 0;
+}
+
+.lock-body {
+    position: relative;
+
+    width: 105px;
+    height: 85px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #3a4354,
+            #202736
+        );
+
+    border: 2px solid #566074;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.keyhole {
+    font-size: 30px;
+
+    opacity: 0.8;
+}
+
+.lock-status {
+    margin-top: 13px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.lock-status.open {
+    color: var(--green);
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CLUE
+   ========================================================= */
+
+.clue-card {
+    width: 100%;
+
+    padding:
+        clamp(16px, 4vw, 25px);
+
+    text-align: center;
+
+    background: var(--panel);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+}
+
+.clue-label {
+    margin-bottom: 8px;
+
+    color: var(--accent-light);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.clue-card h2 {
+    font-size: clamp(18px, 4vw, 27px);
+
+    line-height: 1.25;
+}
+
+.word-length {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   ANSWER GRID
+   ========================================================= */
+
+.word-grid {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 22px auto;
+
+    padding: 10px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: clamp(5px, 1.5vw, 10px);
+}
+
+.word-slot {
+    width: clamp(38px, 8vw, 62px);
+    height: clamp(44px, 8vw, 62px);
+
+    flex:
+        0 1 clamp(38px, 8vw, 62px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #151c29;
+
+    border:
+        2px solid #303a4d;
+
+    border-radius: 10px;
+
+    color: var(--text);
+
+    font-size: clamp(18px, 4vw, 29px);
+
+    font-weight: 800;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.word-slot.filled {
+    background: #202a3d;
+
+    border-color: var(--accent);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ALPHABET KEYBOARD
+   ========================================================= */
+
+.keyboard {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 20px auto;
+
+    padding:
+        8px
+        clamp(3px, 1vw, 10px);
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: clamp(5px, 1vw, 8px);
+}
+
+
+/*
+   The alphabet buttons intentionally have a fixed
+   keyboard-like size instead of stretching.
+*/
+
+.keyboard .key {
+    width: 52px;
+    height: 52px;
+
+    flex:
+        0 0 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #182131;
+
+    border:
+        1px solid #344056;
+
+    border-radius: 9px;
+
+    color: var(--text);
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.1s ease,
+        background 0.15s ease,
+        border-color 0.15s ease,
+        opacity 0.15s ease;
+}
+
+.keyboard .key:hover:not(:disabled) {
+    background: #222d40;
+
+    border-color: var(--accent-light);
+
+    transform: translateY(-2px);
+}
+
+.keyboard .key:active:not(:disabled) {
+    transform: scale(0.92);
+}
+
+
+/* Selected */
+
+.keyboard .key.selected {
+    background: var(--accent);
+
+    border-color: var(--accent-light);
+
+    color: white;
+}
+
+
+/* Disabled */
+
+.keyboard .key:disabled {
+    cursor: default;
+
+    opacity: 0.45;
+}
+
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.controls {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.control-button,
+.hint-button,
+.submit-button,
+.next-button {
+    min-height: 46px;
+
+    padding:
+        0 18px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.12s ease,
+        opacity 0.15s ease;
+}
+
+.control-button {
+    min-width: 50px;
+
+    background: #202938;
+
+    color: white;
+
+    border: 1px solid var(--border);
+}
+
+.hint-button {
+    background: #262033;
+
+    color: var(--yellow);
+
+    border: 1px solid #4a3b5f;
+}
+
+.submit-button {
+    min-width: 120px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            #6145db
+        );
+
+    color: white;
+}
+
+.control-button:hover,
+.hint-button:hover,
+.submit-button:hover,
+.next-button:hover {
+    transform: translateY(-2px);
+}
+
+.control-button:active,
+.hint-button:active,
+.submit-button:active,
+.next-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.message {
+    min-height: 26px;
+
+    margin: 14px auto;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+.message.success {
+    color: var(--green);
+}
+
+.message.error {
+    color: var(--red);
+}
+
+.message.warning {
+    color: var(--yellow);
+}
+
+.message.hint {
+    color: var(--accent-light);
+}
+
+
+/* =========================================================
+   COMPLETE SCREEN
+   ========================================================= */
+
+.complete-screen {
+    width: min(100%, 500px);
+
+    margin: 18px auto;
+
+    padding: 28px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17251f,
+            #111a18
+        );
+
+    border:
+        1px solid #315b46;
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.complete-screen.hidden {
+    display: none;
+}
+
+.complete-screen.show {
+    animation:
+        completePop
+        0.35s ease;
+}
+
+@keyframes completePop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.complete-icon {
+    font-size: 45px;
+
+    margin-bottom: 8px;
+}
+
+.complete-screen h2 {
+    color: var(--green);
+
+    font-size: 25px;
+}
+
+.complete-screen p {
+    margin-top: 6px;
+
+    color: var(--muted);
+}
+
+.level-score {
+    margin: 14px 0;
+
+    color: var(--yellow);
+
+    font-size: 28px;
+
+    font-weight: 900;
+}
+
+.next-button {
+    background: var(--green);
+
+    color: #07130d;
+
+    padding: 0 25px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 30px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: #687386;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #game {
+        padding-top: 14px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .stats {
+        gap: 5px;
+    }
+
+    .stat {
+        min-width: 63px;
+
+        padding: 7px 5px;
+    }
+
+    .stat strong {
+        font-size: 14px;
+    }
+
+    .keyboard {
+        gap: 6px;
+    }
+
+    .keyboard .key {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    #game {
+        padding:
+            12px
+            10px
+            30px;
+    }
+
+    .topbar {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 14px;
+    }
+
+    .logo-area {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .stat {
+        flex: 1;
+    }
+
+    .lock-card {
+        margin-top: 22px;
+    }
+
+    .lock-body {
+        width: 90px;
+        height: 72px;
+    }
+
+    .lock-shackle {
+        width: 50px;
+        height: 52px;
+    }
+
+    .word-grid {
+        gap: 5px;
+
+        padding:
+            8px
+            3px;
+    }
+
+    .word-slot {
+        width: 44px;
+        height: 48px;
+
+        flex-basis: 44px;
+
+        font-size: 20px;
+    }
+
+    /*
+       ALPHABET
+       */
+
+    .keyboard {
+        gap: 5px;
+
+        padding:
+            5px
+            2px;
+    }
+
+    .keyboard .key {
+        width: 40px;
+        height: 42px;
+
+        flex-basis: 40px;
+
+        font-size: 15px;
+
+        border-radius: 7px;
+    }
+
+    .controls {
+        gap: 6px;
+    }
+
+    .control-button,
+    .hint-button,
+    .submit-button {
+        min-height: 44px;
+
+        padding:
+            0 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo-area h1 {
+        font-size: 23px;
+    }
+
+    .logo-area p {
+        font-size: 11px;
+    }
+
+    .stat {
+        padding: 6px 3px;
+    }
+
+    .stat span {
+        font-size: 8px;
+    }
+
+    .stat strong {
+        font-size: 13px;
+    }
+
+    .word-slot {
+        width: 39px;
+        height: 43px;
+
+        flex-basis: 39px;
+
+        font-size: 18px;
+    }
+
+    .keyboard {
+        gap: 4px;
+    }
+
+    .keyboard .key {
+        width: 35px;
+        height: 38px;
+
+        flex-basis: 35px;
+
+        font-size: 14px;
+    }
+
+    .control-button {
+        min-width: 43px;
+    }
+
+    .hint-button {
+        padding: 0 9px;
+    }
+
+    .submit-button {
+        min-width: 100px;
+
+        padding: 0 10px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 330px) {
+
+    .keyboard {
+        gap: 3px;
+    }
+
+    .keyboard .key {
+        width: 32px;
+        height: 35px;
+
+        flex-basis: 32px;
+
+        font-size: 13px;
+    }
+
+    .word-slot {
+        width: 35px;
+        height: 39px;
+
+        flex-basis: 35px;
+
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible {
+    outline:
+        2px solid var(--accent-light);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   GAME FINISHED
+   ========================================================= */
+
+.game-finished {
+    width: 100%;
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    color: var(--yellow);
+
+    font-size: clamp(22px, 5vw, 38px);
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
