@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spell Master</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         GAME CONTAINER
+    ========================== -->
+
+    <main class="game-container">
+
+        <!-- TOP BAR -->
+        <header class="top-bar">
+
+            <div class="brand">
+                <div class="brand-icon">✓</div>
+                <div>
+                    <h1>Spell Master</h1>
+                    <span>Choose the correct spelling</span>
+                </div>
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span class="stat-label">SCORE</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">STREAK</span>
+                    <strong id="streak">0</strong>
+                </div>
+
+                <div class="stat lives-stat">
+                    <span class="stat-label">LIVES</span>
+                    <div id="lives" class="lives">
+                        <span>♥</span>
+                        <span>♥</span>
+                        <span>♥</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-section">
+
+            <div class="progress-info">
+                <span id="levelName">Level 1 · Beginner</span>
+                <span id="questionCounter">Question 1 / 10</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+        </section>
+
+
+        <!-- QUESTION -->
+        <section class="question-section">
+
+            <div class="question-badge">
+                SPELLING CHALLENGE
+            </div>
+
+            <h2>
+                Which among these is<br>
+                <span>correctly spelled?</span>
+            </h2>
+
+            <p class="question-description">
+                Choose the word with the correct spelling.
+            </p>
+
+        </section>
+
+
+        <!-- ANSWER OPTIONS -->
+        <section id="options" class="options">
+
+            <button class="answer-option" data-answer="A">
+                <span class="option-letter">A</span>
+                <span class="option-word">Apple</span>
+            </button>
+
+            <button class="answer-option" data-answer="B">
+                <span class="option-letter">B</span>
+                <span class="option-word">Appel</span>
+            </button>
+
+            <button class="answer-option" data-answer="C">
+                <span class="option-letter">C</span>
+                <span class="option-word">Aple</span>
+            </button>
+
+            <button class="answer-option" data-answer="D">
+                <span class="option-letter">D</span>
+                <span class="option-word">Appl</span>
+            </button>
+
+        </section>
+
+
+        <!-- FEEDBACK -->
+        <section id="feedback" class="feedback hidden">
+
+            <div id="feedbackIcon" class="feedback-icon">
+                ✓
+            </div>
+
+            <div class="feedback-content">
+
+                <strong id="feedbackTitle">
+                    Correct!
+                </strong>
+
+                <p id="feedbackText">
+                    Excellent spelling.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM CONTROLS -->
+        <section class="controls">
+
+            <button id="hintButton" class="hint-button">
+                <span class="hint-icon">💡</span>
+                <span>Hint</span>
+            </button>
+
+            <div id="hintText" class="hint-text hidden">
+                <!-- Hint appears here -->
+            </div>
+
+            <button id="nextButton" class="next-button hidden">
+                Next Question
+                <span>→</span>
+            </button>
+
+        </section>
+
+
+        <!-- LEVEL COMPLETE -->
+        <section id="levelComplete" class="level-complete hidden">
+
+            <div class="complete-icon">
+                ★
+            </div>
+
+            <h2>Level Complete!</h2>
+
+            <p>
+                Excellent work. You're becoming a spelling master.
+            </p>
+
+            <div class="complete-stats">
+
+                <div>
+                    <span>Score</span>
+                    <strong id="finalScore">0</strong>
+                </div>
+
+                <div>
+                    <span>Accuracy</span>
+                    <strong id="accuracy">0%</strong>
+                </div>
+
+                <div>
+                    <span>Best Streak</span>
+                    <strong id="bestStreak">0</strong>
+                </div>
+
+            </div>
+
+            <button id="nextLevelButton" class="next-level-button">
+                Continue to Next Level →
+            </button>
+
+        </section>
+
+
+        <!-- GAME OVER -->
+        <section id="gameOver" class="game-over hidden">
+
+            <div class="game-over-icon">
+                ♥
+            </div>
+
+            <h2>Game Over</h2>
+
+            <p>
+                Your spelling journey doesn't end here.
+            </p>
+
+            <div class="game-over-score">
+                <span>Final Score</span>
+                <strong id="gameOverScore">0</strong>
+            </div>
+
+            <button id="restartButton" class="restart-button">
+                Play Again
+            </button>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <span>Spell Master</span>
+            <span>•</span>
+            <span>Train your spelling. Master the words.</span>
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
