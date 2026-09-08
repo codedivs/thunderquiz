@@ -192,6 +192,10 @@
             Quick Play
         </a>
 
+    	<a href="#more-games">
+	    More Games
+	</a>
+
     </nav>
 
 
@@ -397,6 +401,284 @@
         id="puzzle-games"
         aria-live="polite"
     ></div>
+
+</section>
+
+<!-- =====================================================
+     MORE GAMES
+====================================================== -->
+
+<section
+    class="game-section more-games-section"
+    id="more-games"
+    aria-labelledby="more-games-title"
+>
+
+<div class="section-heading more-games-heading">
+
+    <div>
+
+        <span class="section-kicker">
+            THE FULL ARCADE
+        </span>
+
+        <h2 id="more-games-title">
+            More Games
+        </h2>
+
+        <p class="section-description">
+            Browse our growing collection of brain games,
+            puzzles, quizzes and quick challenges.
+        </p>
+
+    </div>
+
+
+    <span
+        class="game-count"
+        id="all-games-count"
+    >
+        00 GAMES
+    </span>
+
+</div>
+
+
+<!-- =================================================
+     GAME SEARCH
+================================================== -->
+
+<div class="game-browser">
+
+    <div class="game-search">
+
+        <label
+            for="game-search-input"
+            class="sr-only"
+        >
+            Search games
+        </label>
+
+        <span
+            class="search-icon"
+            aria-hidden="true"
+        >
+            🔍
+        </span>
+
+        <input
+            type="search"
+            id="game-search-input"
+            placeholder="Search thousands of games..."
+            autocomplete="off"
+            spellcheck="false"
+        >
+
+        <button
+            type="button"
+            id="clear-game-search"
+            class="clear-search"
+            aria-label="Clear game search"
+            hidden
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- =============================================
+         CATEGORY FILTERS
+    ============================================== -->
+
+    <div
+        class="game-filters"
+        id="game-filters"
+        aria-label="Game categories"
+    >
+
+        <button
+            type="button"
+            class="game-filter active"
+            data-category="all"
+        >
+            All Games
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="quiz"
+        >
+            Quizzes
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="puzzle"
+        >
+            Puzzles
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="logic"
+        >
+            Logic
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="memory"
+        >
+            Memory
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="reaction"
+        >
+            Reaction
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="numbers"
+        >
+            Numbers
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="word"
+        >
+            Word Games
+        </button>
+
+        <button
+            type="button"
+            class="game-filter"
+            data-category="strategy"
+        >
+            Strategy
+        </button>
+
+    </div>
+
+
+    <!-- =============================================
+         SORT
+    ============================================== -->
+
+    <div class="game-browser-bar">
+
+        <span
+            id="game-results-label"
+            class="game-results-label"
+        >
+            Showing all games
+        </span>
+
+        <label class="game-sort">
+
+            <span>
+                Sort:
+            </span>
+
+            <select id="game-sort-select">
+
+                <option value="featured">
+                    Featured
+                </option>
+
+                <option value="newest">
+                    Newest
+                </option>
+
+                <option value="az">
+                    A–Z
+                </option>
+
+                <option value="random">
+                    Random
+                </option>
+
+            </select>
+
+        </label>
+
+    </div>
+
+
+    <!-- =============================================
+         ALL GAMES GRID
+    ============================================== -->
+
+    <div
+        class="all-games-grid"
+        id="all-games-grid"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- =============================================
+         NO RESULTS
+    ============================================== -->
+
+    <div
+        class="no-game-results"
+        id="no-game-results"
+        hidden
+    >
+
+        <div
+            class="no-results-icon"
+            aria-hidden="true"
+        >
+            ⚡
+        </div>
+
+        <h3>
+            No games found
+        </h3>
+
+        <p>
+            Try another search or choose a different category.
+        </p>
+
+        <button
+            type="button"
+            id="reset-game-search"
+        >
+            SHOW ALL GAMES
+        </button>
+
+    </div>
+
+
+    <!-- =============================================
+         LOAD MORE
+    ============================================== -->
+
+    <div class="load-more-wrapper">
+
+        <button
+            type="button"
+            id="load-more-games"
+            class="load-more-button"
+        >
+            LOAD MORE GAMES
+        </button>
+
+    </div>
+
+</div>
 
 </section>
 

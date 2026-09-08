@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Code Breaker - Free Online Code Breaking Puzzle Game</title>
+
+    <meta name="description"
+          content="Play Code Breaker, a free online puzzle game where you crack secret codes, test your logic, and challenge your brain. Can you break the code?">
+
+    <meta name="keywords"
+          content="Code Breaker, code breaking game, code puzzle game, logic puzzle, brain game, puzzle game, free online game, secret code game">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="Code Breaker">
+
+    <link rel="canonical" href="https://thunderquiz.com/codebreaker">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title"
+          content="Code Breaker - Free Online Code Breaking Puzzle Game">
+
+    <meta property="og:description"
+          content="Crack the secret code in this fun and challenging free online puzzle game. Test your logic and see if you can become a Code Breaker!">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url"
+          content="https://thunderquiz.com/codebreaker">
+
+    <meta property="og:image"
+          content="https://thunderquiz.com/images/code-breaker-preview.jpg">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="Code Breaker - Free Online Puzzle Game">
+
+    <meta name="twitter:description"
+          content="Crack secret codes and test your logic in this free online Code Breaker puzzle game.">
+
+    <meta name="twitter:image"
+          content="https://thunderquiz.com/images/code-breaker-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+<main class="game">
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <p class="eyebrow">
+                LOGIC PUZZLE GAME
+            </p>
+
+            <h1>
+                CODE BREAKER
+            </h1>
+
+            <p class="subtitle">
+                Crack the code. Unlock the next challenge.
+            </p>
+
+        </div>
+
+
+        <div class="header-progress">
+
+            <span>
+                LEVEL
+            </span>
+
+            <strong id="levelDisplay">
+                1 / 13
+            </strong>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         LEVEL PROGRESS
+    ====================================== -->
+
+    <section class="level-progress-card">
+
+        <div class="progress-heading">
+
+            <div>
+
+                <span class="small-label">
+                    CURRENT CHALLENGE
+                </span>
+
+                <h2 id="levelTitle">
+                    LEVEL 1 — FIRST CODE
+                </h2>
+
+            </div>
+
+
+            <div class="stars-display"
+                 id="starsDisplay">
+
+                ☆ ☆ ☆
+
+            </div>
+
+        </div>
+
+
+        <div class="level-progress-track">
+
+            <div id="levelProgressBar"
+                 class="level-progress-bar">
+
+            </div>
+
+        </div>
+
+
+        <p id="levelDescription">
+
+            A simple three-digit code to begin your journey.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         GAME INFORMATION
+    ====================================== -->
+
+    <section class="game-info">
+
+        <div class="info-box">
+
+            <span>
+                CODE LENGTH
+            </span>
+
+            <strong id="codeLength">
+                3 DIGITS
+            </strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span>
+                ATTEMPTS
+            </span>
+
+            <strong id="attempts">
+                0 / 10
+            </strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span>
+                DIFFICULTY
+            </span>
+
+            <strong id="difficulty">
+                VERY EASY
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         LEGEND
+    ====================================== -->
+
+    <section class="legend">
+
+        <div>
+
+            <span class="dot correct"></span>
+
+            Correct digit + position
+
+        </div>
+
+
+        <div>
+
+            <span class="dot partial"></span>
+
+            Correct digit, wrong position
+
+        </div>
+
+
+        <div>
+
+            <span class="dot wrong"></span>
+
+            Digit not in code
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         MAIN GAME
+    ====================================== -->
+
+    <section class="game-card">
+
+
+        <div class="secret-heading">
+
+            <span>
+                🔐 SECRET COMBINATION
+            </span>
+
+        </div>
+
+
+        <!-- Dynamic code slots -->
+
+        <div id="codeDisplay"
+             class="code-display">
+
+        </div>
+
+
+        <p id="instruction"
+           class="instruction">
+
+            Enter the correct combination.
+
+        </p>
+
+
+
+        <!-- INPUT -->
+
+        <div class="input-area">
+
+            <input
+                id="guessInput"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="Enter code"
+            >
+
+
+            <button id="guessBtn">
+
+                BREAK CODE
+
+            </button>
+
+        </div>
+
+
+        <p id="message"
+           class="message">
+
+            The code is waiting...
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         GUESS HISTORY
+    ====================================== -->
+
+    <section class="history-section">
+
+
+        <div class="section-title">
+
+            <div>
+
+                <span class="small-label">
+                    ANALYSIS
+                </span>
+
+                <h2>
+                    GUESS HISTORY
+                </h2>
+
+            </div>
+
+
+            <button id="restartLevelBtn"
+                    class="new-game">
+
+                ↻ RESTART LEVEL
+
+            </button>
+
+        </div>
+
+
+        <div id="history"
+             class="history">
+
+            <div class="empty-history">
+
+                No guesses yet.
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         LEVEL MAP
+    ====================================== -->
+
+    <section class="levels-section">
+
+
+        <div class="section-title level-heading">
+
+            <div>
+
+                <span class="small-label">
+                    PROGRESSION
+                </span>
+
+                <h2>
+                    CODE LEVELS
+                </h2>
+
+            </div>
+
+
+            <span id="levelsUnlockedText"
+                  class="unlock-text">
+
+                LEVEL 1 UNLOCKED
+
+            </span>
+
+        </div>
+
+
+        <div id="levelMap"
+             class="level-map">
+
+
+            <!-- JavaScript creates 13 levels -->
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         RULES
+    ====================================== -->
+
+    <section class="rules">
+
+        <h3>
+            HOW TO PLAY
+        </h3>
+
+
+        <p>
+            Every level contains a hidden number combination.
+            Use the feedback from each guess to logically
+            eliminate possibilities.
+        </p>
+
+
+        <div class="rule-grid">
+
+            <div>
+
+                <span class="dot correct"></span>
+
+                <p>
+                    Correct digit in the exact position.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span class="dot partial"></span>
+
+                <p>
+                    Correct digit but placed incorrectly.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span class="dot wrong"></span>
+
+                <p>
+                    This digit does not appear in the code.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         RESULT SCREEN
+    ====================================== -->
+
+    <div id="resultScreen"
+         class="result-screen hidden">
+
+
+        <div class="result-card">
+
+
+            <div id="resultIcon"
+                 class="result-icon">
+
+                🎉
+
+            </div>
+
+
+            <p id="resultLevel"
+               class="result-level">
+
+                LEVEL 1 COMPLETE
+
+            </p>
+
+
+            <h2 id="resultTitle">
+
+                CODE CRACKED!
+
+            </h2>
+
+
+            <p id="resultText">
+
+            </p>
+
+
+            <!-- Stars earned -->
+
+            <div id="resultStars"
+                 class="result-stars">
+
+                ⭐ ⭐ ⭐
+
+            </div>
+
+
+            <!-- Secret code -->
+
+            <div class="secret-reveal">
+
+                SECRET CODE
+
+                <strong id="secretCode">
+
+                    123
+
+                </strong>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button id="nextLevelBtn"
+                        class="primary-btn">
+
+                    NEXT LEVEL →
+
+                </button>
+
+
+                <button id="playAgainBtn"
+                        class="secondary-btn">
+
+                    TRY AGAIN
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         FINAL COMPLETION SCREEN
+    ====================================== -->
+
+    <div id="finalScreen"
+         class="result-screen hidden">
+
+
+        <div class="result-card final-card">
+
+
+            <div class="result-icon">
+
+                👑
+
+            </div>
+
+
+            <p class="result-level">
+
+                ALL 13 LEVELS COMPLETE
+
+            </p>
+
+
+            <h2>
+
+                CODE LEGEND
+
+            </h2>
+
+
+            <p>
+
+                You cracked every combination and completed
+                the ultimate Code Breaker challenge.
+
+            </p>
+
+
+            <div class="legend-crown">
+
+                👑
+                ⭐ ⭐ ⭐
+                🔐
+
+            </div>
+
+
+            <button id="restartGameBtn"
+                    class="primary-btn">
+
+                PLAY FROM LEVEL 1
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <span>
+            🧠 ANALYZE
+        </span>
+
+        <span>
+            🔢 ELIMINATE
+        </span>
+
+        <span>
+            🔐 BREAK
+        </span>
+
+        <span>
+            👑 CONQUER
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+

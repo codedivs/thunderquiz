@@ -1,128 +1,262 @@
 {
-    "settings": {
-        "adsEnabled": false
-    },
-
-    "games": [
-
-        {
-            "id": "iq",
-            "title": "IQ Level Estimator",
-            "folder": "iq",
-            "image": "/images/iq.jpg",
-            "category": "IQ · REASONING",
-            "section": "quick",
-            "active": true
-        },
-
-        {
-            "id": "mindmatch",
-            "title": "Mind Match",
-            "folder": "mindmatch",
-            "image": "/images/mindmatch.jpg",
-            "category": "MEMORY · SPEED",
-            "section": "quick",
-            "active": true
-        },
-
-        {
-            "id": "sequence",
-            "title": "Sequence",
-            "folder": "sequence",
-            "image": "/images/sequence.png",
-            "category": "LOGIC · PATTERNS",
-            "section": "quick",
-            "active": true
-        },
-
-        {
-            "id": "pattern-hacker",
-            "title": "Pattern Hacker",
-            "folder": "pattern-hacker",
-            "image": "/images/pattern-hacker.png",
-            "category": "LOGIC · CHALLENGE",
-            "section": "quick",
-            "active": true
-        },
-
-        {
-            "id": "whoslying",
-            "title": "Who Is Lying?",
-            "folder": "whoslying",
-            "image": "/images/whoslying.png",
-            "category": "DETECTIVE · CLUES",
-            "section": "challenge",
-            "active": true
-        },
-
-        {
-            "id": "turncards",
-            "title": "Color Memory",
-            "folder": "turncards",
-            "image": "/images/colormemory.png",
-            "category": "MEMORY · CASUAL",
-            "section": "challenge",
-            "active": true
-        },
-
-        {
-            "id": "namethecolors",
-            "title": "Name the Colors",
-            "folder": "namethecolors",
-            "image": "/images/namecolors.png",
-            "category": "SPEED · FOCUS",
-            "section": "challenge",
-            "active": true
-        },
-
-        {
-            "id": "crossword",
-            "title": "Crossword",
-            "folder": "crossword",
-            "image": "/images/crossword.png",
-            "category": "WORDS · PUZZLE",
-            "section": "puzzle",
-            "active": true
-        },
-
-        {
-            "id": "wordpuzzle",
-            "title": "Word Hunt",
-            "folder": "wordpuzzle",
-            "image": "/images/wordhunt.png",
-            "category": "WORDS · SEARCH",
-            "section": "puzzle",
-            "active": true
-        },
-
-	{
-	    "id": "chess",
-    	    "title": "Chess",
-    	    "folder": "chess",
-    	    "image": "/images/chess.png",
-    	    "category": "STRATEGY · CHESS",
-    	    "section": "challenge",
-    	    "active": true
+	"settings":{
+		"adsEnabled":false,
+		"version":2,
+		"gamesPerPage":24
 	},
-	{
-		"id":"wordtrap",
-		"title":"wordtrap",
-		"folder":"wordtrap",
-		"image":"/images/wordtrap.png",
-		"category":"WORDS . PUZZLE",
-		"section":"puzzle",
-		"active":"true"
-	},
-	{
-		"id":"riddlerash",
-		"title":"riddlerash",
-		"folder":"riddlerash",
-		"image":"/images/riddlerash.png",
-		"category":"WORDS . PUZZLE",
-		"section":"puzzle",
-		"active":"true"
-	}
 
-    ]
+	"games":[
+
+		{
+			"id":"iq",
+			"title":"IQLevelEstimator",
+			"folder":"iq",
+			"image":"/images/iq.jpg",
+			"category":"logic",
+			"section":"quick",
+			"description":"TestyourreasoningskillsandestimateyourIQ.",
+			"tags":["iq","reasoning","brain","test"],
+			"difficulty":"medium",
+			"featured":true,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"mindmatch",
+			"title":"MindMatch",
+			"folder":"mindmatch",
+			"image":"/images/mindmatch.jpg",
+			"category":"memory",
+			"section":"quick",
+			"description":"Challengeyourmemorybymatchingpatterns.",
+			"tags":["memory","matching","focus","speed"],
+			"difficulty":"easy",
+			"featured":true,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"sequence",
+			"title":"Sequence",
+			"folder":"sequence",
+			"image":"/images/sequence.png",
+			"category":"logic",
+			"section":"quick",
+			"description":"Findthemissingpatternandcompletethesequence.",
+			"tags":["logic","patterns","numbers","brain"],
+			"difficulty":"medium",
+			"featured":true,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"pattern-hacker",
+			"title":"PatternHacker",
+			"folder":"pattern-hacker",
+			"image":"/images/pattern-hacker.png",
+			"category":"logic",
+			"section":"quick",
+			"description":"Crackincreasinglydifficultvisualpatterns.",
+			"tags":["logic","patterns","challenge","brain"],
+			"difficulty":"hard",
+			"featured":true,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"whoslying",
+			"title":"WhoIsLying?",
+			"folder":"whoslying",
+			"image":"/images/whoslying.png",
+			"category":"detective",
+			"section":"challenge",
+			"description":"Studythecluesandfigureoutwhoistellingthetruth.",
+			"tags":["detective","clues","logic","mystery"],
+			"difficulty":"medium",
+			"featured":false,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"turncards",
+			"title":"ColorMemory",
+			"folder":"turncards",
+			"image":"/images/colormemory.png",
+			"category":"memory",
+			"section":"challenge",
+			"description":"Rememberthecolorsequenceandreproduceitcorrectly.",
+			"tags":["memory","colors","focus","speed"],
+			"difficulty":"easy",
+			"featured":false,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"namethecolors",
+			"title":"NametheColors",
+			"folder":"namethecolors",
+			"image":"/images/namecolors.png",
+			"category":"reaction",
+			"section":"challenge",
+			"description":"Reactquicklyandidentifycolorsbeforetimerunsout.",
+			"tags":["reaction","speed","focus","colors"],
+			"difficulty":"medium",
+			"featured":false,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"chess",
+			"title":"Chess",
+			"folder":"chess",
+			"image":"/images/chess.png",
+			"category":"strategy",
+			"section":"challenge",
+			"description":"Playaclassicgameofstrategyandplanning.",
+			"tags":["chess","strategy","board","thinking"],
+			"difficulty":"hard",
+			"featured":true,
+			"dateAdded":"2026-09-02",
+			"active":true
+		},
+
+		{
+			"id":"crossword",
+			"title":"Crossword",
+			"folder":"crossword",
+			"image":"/images/crossword.png",
+			"category":"word",
+			"section":"puzzle",
+			"description":"Solvecluesandcompletethecrossword.",
+			"tags":["words","vocabulary","puzzle","classic"],
+			"difficulty":"medium",
+			"featured":false,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"wordpuzzle",
+			"title":"WordHunt",
+			"folder":"wordpuzzle",
+			"image":"/images/wordhunt.png",
+			"category":"word",
+			"section":"puzzle",
+			"description":"Searchtheboardandfindhiddenwords.",
+			"tags":["words","search","puzzle","casual"],
+			"difficulty":"easy",
+			"featured":false,
+			"dateAdded":"2026-09-01",
+			"active":true
+		},
+
+		{
+			"id":"wordtrap",
+			"title":"WordTrap",
+			"folder":"wordtrap",
+			"image":"/images/wordtrap.png",
+			"category":"word",
+			"section":"puzzle",
+			"description":"Thinkcarefullyandavoidthetrapshiddeninthepuzzle.",
+			"tags":["words","logic","puzzle","brain"],
+			"difficulty":"medium",
+			"featured":false,
+			"dateAdded":"2026-09-03",
+			"active":true
+		},
+
+		{
+			"id":"riddlerash",
+			"title":"RiddleRush",
+			"folder":"riddlerash",
+			"image":"/images/riddlerash.png",
+			"category":"riddle",
+			"section":"puzzle",
+			"description":"Solvearapidseriesoftrickyriddles.",
+			"tags":["riddles","logic","words","brain"],
+			"difficulty":"hard",
+			"featured":false,
+			"dateAdded":"2026-09-03",
+			"active":true
+		},
+		{
+			"id":"frenchsprint",
+			"title":"FrenchSprint",
+			"folder":"frenchsprint",
+			"image":"/images/frenchsprint.png",
+			"category":"language",
+			"section":"learning",
+			"description":"LearnFrenchthroughfastvocabulary,phrases,andsentencechallenges.",
+			"tags":["french","language","vocabulary","learning","quiz"],
+			"difficulty":"medium",
+			"featured":false,
+			"dateAdded":"2026-09-05",
+			"active":true
+		},
+		{
+			"id":"wordlock",
+			"title":"WordLock",
+			"folder":"wordlock",
+			"image":"/images/wordlock.png",
+			"category":"word",
+			"section":"puzzle",
+			"description":"Crackthehiddenwordbeforethelockcloses.",
+			"tags":["words","vocabulary","logic","brain"],
+			"difficulty":"hard",
+			"featured":false,
+			"dateAdded":"2026-09-05",
+			"active":true
+		},
+		{
+			"id":"spellmaster",
+			"title":"SpellMaster",
+			"folder":"spellmaster",
+			"image":"/images/spellmaster.png",
+			"category":"word",
+			"section":"puzzle",
+			"description":"Choosethecorrectlyspelledwordandmastereverylevel.",
+			"tags":["spelling","words","vocabulary","brain"],
+			"difficulty":"medium",
+			"featured":false,
+			"dateAdded":"2026-09-05",
+			"active":true
+		},
+		{
+			"id":"missingletters",
+			"title":"MissingLetters",
+			"folder":"missingletters",
+			"image":"/images/missingletters.png",
+			"category":"word",
+			"section":"puzzle",
+			"description":"Readthedefinition,completethemissingletters,andmastereverylevel.",
+			"tags":["missingletters","spelling","words","vocabulary","brain"],
+			"difficulty":"medium",
+			"featured":false,
+			"dateAdded":"2026-09-05",
+			"active":true
+		},
+		{
+			"id": "codebreaker",
+			"title": "Code Breaker",
+			"folder": "codebreaker",
+			"image": "/images/codebreaker.png",
+			"category": "logic",
+			"section": "puzzle",
+			"description": "Crackthecode,solvetheclues,andtestyourlogicinthischallengingpuzzlegame.",
+			"tags": ["codebreaker", "logic", "codes", "brain", "puzzle", "strategy"],
+			"difficulty": "medium",
+			"featured": false,
+			"dateAdded": "2026-09-08",
+			"active": true
+		}
+
+	]
 }
 
