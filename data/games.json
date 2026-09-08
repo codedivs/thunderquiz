@@ -255,7 +255,22 @@
 			"featured": false,
 			"dateAdded": "2026-09-08",
 			"active": true
+		},
+		{
+			"id": "mindmatch",
+			"title": "Mind Match",
+			"folder": "mindmatch",
+			"image": "/images/mindmatch.png",
+			"category": "brain",
+			"section": "puzzle",
+			"description": "Find the odd tile before time runs out, build combos, earn XP, and sharpen your visual focus.",
+			"tags": ["mindmatch", "visual", "brain game", "focus", "puzzle", "memory", "reaction"],
+			"difficulty": "medium",
+			"featured": false,
+			"dateAdded": "2026-09-08",
+			"active": true
 		}
+
 
 	]
 }
