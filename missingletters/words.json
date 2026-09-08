@@ -1,0 +1,428 @@
+{
+  "words": [
+    {
+      "word": "TURN",
+      "definition": "To change direction or move around in a different direction."
+    },
+    {
+      "word": "BOOK",
+      "definition": "A set of written or printed pages bound together."
+    },
+    {
+      "word": "COLD",
+      "definition": "Having a low temperature; not warm."
+    },
+    {
+      "word": "FIRE",
+      "definition": "The visible heat and light produced when something burns."
+    },
+    {
+      "word": "TREE",
+      "definition": "A tall plant with a wooden trunk, branches, and leaves."
+    },
+    {
+      "word": "ROAD",
+      "definition": "A path or route used by people and vehicles to travel from one place to another."
+    },
+    {
+      "word": "WIND",
+      "definition": "Moving air, especially when it is strong enough to be felt."
+    },
+    {
+      "word": "RAIN",
+      "definition": "Water that falls from clouds in drops."
+    },
+    {
+      "word": "STAR",
+      "definition": "A bright object in the night sky that produces its own light."
+    },
+    {
+      "word": "MOON",
+      "definition": "The natural object that orbits Earth and appears bright in the night sky."
+    },
+    {
+      "word": "FISH",
+      "definition": "An animal that lives in water and breathes using gills."
+    },
+    {
+      "word": "BIRD",
+      "definition": "An animal with feathers, wings, and a beak."
+    },
+    {
+      "word": "HOME",
+      "definition": "The place where a person lives."
+    },
+    {
+      "word": "DOOR",
+      "definition": "A movable barrier used to close an entrance to a room or building."
+    },
+    {
+      "word": "HAND",
+      "definition": "The part of the body at the end of the arm, used for holding and touching."
+    },
+    {
+      "word": "FOOT",
+      "definition": "The part of the body at the end of the leg used for standing and walking."
+    },
+    {
+      "word": "HEAD",
+      "definition": "The upper part of the human body containing the brain, eyes, ears, nose, and mouth."
+    },
+    {
+      "word": "FACE",
+      "definition": "The front part of a person's head."
+    },
+    {
+      "word": "EYES",
+      "definition": "The organs used for seeing."
+    },
+    {
+      "word": "TIME",
+      "definition": "The ongoing measurement of events from the past through the present and into the future."
+    },
+    {
+      "word": "WORK",
+      "definition": "Activity done to achieve a purpose or earn a living."
+    },
+    {
+      "word": "PLAY",
+      "definition": "An activity done for enjoyment, entertainment, or recreation."
+    },
+    {
+      "word": "WALK",
+      "definition": "To move by putting one foot in front of the other."
+    },
+    {
+      "word": "JUMP",
+      "definition": "To push yourself off the ground and move through the air."
+    },
+    {
+      "word": "FAST",
+      "definition": "Moving or happening at a high speed."
+    },
+    {
+      "word": "SLOW",
+      "definition": "Moving or happening at a low speed."
+    },
+    {
+      "word": "BIG",
+      "definition": "Large in size, amount, or importance."
+    },
+    {
+      "word": "SMALL",
+      "definition": "Little in size, amount, or extent."
+    },
+    {
+      "word": "OPEN",
+      "definition": "Not closed or blocked."
+    },
+    {
+      "word": "CLOSE",
+      "definition": "To shut something or bring it into a closed position."
+    },
+    {
+      "word": "LIGHT",
+      "definition": "The natural or artificial brightness that allows things to be seen."
+    },
+    {
+      "word": "DARK",
+      "definition": "Having little or no light."
+    },
+    {
+      "word": "HAPPY",
+      "definition": "Feeling pleasure, joy, or satisfaction."
+    },
+    {
+      "word": "ANGRY",
+      "definition": "Feeling strong displeasure or annoyance."
+    },
+    {
+      "word": "QUIET",
+      "definition": "Making very little or no noise."
+    },
+    {
+      "word": "LOUD",
+      "definition": "Making a strong or easily heard sound."
+    },
+    {
+      "word": "GREEN",
+      "definition": "A color commonly associated with grass and leaves."
+    },
+    {
+      "word": "BLACK",
+      "definition": "The darkest color, produced when little or no light is reflected."
+    },
+    {
+      "word": "WHITE",
+      "definition": "The color of fresh snow or clean paper."
+    },
+    {
+      "word": "WATER",
+      "definition": "A clear liquid essential for life and found in rivers, lakes, and oceans."
+    },
+    {
+      "word": "EARTH",
+      "definition": "The planet on which humans, animals, and plants live."
+    },
+    {
+      "word": "WORLD",
+      "definition": "The Earth and all the people, places, and things on it."
+    },
+    {
+      "word": "HOUSE",
+      "definition": "A building designed for people to live in."
+    },
+    {
+      "word": "TABLE",
+      "definition": "A piece of furniture with a flat surface supported by legs."
+    },
+    {
+      "word": "CHAIR",
+      "definition": "A piece of furniture designed for one person to sit on."
+    },
+    {
+      "word": "PHONE",
+      "definition": "A device used to communicate with people, often by voice or messages."
+    },
+    {
+      "word": "MUSIC",
+      "definition": "Organized sounds created for listening, expression, or entertainment."
+    },
+    {
+      "word": "DANCE",
+      "definition": "To move the body rhythmically, usually to music."
+    },
+    {
+      "word": "SMILE",
+      "definition": "A facial expression made by turning the corners of the mouth upward."
+    },
+    {
+      "word": "LAUGH",
+      "definition": "To make sounds and movements that express amusement or happiness."
+    },
+    {
+      "word": "SLEEP",
+      "definition": "A natural state of rest in which the body and mind recover."
+    },
+    {
+      "word": "DREAM",
+      "definition": "A series of thoughts, images, or experiences that can occur during sleep."
+    },
+    {
+      "word": "FOOD",
+      "definition": "Something that people or animals eat to obtain energy and nutrients."
+    },
+    {
+      "word": "MILK",
+      "definition": "A white liquid produced by mammals as food for their young."
+    },
+    {
+      "word": "BREAD",
+      "definition": "A food made by baking dough, usually prepared from flour and water."
+    },
+    {
+      "word": "APPLE",
+      "definition": "A round fruit that commonly has red, green, or yellow skin."
+    },
+    {
+      "word": "HORSE",
+      "definition": "A large four-legged animal commonly used for riding and work."
+    },
+    {
+      "word": "TIGER",
+      "definition": "A large wild cat known for its orange coat and dark stripes."
+    },
+    {
+      "word": "LION",
+      "definition": "A large wild cat known for its strength and, in males, a mane."
+    },
+    {
+      "word": "SNAKE",
+      "definition": "A long, legless reptile that moves by sliding its body along the ground."
+    },
+    {
+      "word": "MOUSE",
+      "definition": "A small animal with a pointed face, rounded ears, and a long tail."
+    },
+    {
+      "word": "RIVER",
+      "definition": "A large natural stream of flowing water."
+    },
+    {
+      "word": "OCEAN",
+      "definition": "A very large area of salt water covering much of Earth's surface."
+    },
+    {
+      "word": "CLOUD",
+      "definition": "A visible mass of tiny water droplets or ice crystals in the sky."
+    },
+    {
+      "word": "STORM",
+      "definition": "A period of severe weather that may include strong wind, rain, thunder, or lightning."
+    },
+    {
+      "word": "SNOW",
+      "definition": "Frozen water that falls from clouds as soft white flakes."
+    },
+    {
+      "word": "SUMMER",
+      "definition": "The warmest season of the year in many parts of the world."
+    },
+    {
+      "word": "WINTER",
+      "definition": "The coldest season of the year in many parts of the world."
+    },
+    {
+      "word": "SPRING",
+      "definition": "The season between winter and summer when plants commonly begin growing."
+    },
+    {
+      "word": "AUTUMN",
+      "definition": "The season between summer and winter when many leaves change color and fall."
+    },
+    {
+      "word": "CLOCK",
+      "definition": "A device used to measure and display time."
+    },
+    {
+      "word": "WATCH",
+      "definition": "A small timekeeping device usually worn on the wrist."
+    },
+    {
+      "word": "KEY",
+      "definition": "A small object used to open or lock a door or other mechanism."
+    },
+    {
+      "word": "LOCK",
+      "definition": "A mechanism used to prevent something from being opened without the correct key or code."
+    },
+    {
+      "word": "GOLD",
+      "definition": "A valuable yellow metal often used for jewelry and coins."
+    },
+    {
+      "word": "SILVER",
+      "definition": "A valuable shiny gray metal used for jewelry, coins, and other objects."
+    },
+    {
+      "word": "MONEY",
+      "definition": "Something generally accepted as a means of payment for goods and services."
+    },
+    {
+      "word": "PRICE",
+      "definition": "The amount of money required to buy something."
+    },
+    {
+      "word": "STORE",
+      "definition": "A place where goods are sold to customers."
+    },
+    {
+      "word": "TRAIN",
+      "definition": "A series of connected vehicles that travels along railway tracks."
+    },
+    {
+      "word": "PLANE",
+      "definition": "An aircraft designed to fly through the air using wings."
+    },
+    {
+      "word": "SHIP",
+      "definition": "A large vessel designed to travel on water."
+    },
+    {
+      "word": "BIKE",
+      "definition": "A two-wheeled vehicle powered by pedals or a motor."
+    },
+    {
+      "word": "DRIVE",
+      "definition": "To control and operate a vehicle."
+    },
+    {
+      "word": "START",
+      "definition": "To begin doing something or cause something to begin."
+    },
+    {
+      "word": "FINISH",
+      "definition": "To bring something to an end or complete it."
+    },
+    {
+      "word": "BUILD",
+      "definition": "To construct something by putting parts together."
+    },
+    {
+      "word": "BREAK",
+      "definition": "To damage something so that it separates, cracks, or no longer works properly."
+    },
+    {
+      "word": "THINK",
+      "definition": "To use the mind to consider, understand, or solve something."
+    },
+    {
+      "word": "LEARN",
+      "definition": "To gain knowledge or a skill through study, experience, or teaching."
+    },
+    {
+      "word": "TEACH",
+      "definition": "To help someone gain knowledge or learn a skill."
+    },
+    {
+      "word": "WRITE",
+      "definition": "To form words or symbols using a pen, pencil, keyboard, or other method."
+    },
+    {
+      "word": "READ",
+      "definition": "To look at and understand written or printed words."
+    },
+    {
+      "word": "SPEAK",
+      "definition": "To communicate using spoken words."
+    },
+    {
+      "word": "LISTEN",
+      "definition": "To pay attention to sounds or what someone is saying."
+    },
+    {
+      "word": "WATCH",
+      "definition": "To look at something carefully for a period of time."
+    },
+    {
+      "word": "FIND",
+      "definition": "To discover or locate something that was previously unknown or missing."
+    },
+    {
+      "word": "SEARCH",
+      "definition": "To look carefully for someone or something."
+    },
+    {
+      "word": "HIDE",
+      "definition": "To place something where it cannot easily be seen or found."
+    },
+    {
+      "word": "SHOW",
+      "definition": "To make something visible or allow someone to see it."
+    },
+    {
+      "word": "GIVE",
+      "definition": "To hand something to someone or provide something for them."
+    },
+    {
+      "word": "TAKE",
+      "definition": "To get, carry, or move something from one place to another."
+    },
+    {
+      "word": "KEEP",
+      "definition": "To continue to have or hold something."
+    },
+    {
+      "word": "LOSE",
+      "definition": "To no longer have something because it has disappeared or been taken away."
+    },
+    {
+      "word": "WIN",
+      "definition": "To succeed in a competition or achieve victory."
+    },
+    {
+      "word": "PLAY",
+      "definition": "To take part in a game or activity for enjoyment."
+    }
+  ]
+}
